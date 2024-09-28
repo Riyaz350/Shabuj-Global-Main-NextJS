@@ -1,5 +1,5 @@
 'use client'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { LiaGreaterThanSolid } from "react-icons/lia";
 import countries from '../../../assets/json/countries.json'
 import Link from "next/link";
@@ -7,7 +7,11 @@ import Image from "next/image";
 const Home_Destination = () => {
   const [cardIndex, setCardIndex] = useState<number>(100);
   const [showAll, setShowAll] = useState(false);
-  const width = window.innerWidth;
+  const [width, setWidth] = useState<number>(1024);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
 
   const displayedCountries = showAll ? countries : countries.slice(0, 6);
 
@@ -27,9 +31,8 @@ const Home_Destination = () => {
         <div
           className={`absolute z-5 top-[-120px] hidden lg:flex ${width <= 1240 ? "right-[8%]" : "right-[27%]"} `}
         >
-          <Image width={100} height={100} src='https://i.ibb.co.com/nDCNBSC/planepath.png' alt="" priority className={`${
-            showAll ? "md:hidden" : " "
-          } w-auto h-auto`}/>
+          <Image width={100} height={100} src='https://i.ibb.co.com/nDCNBSC/planepath.png' alt="" priority className={`${showAll ? "md:hidden" : " "
+            } w-auto h-auto`} />
         </div>
         <div className="bg-[#21E5E5] bg-clip-text py-2 text-transparent text-4xl font-bold">
           <h1>Choose Your Destination</h1>
@@ -51,9 +54,8 @@ const Home_Destination = () => {
                 }}
               >
                 <Image width={100} height={100}
-                  className={`${
-                    cardIndex === index && "rotate-bg"
-                  } h-[300px] scale-x-[-1] w-full rounded-3xl bg-white`}
+                  className={`${cardIndex === index && "rotate-bg"
+                    } h-[300px] scale-x-[-1] w-full rounded-3xl bg-white`}
                   src={country.img}
                   alt=""
                 />
@@ -67,11 +69,10 @@ const Home_Destination = () => {
                   transformOrigin: "bottom left",
                   transition: "transform 0.5s ease",
                 }}
-                className={`${
-                  cardIndex === index
+                className={`${cardIndex === index
                     ? "bg-[#08214b] z-20"
                     : "bg-[#081831] z-10"
-                } absolute top-0 left-0 flex flex-col justify-around items-center w-full h-[300px] rounded-3xl`}
+                  } absolute top-0 left-0 flex flex-col justify-around items-center w-full h-[300px] rounded-3xl`}
               >
                 <h1 className="text-[#88F3D0] text-2xl text-center font-bold">
                   {country.name}

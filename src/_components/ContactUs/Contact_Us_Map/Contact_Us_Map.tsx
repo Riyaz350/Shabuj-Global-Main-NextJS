@@ -5,6 +5,7 @@ import { FiSmartphone } from "react-icons/fi";
 import { IoMailOutline } from "react-icons/io5";
 import "./Contact_US.css";
 import { useEffect, useState, useRef } from "react";
+import Image from "next/image";
 
 const Contact_Us_Map = () => {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
@@ -12,7 +13,7 @@ const Contact_Us_Map = () => {
   const [showDiv, setShowDiv] = useState<string | null>("block");
   const modalRef = useRef<HTMLDivElement | null>(null); 
 
-  const handleMouseEnter = (event:React.MouseEvent<HTMLElement>) => {
+  const handleMouseEnter = (event:React.MouseEvent<SVGPathElement>) => {
     setSelectedCountry(event.currentTarget.id);
     setShowDiv("block");
   };
@@ -49,7 +50,7 @@ const Contact_Us_Map = () => {
     setWidth(window.innerWidth);
   }, []);
 
-  const handleSvgClick = (event: React.MouseEvent<HTMLElement>) => {
+  const handleSvgClick = (event: React.MouseEvent<SVGPathElement>) => {
     event.stopPropagation(); 
     setShowModal(true);
   };
@@ -2400,9 +2401,9 @@ const Contact_Us_Map = () => {
                   <IoIosCloseCircleOutline />
                 </button>
                 <h2 className="text-[30px] text-center font-bold mb-6">
-                  {officeAddress[selectedCountry]?.title}
+                  {selectedCountry && officeAddress[selectedCountry]?.title}
                 </h2>
-                {officeAddress[selectedCountry]?.offices.map(
+                {selectedCountry && officeAddress[selectedCountry]?.offices.map(
                   (office, index) => (
                     <div
                       key={index}
@@ -2441,7 +2442,7 @@ const Contact_Us_Map = () => {
             </div>
           ) : null}
 
-          <img
+          <Image width={100} height={100}
             src='https://i.ibb.co.com/9ctmQtW/Flow-1-512p-50fps.gif'
             alt="GIF Image"
             className="w-[22%] hidden lg:flex lg:absolute bottom-0 pl-10 lg:pl-0 left-14"

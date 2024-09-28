@@ -8,8 +8,8 @@ const Contact_Us_Accordion = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
-    <div className="bg-[#EFF6FF] min-h-96">
-      <div className="max-w-screen-xl mx-auto pt-20 grid grid-cols-5 gap-3 min-h-[300px]">
+    <div className="bg-[#EFF6FF] min-h-96 poppins pb-20">
+      <div className="max-w-screen-xl mx-auto pt-20 px-10 lg:px-5 space-y-5 lg:space-y-0 lg:grid grid-cols-5 gap-3 min-h-[300px]">
         <div>
           <h3 className="text-[28px] font-semibold">United Kingdom</h3>
           <div
@@ -21,11 +21,11 @@ const Contact_Us_Accordion = () => {
               id="basic-heading-one-with-arrow-always-open"
             >
               <button
-                className="accordion-toggle group inline-flex items-center text-xl font-normal leading-8  w-full transition duration-500 accordion-active:font-medium always-open"
+                className="accordion-toggle group  flex  text-xl font-normal leading-8  w-full transition duration-500 accordion-active:font-medium always-open"
                 aria-controls="basic-collapse-one-with-arrow-always-open"
                 onClick={() => toggleAccordion(0)}
               >
-                <h5 className="text-xl font-semibold">London (Head Office)</h5>
+                <h5 className="text-xl font-semibold text-start">London (Head Office)</h5>
                 <svg
                   className={`transition duration-500  ${
                     activeIndex === 0 ? "rotate-180" : ""

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Home_Connection = () => {
   return (
-    <div className="w-full mx-auto py-[20%] md:py-[10%] px-5">
+    <div className="w-full mx-auto py-[20%] md:py-[10%] px-20 mt-10">
       <div
         className="w-full lg:max-w-[1150px] rounded-[40px] h-[300px] bg-no-repeat relative md:mx-auto  lg:p-0 p-2 bg-top"
         style={{
@@ -17,7 +17,7 @@ const Home_Connection = () => {
           alt=""
         />
         <div className="flex flex-col h-full justify-center md:pt-16 mx-auto py-7 text-center text-white w-11/12">
-          <p className="font-bold lg:text-5xl md:text-4xl text-3xl leading-[3rem]">
+          <p className="font-bold lg:text-4xl md:text-4xl text-3xl leading-[3rem]">
             Ready to take the leap?
           </p>
           <p className="lg:text-2xl md:text-xl text-base font-[300] lg:w-[45%] md:w-[55%] w-full mx-auto mb-7 mt-3">

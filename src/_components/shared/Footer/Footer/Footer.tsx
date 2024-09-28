@@ -8,14 +8,14 @@ import Link from "next/link";
 const Footer = () => {
   const accordion = useRef<HTMLDivElement>(null);
 
-  const handleClick = (evt:React.MouseEvent<HTMLInputElement>) => {
-   if(accordion.current){
-    accordion.current.querySelectorAll("input").forEach((input) => {
-      if (input !== evt.target) {
-        (input as HTMLInputElement).checked = false;
-      }
-    });
-   }
+  const handleClick = (evt: React.MouseEvent<HTMLInputElement>) => {
+    if (accordion.current) {
+      accordion.current.querySelectorAll("input").forEach((input) => {
+        if (input !== evt.target) {
+          (input as HTMLInputElement).checked = false;
+        }
+      });
+    }
   };
   return (
     <div>
@@ -195,7 +195,7 @@ const Footer = () => {
                   <div className="mulish-semibold lg:text-[18px] text-base text-blue-600 pl-4">
                     Bangladesh
                   </div>
-                  <div className="collapse collapse-arrow">
+                  <div className="collapse p-0 collapse-arrow">
                     <input
                       type="checkbox"
                       name="my-accordion-2"
