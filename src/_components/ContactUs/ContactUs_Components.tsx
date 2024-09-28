@@ -1,5 +1,4 @@
 'use client'
-import { FaChevronDown } from 'react-icons/fa6';
 import { MdDone } from "react-icons/md";
 import { useEffect, useState } from 'react';
 import { motion } from "framer-motion"
@@ -42,7 +41,7 @@ const ContactUs_Components = () => {
                             </div>
 
                             <div className='space-y-2'>
-                                <select className={`bg-white flex items-center justify-between pl-2  ${inputClass}`}>Preferred Study Destination <FaChevronDown /> 
+                                <select className={`bg-white flex items-center justify-between pl-2  ${inputClass}`}>Preferred Study Destination 
                                     <option  defaultChecked>
                                         Preferred Study Destination
                                     </option>
@@ -50,8 +49,22 @@ const ContactUs_Components = () => {
                                     <option value="USA">USA</option>
                                     <option value="Australia">Australia</option>
                                 </select>
-                                <p className={`bg-white flex items-center justify-between pl-2  ${inputClass}`}>Preferred Study Year  <FaChevronDown /> </p>
-                                <p className={`bg-white flex items-center justify-between pl-2  ${inputClass}`}>Preferred Study Intake   <FaChevronDown /> </p>
+                                <select className={`bg-white flex items-center justify-between pl-2  ${inputClass}`}>Preferred Study Year 
+                                    <option  defaultChecked>
+                                        Preferred Study Year
+                                    </option>
+                                    <option value="UK">2024</option>
+                                    <option value="USA">2025</option>
+                                    <option value="Australia">2026</option>
+                                </select>
+                                <select className={`bg-white flex items-center justify-between pl-2  ${inputClass}`}>Preferred Study Intake
+                                    <option  defaultChecked>
+                                        Preferred Study Intake
+                                    </option>
+                                    <option value="UK">Summer</option>
+                                    <option value="USA">Fall</option>
+                                    <option value="Australia">Winter</option>
+                                </select>
                             </div>
 
                             <div className='sm:flex hidden items-start mt-3 gap-2 bg-transparent text-[8px] md:text-base '>

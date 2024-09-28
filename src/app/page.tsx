@@ -3,7 +3,6 @@ import "./globals.css";
 import Home_Events from "@/_components/Home/Home_Events/Home_Events";
 import Home_Tab from "@/_components/Home/Home_Tab/Home_Tab";
 import Home_Counter from "@/_components/Home/Home_Counter/Home_Counter";
-import Home_Ticker from "@/_components/Home/Home_Ticker/Home_Ticker";
 import Home_Testimonial from "@/_components/Home/Home_Testimonial/Home_Testimonial";
 import Home_Connection from "@/_components/Home/Home_Connection/Home_Connection";
 import Home_Destination from "@/_components/Home/Home_Destination/Home_Destination";
@@ -19,7 +18,6 @@ export default function Home() {
       <Home_Events/>
       <Home_Tab/>
       <Home_Counter/>
-      <Home_Ticker/>
       <Home_Testimonial/>
       <Home_Connection/>
       <Home_Destination/>

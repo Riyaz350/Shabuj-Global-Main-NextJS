@@ -2401,15 +2401,15 @@ const Contact_Us_Map = () => {
                   <IoIosCloseCircleOutline />
                 </button>
                 <h2 className="text-[30px] text-center font-bold mb-6">
-                  {selectedCountry && officeAddress[selectedCountry]?.title}
+                {selectedCountry && officeAddress[selectedCountry as keyof typeof officeAddress]?.title}
                 </h2>
-                {selectedCountry && officeAddress[selectedCountry]?.offices.map(
+                {selectedCountry && officeAddress[selectedCountry as keyof typeof officeAddress]?.offices.map(
                   (office, index) => (
                     <div
                       key={index}
                       className={`py-5 mx-auto space-y-2 w-[75%] ${
                         index !==
-                        officeAddress[selectedCountry]?.offices.length - 1
+                        officeAddress[selectedCountry as keyof typeof officeAddress]?.offices.length - 1
                           ? "border-b border-dashed border-black"
                           : ""
                       }`}

@@ -54,7 +54,7 @@ const Services_Components = () => {
                 {/* first 2 cards */}
                 <div className='relative'>
                     <div className='z-10 mb-10 lg:mb-0'>
-                        <Card  index={0}/>
+                        <Card circle='' position=''  index={0}/>
                     </div>
                     <div className='lg:grid grid-cols-3  -z-10 lg:-mt-56'>
                         <div className='col-span-2   items-end lg:flex hidden '>
@@ -73,7 +73,7 @@ const Services_Components = () => {
                 {/* second 2 cards */}
                 <div className='relative'>
                     <div className='z-10 mb-10 lg:mb-0'>
-                        <Card circle='https://i.ibb.co.com/wpVjbV7/Circle.png' index={2} />
+                        <Card circle='https://i.ibb.co.com/wpVjbV7/Circle.png' position='' index={2} />
                     </div>
                     <div className='lg:grid grid-cols-3  -z-10 lg:-mt-56'>
                         <div className='col-span-2   items-end lg:flex hidden '>
@@ -88,7 +88,7 @@ const Services_Components = () => {
                 {/* third 2 cards */}
                 <div className='relative'>
                     <div className='z-10 mb-10 lg:mb-0'>
-                        <Card circle='https://i.ibb.co.com/wpVjbV7/Circle.png' index={4}/>
+                        <Card circle='https://i.ibb.co.com/wpVjbV7/Circle.png' position='' index={4}/>
                     </div>
                     <div className='lg:grid grid-cols-3  -z-10 lg:-mt-56'>
                         <div className='col-span-2   items-end lg:flex hidden '>
@@ -105,7 +105,7 @@ const Services_Components = () => {
                 {/* fourth 2 cards */}
                 <div className='relative'>
                     <div className='z-10 mb-10 lg:mb-0'>
-                        <Card circle='https://i.ibb.co.com/wpVjbV7/Circle.png' index={6}/>
+                        <Card circle='https://i.ibb.co.com/wpVjbV7/Circle.png' position='' index={6}/>
                     </div>
                     <div className='lg:grid grid-cols-3  z-20 lg:-mt-56'>
                         <div className='col-span-2   items-end lg:flex hidden '>
@@ -123,7 +123,7 @@ const Services_Components = () => {
                 {/* fifth card */}
                 <div className='relative'>
                     <div className='  mb-10 lg:mb-0'>
-                        <Card circle='https://i.ibb.co.com/wpVjbV7/Circle.png' index={8}/>
+                        <Card circle='https://i.ibb.co.com/wpVjbV7/Circle.png' position='' index={8}/>
                     </div>
                     <div className='lg:grid grid-cols-3    lg:-mt-56'>
                         <div className='col-span-2   items-end lg:flex hidden '>
@@ -132,7 +132,7 @@ const Services_Components = () => {
                             <Image width={100} height={100}  className='w-6/12 z-10 h-auto hidden ml-auto mr-20' src='https://i.ibb.co.com/MgCCdg9/Airport-amico.jpg' alt="" />
                         </div>
                         <div className='invisible'>
-                            <Card index={9}/>
+                            <Card circle='' position='' index={9}/>
                         </div>
                         <Connector1 />
                     </div>
