@@ -1,0 +1,74 @@
+'use client'
+import CountUp from "react-countup";
+import './Home_Counter.css'
+import ScrollTrigger from "react-scroll-trigger";
+import { useState } from "react";
+import Image from "next/image";
+
+const Home_Counter = () => {
+    const [counterState, setCounterState] = useState(false)
+    return (
+        <div className="bg-gradient-two bg-[#EBEBEB] max-w-[1154px] mx-auto rounded-[64px] lg:mt-[200px]  lg:mb-[140px] mb-[28px] relative lg:z-20 mt-16">
+            <div className="section-bg-overlay"></div>
+            <div className="flex flex-col lg:block">
+                <div className="lg:absolute lg:-top-48 lg:-z-40 order-2 pb-12 md:mx-auto lg:w-auto w-1/2 mx-auto">
+                    <Image width={50} height={50} src="https://i.ibb.co.com/rtSqMV2/strength1.png" priority alt="strength" className="w-full" />
+                </div>
+                
+                <h2 className="poppins-bold text-gradient text-4xl text-center lg:text-[67px] py-20 lg:py-[101px] lg:text-right lg:pr-[66px] order-1 text-white">Our Core Strength</h2>
+            </div>
+            
+            <ScrollTrigger onEnter={()=> setCounterState(true)} onExit={()=> setCounterState(false)}>
+                <div className="flex justify-center flex-wrap gap-10 pb-[46px] pl-5 pr-5">
+                    <div className="text-center child-one">
+                        <Image width={50} height={50} className="mx-auto w-auto h-auto" src="https://i.ibb.co.com/7R5rzV8/vector1.png" alt="icon" />
+                        <h2 className="poppins-bold pt-0 text-4xl lg:text-[50px] text-white mt-2">
+                            { counterState && <CountUp start={0} end={16} duration={5}></CountUp>}
+                        </h2>
+                        <p className="mulish-regular text-[16px] text-white">Global Offices</p>
+                    </div>
+                    <div className="text-center child-two">
+                        <Image width={50} height={50} className="mx-auto w-auto h-auto" src="https://i.ibb.co.com/6sZWGjp/vector2.png" alt="icon" />
+                        <h2 className="poppins-bold pt-0 text-4xl lg:text-[50px] text-white mt-2">
+                        { counterState && <CountUp start={0} end={100} duration={5}></CountUp>}+
+                        </h2>
+                        <p className="mulish-regular text-[16px] text-white">UK Education Fair</p>
+                    </div>
+                    <div className="text-center child-three">
+                        <Image width={50} height={50} className="mx-auto w-auto h-auto" src="https://i.ibb.co.com/TmQyWkF/vector3.png" alt="icon" />
+                        <h2 className="poppins-bold pt-0 text-4xl lg:text-[50px] text-white mt-2">
+                        { counterState && <CountUp start={0} end={50000} duration={5}></CountUp>}+
+                        </h2>
+                        <p className="mulish-regular text-[16px] text-white">Courses Offered</p>
+                    </div>
+                    <div className="text-center child-four">
+                        <Image width={50} height={50} className="mx-auto w-auto h-auto" src="https://i.ibb.co.com/rfHj5Cg/vector4.png" alt="icon" />
+                        <h2 className="poppins-bold pt-0 text-4xl lg:text-[50px] text-white mt-2">
+                        { counterState && <CountUp start={0} end={350} duration={5}></CountUp>}+
+                        </h2>
+                        <p className="mulish-regular text-[16px] text-white">Global Counsellors</p>
+                    </div>
+                    <div className="text-center child-five">
+                        <Image width={50} height={50} className="mx-auto w-auto h-auto" src="https://i.ibb.co.com/fDX6C80/vector5.png" alt="icon" />
+                        <h2 className="poppins-bold pt-0 text-4xl lg:text-[50px] text-white mt-2">
+                        { counterState && <CountUp start={0} end={150} duration={5}></CountUp>}+
+                        </h2>
+                        <p className="mulish-regular text-[16px] text-white">Recruiting University</p>
+                    </div>
+                    <div className="text-center child-six">
+                        <Image width={50} height={50}className="mx-auto w-auto h-auto" src="https://i.ibb.co.com/Ld34nyH/vector6.png" alt="icon" />
+                        <h2 className="poppins-bold pt-0 text-4xl lg:text-[50px] text-white mt-2">
+                        { counterState && <CountUp start={0} end={5000} duration={5}></CountUp>}+
+                        </h2>
+                        <p className="mulish-regular text-[16px] text-white">Student Served</p>
+                    </div>
+                </div>
+            </ScrollTrigger>
+            <div className="absolute -bottom-36 lg:block hidden">
+                <Image width={50} height={50} src="https://i.ibb.co.com/J7dN35r/bg-shape2.png" className="w-auto h-auto" alt="" />
+            </div>
+        </div>
+    );
+};
+
+export default Home_Counter;
