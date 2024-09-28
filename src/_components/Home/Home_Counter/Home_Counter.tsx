@@ -99,8 +99,7 @@ const CoreStrength = () => {
 
             <div className='inter bg-[#4BA1FF] py-10 rounded-tl-badge rounded-br-badge lg:my-0 my-10 overflow-hidden'>
                 <div className='bg-white -rotate-2 '>
-                    <Marquee pauseOnHover autoFill direction="right" speed={200}
-                    >
+                    <Marquee pauseOnHover autoFill direction="right" speed={200}>
                         {skills.map((skill, index) => (
                             <div className='flex items-center' key={index}>
                                 <p className='text-3xl lg:text-5xl text-black py-2'>{skill}</p>
