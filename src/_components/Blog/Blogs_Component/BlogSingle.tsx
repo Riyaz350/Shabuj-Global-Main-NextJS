@@ -1,13 +1,14 @@
+import Image from "next/image";
 import { FaAngleDown } from "react-icons/fa6";
 
 const BlogSingle = () => {
-  const Header = ({ title }) => {
+  const Header = ({ title }:{title:string}) => {
     return <h2 className="text-xl font-semibold">{title}</h2>;
   };
-  const Text = ({ text }) => {
+  const Text = ({ text }:{text:string}) => {
     return <p className=" ">{text}</p>;
   };
-  const Label = ({ text }) => {
+  const Label = ({ text }:{text:string}) => {
     return (
       <p className=" font-medium">
         {text}
@@ -15,7 +16,7 @@ const BlogSingle = () => {
       </p>
     );
   };
-  const Input = ({ text, type }) => {
+  const Input = ({ text, type }:{text:string, type:string}) => {
     return (
       <input
         className="overscroll-none border-[1px] hover:border-[#3b82f6] cursor-pointer w-full p-1 placeholder:text-xs placeholder:text-gray-300 focus:outline-[#3b82f6] "
@@ -25,10 +26,10 @@ const BlogSingle = () => {
     );
   };
 
-  const Card = ({ img, title }) => {
+  const Card = ({ img, title }:{img:string, title:string}) => {
     return (
       <div className="space-y-2  lg:w-full sm:w-[48%] w-full  shadow-2xl rounded-2xl  h-max !mt-0">
-        <img src={img} alt="" className="w-full" />
+        <Image width={100} height={100} src={img} alt="" className="w-full h-auto" />
         <div className="p-5">
           <div className="bg-[#fff2ee] w-fit p-2 text-xs text-[#ff8156] rounded-sm">
             Networking
@@ -219,7 +220,7 @@ const BlogSingle = () => {
                 <Label text="Phone Number" />
                 <div className="flex items-center gap-5 text-gray-300 text-xs">
                   <span className="flex p-2 border-[1px]">
-                    <img src='https://i.ibb.co.com/QjQfzT1/contents.png' alt="" />
+                    <Image width={100} height={100} className="w-auto h-auto" src='https://i.ibb.co.com/QjQfzT1/contents.png' alt="" />
                     <p className="pr-2">+880</p>
                   </span>
                   <Input text="1891123654" type="text" />
@@ -296,7 +297,7 @@ const BlogSingle = () => {
 
           <div className="my-10">
             <div className="flex items-center">
-              <img src='https://i.ibb.co.com/0tWWKrV/Category-1-Plus.png' alt="" />
+              <Image width={100} height={100} className="w-auto h-auto" src='https://i.ibb.co.com/0tWWKrV/Category-1-Plus.png' alt="" />
               <p className="font-semibold">Category</p>
             </div>
             <ul className="space-y-1 my-1">

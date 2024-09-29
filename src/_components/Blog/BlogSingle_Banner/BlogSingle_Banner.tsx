@@ -1,3 +1,4 @@
+import Image from "next/image";
 import "./BlogSingle_Banner.css";
 
 const BlogSingle_Banner = () => {
@@ -44,7 +45,7 @@ const BlogSingle_Banner = () => {
           </p>
         </div>
         <div className="absolute lg:-bottom-[28rem] md:-bottom-[20rem] sm:-bottom-[12rem] -bottom-[8rem]  left-0 right-0 mx-auto px-5">
-          <img
+          <Image width={100} height={100} className="w-auto h-auto"
             src="https://i.ibb.co.com/HCdfPYW/blogsingle-Banner.png"
             alt=""
           />

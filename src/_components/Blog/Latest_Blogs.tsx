@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Latest_Blogs = () => {
   const data = [
     {
@@ -83,7 +85,7 @@ const Latest_Blogs = () => {
         {data.slice(0, 3).map((item) => (
           <div key={item.id} className="group">
             <div className="shadow-xl rounded-[16px] flex flex-col h-full group-hover:bg-[#081831] duration-300">
-              <img src={item.image} alt="" className="h-[220px] w-full" />
+              <Image width={100} height={100} src={item.image} alt="" className="h-[220px] w-full" />
               <div className="p-4 pb-4 flex flex-col justify-between flex-grow">
                 <div>
                   <p className="inline-block w-fit px-2 py-[2px] text-[#FF8156] text-xs bg-[#FFF2EE] rounded mb-2">
