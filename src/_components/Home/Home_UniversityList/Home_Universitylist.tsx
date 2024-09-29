@@ -9,27 +9,31 @@ const Home_UniversityList = () => {
             <div className='text-center'>
                 <h2 className='text-[#004ACB] poppins-bold text-[50px] mb-2 px-3'>Universities Across The Globe</h2>
                 <p className='poppins-bold pt-5 lg:pt-0 text-4xl lg:text-[67px]'>The Choice is Endless</p>
-                <Image width={100} height={100} className='mx-auto lg:w-[290px] w-[190px] py-3 bg-white' src="https://i.ibb.co/wMCkStV/University-Section-Animation.gif" alt="" />
+                <Image width={100} height={100} className='mx-auto lg:w-[290px] w-[190px] py-3 bg-white h-auto' src="https://i.ibb.co/wMCkStV/University-Section-Animation.gif" alt="" />
             </div>
             <Marquee className='mb-10' pauseOnHover={true} speed={250} direction='right'>
                 <div className='flex  gap-10'>
-                    {allUni.slice(0,40).map((uni) => (
-                        <Link href={`/singleUniversityAll/${uni.id}`} className='cursor-pointer' key={uni?.id}><Image width={100} height={100} className='w-[200px]' src={uni.logo} alt="university" /></Link>
+                    {allUni.slice(0, 40).map((uni) => (
+                        <Link href={`/singleUniversityAll/${uni.id}`} className='cursor-pointer' key={uni?.id}>
+                            <Image width={100} height={100} className='w-[200px] h-auto' src={uni.logo} alt="university" />
+                        </Link>
                     ))}
                 </div>
             </Marquee>
             <Marquee pauseOnHover={true} speed={250}>
                 <div className='flex  gap-10'>
-                    {allUni.slice(41,76).map((uni) => (
-                        <Link href={`/singleUniversityAll/${uni.id}`} className='cursor-pointer' key={uni?.id}><Image width={100} height={100}className='w-[200px]' src={uni.logo} alt="university" /></Link>
+                    {allUni.slice(41, 76).map((uni) => (
+                        <Link href={`/singleUniversityAll/${uni.id}`} className='cursor-pointer' key={uni?.id}>
+                            <Image width={100} height={100} className='w-[200px] h-auto' src={uni.logo} alt="university" />
+                        </Link>
                     ))}
                 </div>
             </Marquee>
-            
-            
+
+
             <div className='text-center mt-[60px] lg:mt-[98px]'>
                 <Link href={"/comingSoon"}>
-                <button className='text-white bg-[#2563EB] hover:bg-[#3D7DED] rounded-[32px] mulish-regular lg:text-[21px] text-[14px] px-[89px] py-2 mb-[41px]'>View All Universites</button>
+                    <button className='text-white bg-[#2563EB] hover:bg-[#3D7DED] rounded-[32px] mulish-regular lg:text-[21px] text-[14px] px-[89px] py-2 mb-[41px]'>View All Universites</button>
                 </Link>
             </div>
         </div>

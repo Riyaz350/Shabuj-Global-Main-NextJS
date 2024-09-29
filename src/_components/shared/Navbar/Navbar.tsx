@@ -20,7 +20,6 @@ const Navbar2 = () => {
   
   const iconStyle = "flex bg-gray-200 lg:bg-white px-5 gap-2 lg:items-center hover:text-blue-500";
   const flagClass = " text-center my-2  ";
-  const flag = "w-2/4 mx-auto rounded-lg  -rotate-90";
   const enterNavButton = (index: number) => {
     setNavButton(index);
   };
@@ -124,7 +123,7 @@ const Navbar2 = () => {
                     <ul className="grid grid-cols-2 justify-between items-start max-w-7xl mx-auto my-8 gap-3">
                       {countryData.map((country) => (
                         <Link onClick={closeNavbar} key={country.name} className=' my-2 text-center flex flex-col justify-between' href={country.to}>
-                          <Image width={100} height={100} className={flag} src={country.img} alt={country.name} />
+                          <Image width={100} height={100} className="w-2/4 h-auto mx-auto rounded-lg  -rotate-90" src={country.img} alt={country.name} />
                           <li>{country.label}</li>
                         </Link>
                       ))}
@@ -377,10 +376,10 @@ const Navbar2 = () => {
                   <div className="collapse-content text-sm  ">
                     <div className="flex gap-5 flex-col justify-around py-10">
                       <Link onClick={closeNavbar} className="" href="/comingSoon">
-                        <Image width={100} height={100} className="w-3/4 lg:w-2/12" src='https://i.ibb.co/JCsX1Q0/IELTS-Logo.jpg' alt="Image1" />
+                        <Image width={100} height={100} className="w-3/4 h-auto lg:w-2/12" src='https://i.ibb.co/JCsX1Q0/IELTS-Logo.jpg' alt="Image1" />
                       </Link>
                       <Link onClick={closeNavbar} className="" href="/comingSoon">
-                        <Image width={100} height={100 } className="w-3/4 lg:w-2/12" src='https://i.ibb.co/hH49jpH/SELT-Logo.png' alt="Image 2" />
+                        <Image width={100} height={100 } className="w-3/4 lg:w-2/12 h-auto" src='https://i.ibb.co/hH49jpH/SELT-Logo.png' alt="Image 2" />
                       </Link>
                     </div>
                   </div>
@@ -584,7 +583,7 @@ const Navbar2 = () => {
             <ul className="lg:grid hidden lg:grid-cols-7 justify-between items-center max-w-7xl mx-auto my-8 gap-3">
               {countryData.map((country) => (
                 <Link key={country.name} className={flagClass} href={country.to}>
-                  <Image width={100} height={100} className={` ${flag}`} src={country.img} alt='country' />
+                  <Image width={100} height={100} className="w-2/4 h-auto mx-auto rounded-lg  -rotate-90" src={country.img} alt='country' />
                   <li className="">{country.label}</li>
                 </Link>
               ))}
@@ -723,10 +722,10 @@ const Navbar2 = () => {
         {navIndex == 3 && (
           <div className="lg:flex max-w-7xl  mx-auto hidden justify-around py-10">
             <Link href="comingSoon" className=" first-line:">
-              <Image width={100} height={100} className=" w-3/4 lg:w-[200px]" src='https://i.ibb.co/hH49jpH/SELT-Logo.png' alt="Image 1" />
+              <Image width={100} height={100} className=" w-3/4 h-auto lg:w-[200px]" src='https://i.ibb.co/hH49jpH/SELT-Logo.png' alt="Image 1" />
             </Link>
             <Link href="comingSoon" className=" ">
-              <Image width={100} height={100} className="w-3/4 lg:w-[200px]" src='https://i.ibb.co/JCsX1Q0/IELTS-Logo.jpg' alt="Image 2" />
+              <Image width={100} height={100} className="w-3/4 h-auto lg:w-[200px]" src='https://i.ibb.co/JCsX1Q0/IELTS-Logo.jpg' alt="Image 2" />
             </Link>
           </div>
         )}

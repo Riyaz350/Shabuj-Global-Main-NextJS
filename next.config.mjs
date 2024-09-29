@@ -12,6 +12,7 @@ const nextConfig = {
       { source: '/singleBlog', destination: '/pages/singleBlog'},
       { source: '/logIn', destination: '/pages/logIn'},
       { source: '/registration', destination: '/pages/registration'},
+      { source: '/UK', destination: '/pages/studyDestinations/UK'},
     ]
   },
   images: {

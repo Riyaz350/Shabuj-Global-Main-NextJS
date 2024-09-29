@@ -31,8 +31,7 @@ const Home_Destination = () => {
         <div
           className={`absolute z-5 top-[-120px] hidden lg:flex ${width <= 1240 ? "right-[8%]" : "right-[27%]"} `}
         >
-          <Image width={100} height={100} src='https://i.ibb.co.com/nDCNBSC/planepath.png' alt="" priority className={`${showAll ? "md:hidden" : " "
-            } w-auto h-auto`} />
+          <Image width={100} height={100} src='https://i.ibb.co.com/nDCNBSC/planepath.png' alt="" priority className={`${showAll ? "md:hidden" : " "} w-auto h-auto`} />
         </div>
         <div className="bg-[#21E5E5] bg-clip-text py-2 text-transparent text-4xl font-bold">
           <h1>Choose Your Destination</h1>
@@ -54,8 +53,7 @@ const Home_Destination = () => {
                 }}
               >
                 <Image width={100} height={100}
-                  className={`${cardIndex === index && "rotate-bg"
-                    } h-[300px] scale-x-[-1] w-full rounded-3xl bg-white`}
+                  className={`${cardIndex === index && "rotate-bg"} h-[300px] scale-x-[-1] w-full rounded-3xl bg-white`}
                   src={country.img}
                   alt=""
                 />
