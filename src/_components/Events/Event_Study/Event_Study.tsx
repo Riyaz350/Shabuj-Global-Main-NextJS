@@ -1,5 +1,6 @@
-import { Link } from "react-router-dom";
-import countryData from '../../../../public/CountryJSON/countries.json'
+import Link from 'next/link';
+import countryData from '../../../assets/json/countries.json'
+import Image from "next/image";
 const Event_Study = () => {
   
   
@@ -13,8 +14,8 @@ const Event_Study = () => {
       <div>
       <ul className="px-5 grid grid-cols-3 lg:grid-cols-7 justify-between items-center max-w-7xl mx-auto my-8 gap-3">
               {countryData.map((country) => (
-                <Link key={country.name} className={flagClass} to={country.to}>
-                  <img className={` ${flag}`} src={country.img} alt={country.name} />
+                <Link key={country.name} className={flagClass} href={country.to}>
+                  <Image width={100} height={100} className={` ${flag}`} src={country.img} alt={country.name} />
                   <li className="">{country.label}</li>
                 </Link>
               ))}

@@ -7,6 +7,7 @@ const nextConfig = {
       { source: '/contact', destination: '/pages/contactUs' },
       { source: '/about', destination: '/pages/aboutUs' },
       { source: '/events', destination: '/pages/events' },
+      { source: '/singleEvent', destination: '/pages/singleEvent' },
     ]
   },
   images: {

@@ -115,7 +115,7 @@ const Events_Components = () => {
                       10:00 am - 05:00 pm
                     </span>
                   </span>
-                  <Link href={"/SingleEvent"}>
+                  <Link href={"/singleEvent"}>
                     <span className="px-4 font-inter rounded-2xl text-white bg-[#2563EB] p-2 font-light text-xs cursor-pointer">
                       Register Now
                     </span>
@@ -156,7 +156,7 @@ const Events_Components = () => {
                           10:00 am - 05:00 pm
                         </span>
                       </span>{" "}
-                      <Link href={"/SingleEvent"}>
+                      <Link href={"/singleEvent"}>
                         {" "}
                         <span className="font-inter rounded-2xl text-white bg-[#2563EB] p-2 font-light text-xs px-4 cursor-pointer">
                           Register Now
@@ -198,7 +198,7 @@ const Events_Components = () => {
                           10:00 am - 05:00 pm
                         </span>
                       </span>{" "}
-                      <Link href={"/SingleEvent"}>
+                      <Link href={"/singleEvent"}>
                         {" "}
                         <span className="font-inter rounded-2xl text-white bg-[#2563EB] p-2 font-light text-xs px-4 cursor-pointer">
                           Register Now
