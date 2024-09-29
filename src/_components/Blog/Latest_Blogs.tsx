@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Latest_Blogs = () => {
   const data = [
@@ -98,9 +99,9 @@ const Latest_Blogs = () => {
                     {item.description.slice(0, 150)}...
                   </p>
                 </div>
-                <button className="px-4 py-2 text-white rounded-full bg-[#FE632F] hover:bg-blue-500 mt-4">
+                <Link href='singleBlog' className="px-4 py-2 text-white rounded-full bg-[#FE632F] hover:bg-blue-500 mt-4">
                   Continue Reading
-                </button>
+                </Link>
               </div>
             </div>
           </div>

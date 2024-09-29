@@ -10,6 +10,8 @@ const nextConfig = {
       { source: '/singleEvent', destination: '/pages/singleEvent' },
       { source: '/blogs', destination: '/pages/blogs'},
       { source: '/singleBlog', destination: '/pages/singleBlog'},
+      { source: '/logIn', destination: '/pages/logIn'},
+      { source: '/registration', destination: '/pages/registration'},
     ]
   },
   images: {
