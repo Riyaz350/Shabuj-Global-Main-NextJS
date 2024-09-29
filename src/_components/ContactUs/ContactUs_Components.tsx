@@ -28,20 +28,20 @@ const ContactUs_Components = () => {
                 <div className="xl:col-span-3 col-span-5 flex flex-col justify-center items-center relative">
                     <motion.div initial={{ y: '-200px' }} animate={{ y: 0 }} transition={{ duration: 1 }} className={`${width >= 1024 && width <= 1300 && 'mt-5'} w-1/3 md:w-2/5   z-10 lg:w-[40%]  absolute `}>
                         <form className=' w-full z-10 -mt-10 flex flex-col gap-1 md:gap-2 text-xs lg:text-base'>
-                            <input className={inputClass} type="text" placeholder='Name' />
+                            <input className={`pt-1  ${inputClass}`} type="text" placeholder='Name' />
 
                             <div className='flex'>
-                                <input className={`  md:rounded-l-md w-full  outline-none placeholder:text-xs  placeholder:text-[8px]   ${width >= 1024 && width <= 1300 ? 'placeholder:text-[10px]   px-2 text-[10px]' : width > 1300 ? 'text-base placeholder:text-base px-2 py-1' : 'text-[8px] md:text-base pl-[2px] md:p-2 placeholder:text-[7px]'}`} type="text" placeholder='Email' />
+                                <input className={`  md:rounded-l-md w-full  outline-none placeholder:text-xs  placeholder:text-[8px] pt-1   ${width >= 1024 && width <= 1300 ? 'placeholder:text-[10px]   px-2 text-[10px]' : width > 1300 ? 'text-base placeholder:text-base px-2 py-1' : 'text-[8px] md:text-base pl-[2px] md:p-2 placeholder:text-[7px]'}`} type="text" placeholder='Email' />
                                 <p className={`${inputClass2}   text-[8px] `}>.com</p>
                             </div>
 
                             <div className='flex gap-2'>
                                 <p className={`${inputClass2} `}>+880</p>
-                                <input className={`${inputClass}  `} type="text" placeholder='Mobile Number' />
+                                <input className={`${inputClass} pt-1  placeholder:text-[7px]`} type="text" placeholder='Mobile Number' />
                             </div>
 
                             <div className='space-y-2'>
-                                <select className={`bg-white flex items-center justify-between pl-2  ${inputClass}`}>Preferred Study Destination 
+                                <select className={`bg-white flex items-center justify-between pl-2 py-1 rounded-sm text-[8px] ${inputClass}`}>Preferred Study Destination 
                                     <option  defaultChecked>
                                         Preferred Study Destination
                                     </option>
@@ -49,7 +49,7 @@ const ContactUs_Components = () => {
                                     <option value="USA">USA</option>
                                     <option value="Australia">Australia</option>
                                 </select>
-                                <select className={`bg-white flex items-center justify-between pl-2  ${inputClass}`}>Preferred Study Year 
+                                <select className={`bg-white flex items-center justify-between pl-2 py-1 rounded-sm text-[8px] ${inputClass}`}>Preferred Study Year 
                                     <option  defaultChecked>
                                         Preferred Study Year
                                     </option>
@@ -57,7 +57,7 @@ const ContactUs_Components = () => {
                                     <option value="USA">2025</option>
                                     <option value="Australia">2026</option>
                                 </select>
-                                <select className={`bg-white flex items-center justify-between pl-2  ${inputClass}`}>Preferred Study Intake
+                                <select className={`bg-white flex items-center justify-between pl-2 py-1 rounded-sm text-[8px] ${inputClass}`}>Preferred Study Intake
                                     <option  defaultChecked>
                                         Preferred Study Intake
                                     </option>
