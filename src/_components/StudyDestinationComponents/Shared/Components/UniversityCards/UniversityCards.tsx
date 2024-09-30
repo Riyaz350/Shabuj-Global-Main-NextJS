@@ -14,10 +14,8 @@ type University = {
 
 export default function UniversityCards({
   country,
-  routeLabel,
 }: {
   country: string;
-  routeLabel: string;
 }) {
   const [selectedUniversity, setSelectedUniversity] = useState<University | null>(null);
 
@@ -71,7 +69,7 @@ export default function UniversityCards({
               <p className="flex items-center pt-5 pb-6 lg:text-sm text-[10px]">
                 <TiLocation className="text-blue-500" /> Located in {selectedUniversity.location}
               </p>
-              <Link href={`/${routeLabel}/${selectedUniversity.id}`}>
+              <Link href={`/singleUniversity/${selectedUniversity.id}`}>
                 <button className="btn mt-4 lg:px-28 px-16 py-2 bg-blue-500 text-white rounded-3xl">
                   Apply Now
                 </button>

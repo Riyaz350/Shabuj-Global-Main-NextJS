@@ -25,7 +25,7 @@ const page = () => {
             <QuickFacts country='UK'/>
             <Tabs country='UK'/>
             <AnimatedText country="UK"/>
-            <UniversityCards country='UK' routeLabel='uk'/>
+            <UniversityCards country='UK'  />
             <RequirementCard country={"UK"} />
             <Exams country='UK'/>
             <GuidanceBanner/>
