@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect } from "react";
-import Single_University_Banner from "./Single_University_Banner";
+import Banner1 from "./Single_University_Banner";
 import data from '../../../assets/json/allUni.json'
 import Single_Universty_Accordion from "./Single_Universty_Accordion";
 import Single_University_Check from "./Single_University_Check";
@@ -35,7 +35,7 @@ const SingleUniversity = ({id}:{id:number}) => {
   }
     return (
         <div className="mb-20 pb-20">
-            <Single_University_Banner university={university} />
+            <Banner1 university={university} />
             <div className="max-w-7xl mx-auto">
                 <p className="text-center md:text-6xl text-4xl font-semibold md:mt-36 mt-28 md:mx-0 mx-5">
                     {university.name}

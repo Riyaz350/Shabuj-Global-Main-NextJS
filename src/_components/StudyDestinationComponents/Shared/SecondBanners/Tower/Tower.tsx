@@ -1,5 +1,5 @@
 import React from 'react';
-import TowerSVG from '../../SVGs/TowerSVG';
+import TowerSVG from './TowerSVG';
 
 const Tower = ({country, description}:{country:string, description: string}) => {
     return (

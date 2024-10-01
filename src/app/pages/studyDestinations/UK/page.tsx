@@ -6,16 +6,16 @@ import FAQ from '@/_components/StudyDestinationComponents/Shared/Components/FAQ/
 import QuickFacts from '@/_components/StudyDestinationComponents/Shared/Components/QuickFacts/QuickFacts';
 import RequirementCard from '@/_components/StudyDestinationComponents/Shared/Components/RequirementCard/RequirementCard';
 import Tabs from '@/_components/StudyDestinationComponents/Shared/Components/Tabs/Tabs';
-import Tower from '@/_components/StudyDestinationComponents/Shared/Components/Tower/Tower';
+import Tower from '@/_components/StudyDestinationComponents/Shared/SecondBanners/Tower/Tower';
 import UniversityCards from '@/_components/StudyDestinationComponents/Shared/Components/UniversityCards/UniversityCards';
 import University_Required_Docs from '@/_components/StudyDestinationComponents/Shared/Components/UniversityRequiredDocs/University_Required_Docs';
 import GuidanceBanner from '@/_components/StudyDestinationComponents/Shared/Guidence/GuidenceBanner';
-import Banner1 from '@/_components/StudyDestinationComponents/Shared/SVGs/Banner1';
 import Doc1 from '@/_components/StudyDestinationComponents/UK/SVG/Doc1';
 import Doc2 from '@/_components/StudyDestinationComponents/UK/SVG/Doc2';
 import Doc3 from '@/_components/StudyDestinationComponents/UK/SVG/Doc3';
 import FAQUK from '@/_components/StudyDestinationComponents/UK/SVG/FAQUK';
 import React from 'react';
+import Banner1 from '@/_components/StudyDestinationComponents/Shared/Banners/Banner1/Banner1';
 
 const page = () => {
     return (

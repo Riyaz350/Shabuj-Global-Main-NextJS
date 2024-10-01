@@ -13,6 +13,8 @@ const nextConfig = {
       { source: '/logIn', destination: '/pages/logIn' },
       { source: '/registration', destination: '/pages/registration' },
       { source: '/UK', destination: '/pages/studyDestinations/UK' },
+      { source: '/USA', destination: '/pages/studyDestinations/USA' },
+      { source: '/Australia', destination: '/pages/studyDestinations/Australia' },
       { source: '/singleUniversity/:id', destination: '/pages/singleUniversity/:id' },
     ]
   },

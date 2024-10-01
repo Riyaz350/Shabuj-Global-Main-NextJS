@@ -50,7 +50,7 @@ const Home_Events = () => {
     }
 
     return (
-        <div className='events-bg lg:h-[915px] h-[629px] lg:mb-[100px] mb-5 events-width overflow-hidden'>
+        <div className='events-bg lg:h-[915px] h-[529px] lg:mb-[100px] mb-5 events-width overflow-hidden'>
             <div>
                 <h2 className='poppins-bold lg:text-[64px] text-[28px] text-gradient text-center lg:pt-[123px] pt-[50px] lg:pb-[68px] pb-[41px] text-white'>Upcoming Events</h2>
             </div>
@@ -107,7 +107,7 @@ const Home_Events = () => {
                     </button>
                 
                 
-                    <button className='absolute lg:hidden block z-10 top-[440px] left-52 md:left-[400px]' onClick={slideNext}>
+                    <button className='absolute lg:hidden block z-10 top-[340px] left-52 md:left-[400px]' onClick={slideNext}>
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.456522" y="41.5435" width="41.087" height="41.087" rx="20.5435" transform="rotate(-90 0.456522 41.5435)" fill="white" />
                             <rect x="0.456522" y="41.5435" width="41.087" height="41.087" rx="20.5435" transform="rotate(-90 0.456522 41.5435)" stroke="white" strokeWidth="0.913044" />
@@ -116,7 +116,7 @@ const Home_Events = () => {
                     </button>
                 
                 
-                    <button className='absolute lg:hidden block top-[440px] left-40 md:left-[335px]' onClick={slidePrev}>
+                    <button className='absolute lg:hidden block top-[340px] left-40 md:left-[335px]' onClick={slidePrev}>
                         <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="41.5435" y="0.456522" width="41.087" height="41.087" rx="20.5435" transform="rotate(90 41.5435 0.456522)" fill="white" />
                             <rect x="41.5435" y="0.456522" width="41.087" height="41.087" rx="20.5435" transform="rotate(90 41.5435 0.456522)" stroke="white" strokeWidth="0.913044" />

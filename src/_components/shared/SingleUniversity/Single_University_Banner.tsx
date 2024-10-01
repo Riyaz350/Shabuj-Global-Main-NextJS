@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Single_University_Banner = ({university}:{university: {logo:string, name:string}}) => {
+const Banner1 = ({university}:{university: {logo:string, name:string}}) => {
 
 
   return (
@@ -21,4 +21,4 @@ const Single_University_Banner = ({university}:{university: {logo:string, name:s
   );
 };
 
-export default Single_University_Banner;
+export default Banner1;
