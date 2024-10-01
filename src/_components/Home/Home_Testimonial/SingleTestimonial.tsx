@@ -20,7 +20,7 @@ const SingleTestimonial = ({ item }:{item:TestimonialItem}) => {
         {comment}
       </p>
       <div className="absolute top-[31px] left-[19px]">
-        <Image width={100} height={100} src="./assets/quote.png" alt="" />
+        <Image width={100} height={100} className="w-auto h-auto" src="./assets/quote.png" alt="" />
       </div>
     </div>
   );

@@ -53,7 +53,7 @@ const Home_Testimonial = () => {
                     : " transition-all duration-300"
                 } h-full flex-grow !p-5 min-w-[50%]  relative duration-200 bg-white rounded-3xl md:block hidden`}
               >
-                <Image width={100} height={100} className="absolute w-fit md:w-1/6 h-auto lg:top-8 top-2 left-2 lg:left-8" src='https://i.ibb.co.com/tQnYRyP/Highlight.png' alt="" />
+                <Image width={100} height={100} className="absolute w-fit md:w-1/6 h-auto lg:top-8 top-2 md:top-4 left-2 md:left-10 lg:left-8" src='https://i.ibb.co.com/tQnYRyP/Highlight.png' alt="" />
                 <Image width={100} height={100} src={slide.img} className="mx-auto mt-10 lg:mt-16 h-40 w-auto  object-cover rounded-xl" alt={slide.name} />
                 <div className="lg:mx-5 flex-1">
                   <p className="text-xl lg:text-3xl my-5 font-semibold text-center">
@@ -74,7 +74,7 @@ const Home_Testimonial = () => {
                 } min-w-[50%] duration-200 bg-white rounded-3xl lg:hidden md:hidden block relative`}
               >
                 <Image width={100} height={100}
-                  className="absolute top-4 left-6 w-36 h-32"
+                  className="absolute top-3 left-6 w-8 h-8 "
                   src='https://i.ibb.co.com/tQnYRyP/Highlight.png'
                   alt="highlight"
                 />
