@@ -30,7 +30,7 @@ const page = () => {
             <Exams country='UK'/>
             <GuidanceBanner/>
             <University_Required_Docs country='UK' doc1={Doc1} doc2={Doc2} doc3={Doc3}/>
-            <FAQ bgColor={"bg-[#004AC8]"} FAQimg={FAQUK} />
+            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQUK} country='UK'/>
             <Counselor bgColor='linear-gradient(93deg, rgba(50,135,253,1) 0%, rgba(2,28,229,1) 100%)'/>
 
         </div>

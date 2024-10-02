@@ -1,26 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react'
 
-export default function FAQ({bgColor, FAQimg:FAQComponent}:{bgColor:string, FAQimg:React.FC}) {
+export default function FAQ({bgColor, FAQimg:FAQComponent, country}:{bgColor:string, FAQimg:React.FC, country:string}) {
     const faq=[
         {
-          question: "How much can it cost to study in the UK?",
-          answer: "The cost of studying in the UK can vary, but on average,it can range from £10,000 to £38,000 per year for international students."
+          question: `How much can it cost to study in the $${country}?`,
+          answer: `The cost of studying in the ${country} can vary, but on average,it can range from £10,000 to £38,000 per year for international students.`
         },
         {
-          question: "How can I go to the UK from Bangladesh to study?",
-          answer: "To go to the UK from Bangladesh to study, you need to apply for a student visa and meet the eligibility criteria set by the UK government."
+          question: `How can I go to the ${country} from Bangladesh to study?`,
+          answer: `To go to the ${country} from Bangladesh to study, you need to apply for a student visa and meet the eligibility criteria set by the ${country} government.`
         },
         {
-          question: "Do I need IELTS to study in the UK?",
-          answer: "Yes, generally, a valid IELTS score is required for studying in the UK, although some universities may accept alternative English language proficiency tests."
+          question: `Do I need IELTS to study in the ${country}?`,
+          answer: `Yes, generally, a valid IELTS score is required for studying in the ${country}, although some universities may accept alternative English language proficiency tests.`
         },
         {
-          question: "What is the minimum qualification to study in the UK?",
-          answer: "The minimum qualification to study in the UK is a completed secondary education or equivalent, such as A-levels, International Baccalaureate (IB), or equivalent qualifications."
+          question: `What is the minimum qualification to study in the ${country}?`,
+          answer: `The minimum qualification to study in the ${country} is a completed secondary education or equivalent, such as A-levels, International Baccalaureate (IB), or equivalent qualifications.`
         },
         {
-          question: "What is the minimum GPA required to study in the UK?",
-          answer: "The minimum GPA required to study in the UK can vary depending on the university and program, but a good academic record is generally expected."
+          question: `What is the minimum GPA required to study in the ${country}?`,
+          answer: `The minimum GPA required to study in the ${country} can vary depending on the university and program, but a good academic record is generally expected.`
         }
       ];
       const [activeIndex, setActiveIndex] = useState<number |null>(null);

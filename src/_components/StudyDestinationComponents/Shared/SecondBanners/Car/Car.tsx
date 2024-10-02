@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-const SecondBanner = ({ country,description }:{country:string, description:string}) => {
+const SecondBanner = ({ country,description, bgColor }:{country:string, description:string, bgColor:string}) => {
     return (
       <div className="bg-[#EFF6FF] rounded-[32px] py-16">
-        <div className="max-w-screen-xl mx-auto bg-[#00008B] rounded-[32px] px-10 lg:px-24 pt-12 pb-44 text-white relative">
+        <div className={`max-w-screen-xl mx-auto ${bgColor} rounded-[32px] px-10 lg:px-24 pt-12 pb-44 text-white relative`}>
           <h4 className="text-2xl  lg:text-[40px] font-semibold text-center pb-6">
             Why Study in {country}?
           </h4>

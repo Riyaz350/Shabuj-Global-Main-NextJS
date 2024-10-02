@@ -15,6 +15,8 @@ const nextConfig = {
       { source: '/UK', destination: '/pages/studyDestinations/UK' },
       { source: '/USA', destination: '/pages/studyDestinations/USA' },
       { source: '/Australia', destination: '/pages/studyDestinations/Australia' },
+      { source: '/Canada', destination: '/pages/studyDestinations/Canada' },
+      { source: '/Germany', destination: '/pages/studyDestinations/Germany' },
       { source: '/singleUniversity/:id', destination: '/pages/singleUniversity/:id' },
     ]
   },
