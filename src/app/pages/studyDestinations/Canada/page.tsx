@@ -31,7 +31,7 @@ const page = () => {
             <GuidanceBanner/>
             <University_Required_Docs country='Canada' doc1={Doc1} doc2={Doc2} doc3={Doc3}/>
             <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQCanada} country='Canada'/>
-            <Counselor bgColor='linear-gradient(77deg, rgba(60,100,68,1) 0%, rgba(4,45,7,1) 100%)'/>
+            <Counselor country='Canada' bgColor='linear-gradient(77deg, rgba(60,100,68,1) 0%, rgba(4,45,7,1) 100%)'/>
 
         </div>
     );
