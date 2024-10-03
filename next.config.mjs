@@ -22,6 +22,9 @@ const nextConfig = {
       { source: '/Georgia', destination: '/pages/studyDestinations/Georgia' },
       { source: '/Finland', destination: '/pages/studyDestinations/Finland' },
       { source: '/Cyprus', destination: '/pages/studyDestinations/Cyprus' },
+      { source: '/Switzerland', destination: '/pages/studyDestinations/Switzerland' },
+      { source: '/France', destination: '/pages/studyDestinations/France' },
+      { source: '/West-Indies', destination: '/pages/studyDestinations/West-Indies' },
       { source: '/singleUniversity/:id', destination: '/pages/singleUniversity/:id' },
     ]
   },

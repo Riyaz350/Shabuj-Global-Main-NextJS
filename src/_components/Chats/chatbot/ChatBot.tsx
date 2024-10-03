@@ -1,9 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import useChatData from "../Hooks/useChatData";
-import useAxiosPublic from "../Hooks/useAxiosPublic";
-import { IoChatboxOutline } from "react-icons/io5";
 import { v4 as uuidv4 } from "uuid";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { BsFillSendFill } from "react-icons/bs";
@@ -12,7 +9,9 @@ import ClientResponse from "./ResponseTypes/ClientResponse";
 import BotTextResponse from "./ResponseTypes/BotTextResponse";
 import UniversityList from "./ResponseTypes/UniversityList";
 import ErrorResponse from "./ResponseTypes/ErrorResponse";
-const ChatBot = () => {
+import useChatData from "@/_components/StudyDestinationComponents/Shared/Components/Hooks/useChatData";
+import useAxiosPublic from "@/_components/StudyDestinationComponents/Shared/Components/Hooks/useAxiosPublic";
+const ChatBot = ({chatHover, showChat, setShowChat}:{chatHover:boolean, showChat: boolean, setShowChat:React.Dispatch<React.SetStateAction<boolean>>}) => {
 
   interface Payload{
     fields:{
@@ -33,7 +32,6 @@ const ChatBot = () => {
   const [token, setToken] = useState<string |null>(null);
   const [chatData, refetch] = useChatData(token);
   const axiosPublic = useAxiosPublic();
-  const [showChat, setShowChat] = useState(false);
   // const [loading, setLoading] = useState<boolean>(false)
   const generateToken = () => {
     return uuidv4();
@@ -121,22 +119,22 @@ const ChatBot = () => {
 
   return (
     <div
-      className={`${showChat ? "sm:w-[450px] w-[330px]" : "w-0"} z-50    fixed bottom-0 right-0`}
+      className={`${showChat ? "sm:w-[450px] w-[330px]" : "w-0"} z-40    fixed bottom-0 right-0`}
     >
       {token ? (
         <div className="overflow-hidden ">
           <div
             onClick={() => setShowChat(true)}
-            className={`${showChat ? "hidden" : "flex flex-col"} cursor-pointer fixed  right-10 bottom-10`}
+            className={`${showChat ? "hidden" : "flex flex-col"} cursor-pointer fixed transition-all duration-300 ${chatHover? 'right-14 bottom-28': 'right-10 bottom-10'}`}
           >
             <p
               style={{
                 WebkitTransform: `scaleX(-1)`,  
                 transform: `scaleX(-1)`,
               }}
-              className="text-3xl text-white border-2 border-white rounded-full  p-3 bg-black"
+              className="text-xl w-12 h-12 text-center flex items-center text-white border-2 border-white rounded-full  p-3 bg-black"
             >
-              <IoChatboxOutline />
+              IA
             </p>
           </div>
           <motion.div

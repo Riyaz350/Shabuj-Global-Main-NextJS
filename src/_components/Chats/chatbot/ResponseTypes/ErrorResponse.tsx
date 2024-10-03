@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import logo from '../../../../../../assets/images/Group.svg'
+import logo from '../../../../assets/images/Group.svg'
 import Image from "next/image";
 import Link from "next/link";
 
