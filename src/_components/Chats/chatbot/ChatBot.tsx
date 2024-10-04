@@ -210,7 +210,8 @@ const ChatBot = ({chatHover, showChat, setShowChat}:{chatHover:boolean, showChat
               ) : (
                 <div className="w-1/2 mx-auto">
                   <p>
-                    <span className="loading loading-dots loading-lg"></span>
+                    <span className="loading loading-dots loading-lg">
+                    </span>
                   </p>
                 </div>
               )}

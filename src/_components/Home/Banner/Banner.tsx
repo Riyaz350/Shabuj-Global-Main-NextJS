@@ -9,9 +9,9 @@ const Banner = () => {
             <div className='section'>
                 <div className='section-bg'></div>
                 <div className='section-content pt-[31px] lg:pt-[93px] lg:pb-[206px] pb-[70px] max-w-[1155px] mx-auto'>
-                    <div className='text-center lg:text-left pl-10'>
+                    <div className='text-center lg:text-left lg:pl-10'>
                         <h2 className='text-[#00399f] text-center tracking-tight lg:text-left text-[45px] lg:text-[90px] font-bold lg:leading-[110px] leading-[130%]'>Start Your Path to<br></br> Global Education</h2>
-                        <p className='font-normal lg:text-left text-center text-[14px] leading-[160%] lg:text-[21px] text-[#081831] pl-6 lg:pl-0 pt-[14px] lg:pb-[61px] pb-[19px]'>We take pride in our ability to help students achieve their<br></br> academic goals and succeed in life.</p>
+                        <p className='font-normal lg:text-left text-center text-[14px] leading-[160%] lg:text-[21px] text-[#081831] lg:pl-6   pt-[14px] lg:pb-[61px] pb-[19px]'>We take pride in our ability to help students achieve their<br></br> academic goals and succeed in life.</p>
                         <div className="buttons-group-container">
                             <div className="buttons-group">
                                 <Link href='/comingSoon' className='flex justify-between'>Enquire</Link>
