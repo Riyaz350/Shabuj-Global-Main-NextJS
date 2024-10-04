@@ -70,9 +70,9 @@ const CoreStrength = () => {
                         className="rounded-2xl  relative ">
                         <div className='lg:flex  flex-col-reverse lg:flex-row-reverse '>
                             <div className='  lg:mt-32 lg:w-1/2 text-center lg:py-0 py-10 mx-auto  bg-clip-text lg:inline-block text-transparent text-6xl font-bold'>
-                                <h1 className='text-gradient poppins-bold'>Our Core Strength</h1>
+                                <h1 className='text-gradient poppins-bold pb-2'>Our Core Strength</h1>
                             </div>
-                            <Image width={100} height={100} className=' lg:mt-[-80px] lg:p-[10px] md:w-1/2 mx-auto lg:w-fit' src='https://i.ibb.co.com/rtSqMV2/strength1.png' alt="" />
+                            <Image width={100} height={100} className=' lg:mt-[-80px] lg:p-[10px] w-1/2 mx-auto lg:w-fit' src='https://i.ibb.co.com/rtSqMV2/strength1.png' alt="" />
                         </div>
                         <div
                             style={{
@@ -84,7 +84,7 @@ const CoreStrength = () => {
 
                                 {counterDatas.map((counter, index) => (
                                     <div key={index} className=" m-0 text-center flex flex-col items-center justify-between ">
-                                        <Image width={100} height={100} src={counter?.img} alt="" />
+                                        <Image width={100} height={100} className='w-auto h-auto' src={counter?.img} alt="" />
                                         <div className={counterStyle} ref={ref}> {isVisible && <CountUp end={counter?.number} duration={2.5} />}{index !== 0 && '+'}</div>
                                         <h2 className="text-xs lg:text-base font-light    ">{counter?.text}</h2>
                                     </div>
