@@ -12,34 +12,73 @@ import {
   Textarea,
   Typography,
 } from "@material-tailwind/react";
+import axios from "axios";
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
 import { HiXMark } from "react-icons/hi2";
+import { Slide, toast } from "react-toastify";
 import { useCountries } from "use-react-countries";
 
 export default function EnquireModal() {
   const [open, setOpen] = useState(false);
   const { countries } = useCountries();
   const handleOpen = () => setOpen(!open);
-  const [value, setValue] = useState("");
-  console.log(value);
 
-  const HandleEnquies = (e) => {
+  const HandleEnquies = async (e) => {
     e.preventDefault(); // Prevent the default form submission
     const form = e.target; // Get the form element
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
     // Gather all form data
     const data = {
-      name: form.name.value,
+      // name: form.name.value,
       email: form.email.value,
-      phone: form.phone.value,
-      country: value,
-      question: form.question.value,
+      subect: form.subject.value,
+      // phone: form.phone.value,
+      // country: form.country.value,
+      message: form.question.value,
     };
 
     console.log(data);
-    setValue("");
+    try {
+      // Make sure to pass 'data' in the request body
+      await axios.post(`${apiUrl}/enquire`, data);
+      console.log("Data submitted successfully");
+      toast.success(
+        "Your enquiry form submitted successfully. We will contact with you very soon",
+        {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Slide,
+          style: { zIndex: 999999999 },
+        }
+      );
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      let errMessage = "An unknown error occurred"; // Default message
+      if (error instanceof Error) {
+        errMessage = error.message;
+      }
+
+      toast.error(errMessage, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+      });
+    }
   };
 
   return (
@@ -51,7 +90,7 @@ export default function EnquireModal() {
         size="sm"
         open={open}
         handler={handleOpen}
-        className="!w-[400px] !max-h-[600px] p-5 overflow-y-scroll"
+        className="!w-[400px] !max-h-[600px] p-5 overflow-y-scroll !-z-10"
       >
         <DialogHeader className="relative m-0 block">
           <div className="w-4/5">
@@ -74,6 +113,31 @@ export default function EnquireModal() {
         </DialogHeader>
         <form onSubmit={(e) => HandleEnquies(e)}>
           <DialogBody className="space-y-4 pb-0">
+              {/* Full Name */}
+              <div>
+              <Typography
+                variant="small"
+                color="blue-gray"
+                className="mb-2 text-left font-medium"
+              >
+                Subject
+              </Typography>
+              <Input
+                required
+                type="text"
+                color="gray"
+                size="lg"
+                placeholder="eg. Want to know about the process"
+                name="subject"
+                className="placeholder:opacity-100 focus:!border-gray-400 !border-gray-400"
+                containerProps={{
+                  className: "!min-w-full",
+                }}
+                labelProps={{
+                  className: "hidden",
+                }}
+              />
+            </div>
             {/* Full Name */}
             <div>
               <Typography
@@ -165,7 +229,7 @@ export default function EnquireModal() {
               </Typography>
               <select
                 required
-                className={`w-full  outline-0 focus:outline-none  px-5 py-3 rounded-md  !border-gray-400  border placeholder:opacity-100 focus:!border-2`}
+                className={`w-full  outline-0 focus:outline-none  px-5 py-3 rounded-md  !border-gray-400  border placeholder:opacity-100 focus:!border-2 text-sm`}
                 name="country"
                 defaultValue={""}
               >
@@ -202,7 +266,7 @@ export default function EnquireModal() {
             </div>
           </DialogBody>
           <DialogFooter>
-            <Button type="submit" className="ml-auto bg-[#00399F]">
+            <Button type="submit" className="ml-auto bg-[#00399F]" onClick={handleOpen}>
               Submit Enquiry
             </Button>
           </DialogFooter>
