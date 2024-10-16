@@ -139,7 +139,7 @@ export default function EnquireModal() {
                 </Typography>
                 <Input
                   required
-                  type="text" // Changed to text for better flexibility with different phone formats
+                  type="number" // Changed to text for better flexibility with different phone formats
                   color="gray"
                   size="lg"
                   placeholder="eg. 01700000000"
@@ -164,41 +164,21 @@ export default function EnquireModal() {
               >
                 Your Country
               </Typography>
-              <Select
+              <select
                 required
-                className={`${
-                  value == "" ? "!border-red-400" : "!border-gray-400"
-                } placeholder:opacity-100 focus:!border-gray-400 `}
-                name="country" // Added name attribute for country
-                labelProps={{
-                  className: "hidden",
-                }}
-                value={value}
-                onChange={(val) => setValue(val)}
-                selected={(element) =>
-                  element &&
-                  React.cloneElement(element, {
-                    disabled: true,
-                    className:
-                      "flex items-center opacity-100 px-0 gap-2 pointer-events-none",
-                  })
-                }
+                className={`w-full  outline-0 focus:outline-none  px-5 py-3 rounded-md  !border-gray-400  border placeholder:opacity-100 focus:!border-2`}
+                name="country"
+                defaultValue={""}
               >
+                <option value={""} disabled>
+                  <p>Select Your Country</p>
+                </option>
                 {countries.map(({ name, flags }) => (
-                  <Option
-                    key={name}
-                    value={name}
-                    className="!flex items-center gap-2"
-                  >
-                    <img
-                      src={flags.svg}
-                      alt={name}
-                      className="h-5 w-5 rounded-full object-cover"
-                    />
-                    <p>{name}</p>
-                  </Option>
+                  <option key={name} value={name}>
+                    {name}
+                  </option>
                 ))}
-              </Select>
+              </select>
             </div>
 
             {/* Your Question */}
