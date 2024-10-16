@@ -2,6 +2,8 @@
 import { MdDone } from "react-icons/md";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import axios from "axios";
+import { Slide, toast } from "react-toastify";
 
 const ContactUs_Components = () => {
   const [tik, setTik] = useState(false);
@@ -11,8 +13,9 @@ const ContactUs_Components = () => {
     setWidth(window.innerWidth);
   }, []);
 
-  const HandleForm = (event: React.FormEvent<HTMLFormElement>) => {
+  const HandleForm = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
     const formData = new FormData(event.target as HTMLFormElement); // Create a FormData object
 
@@ -23,8 +26,51 @@ const ContactUs_Components = () => {
     const year = formData.get("year") as string;
     const destination = formData.get("destination") as string;
 
-    console.log({ name, email, number, intake, year, destination });
+    const data = {
+      name,
+      email,
+      phoneNumber: number,
+      studyIntake: intake,
+      studyYear: year,
+      studyDestination: destination,
+    }
+
+    try {
+      // Make sure to pass 'data' in the request body
+      await axios.post(`${apiUrl}/apply`, data);
+      console.log("Data submitted successfully");
+      toast.success('Your application submitted successfully', {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+        });
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      let errMessage = "An unknown error occurred"; // Default message
+      if (error instanceof Error) {
+        errMessage = error.message;
+      }
+    
+      toast.error(errMessage, {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+      });
+    }
   };
+
 
   const inputClass = `  md:rounded-md w-full  outline-none placeholder:text-xs  placeholder:text-[8px]   ${
     width >= 1024 && width <= 1300

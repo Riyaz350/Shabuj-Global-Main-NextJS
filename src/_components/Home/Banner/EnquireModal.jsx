@@ -15,7 +15,6 @@ import {
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
-import toast from "react-hot-toast";
 import { HiXMark } from "react-icons/hi2";
 import { useCountries } from "use-react-countries";
 

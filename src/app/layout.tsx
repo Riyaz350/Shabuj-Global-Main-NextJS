@@ -4,7 +4,8 @@ import Navbar2 from "@/_components/shared/Navbar/Navbar";
 import Footer from "@/_components/shared/Footer/Footer/Footer";
 import Providers from "@/_components/QueryClientProvider/Providers";
 import Chats from "@/_components/Chats/Chats";
-import { Toaster } from "react-hot-toast";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata: Metadata = {
   title: "Shabuj Global Education",
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en" data-theme="light">
       <body className={` antialiased`}>
         <Providers>
+        <ToastContainer />
           <Navbar2 />
           <div className="pb-10">
             {children}
