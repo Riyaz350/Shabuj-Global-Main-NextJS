@@ -33,14 +33,14 @@ const ContactUs_Components = () => {
       studyIntake: intake,
       studyYear: year,
       studyDestination: destination,
-    }
+    };
 
     try {
       // Make sure to pass 'data' in the request body
       await axios.post(`${apiUrl}/apply`, data);
       console.log("Data submitted successfully");
-      toast.success('Your application submitted successfully', {
-        position: "bottom-left",
+      toast.success("Your application submitted successfully", {
+        position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -49,14 +49,17 @@ const ContactUs_Components = () => {
         progress: undefined,
         theme: "light",
         transition: Slide,
-        });
+      });
+      // Reset the form after successful submission
+      (event.target as HTMLFormElement).reset();
     } catch (error) {
       console.error("Error submitting the form:", error);
       let errMessage = "An unknown error occurred"; // Default message
-      if (error instanceof Error) {
-        errMessage = error.message;
+      if (axios.isAxiosError(error) && error.response) {
+        errMessage =
+          error.response.data.message || error.response.data || error.message;
       }
-    
+
       toast.error(errMessage, {
         position: "bottom-right",
         autoClose: 5000,
@@ -70,7 +73,6 @@ const ContactUs_Components = () => {
       });
     }
   };
-
 
   const inputClass = `  md:rounded-md w-full  outline-none placeholder:text-xs  placeholder:text-[8px]   ${
     width >= 1024 && width <= 1300
