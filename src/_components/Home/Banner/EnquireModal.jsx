@@ -34,7 +34,7 @@ export default function EnquireModal() {
     const data = {
       // name: form.name.value,
       email: form.email.value,
-      subect: form.subject.value,
+      subject: form.subject.value,
       // phone: form.phone.value,
       // country: form.country.value,
       message: form.question.value,
@@ -46,9 +46,9 @@ export default function EnquireModal() {
       await axios.post(`${apiUrl}/enquire`, data);
       console.log("Data submitted successfully");
       toast.success(
-        "Your enquiry form submitted successfully. We will contact with you very soon",
+        "Your enquiry submitted successfully. We will contact with you very soon",
         {
-          position: "top-center",
+          position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
           closeOnClick: true,
@@ -60,15 +60,16 @@ export default function EnquireModal() {
           style: { zIndex: 999999999 },
         }
       );
+      handleOpen()
     } catch (error) {
       console.error("Error submitting the form:", error);
       let errMessage = "An unknown error occurred"; // Default message
       if (error instanceof Error) {
-        errMessage = error.message;
+        errMessage = error.response.data || error.message;
       }
 
       toast.error(errMessage, {
-        position: "top-center",
+        position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -78,6 +79,7 @@ export default function EnquireModal() {
         theme: "light",
         transition: Slide,
       });
+      handleOpen()
     }
   };
 
@@ -90,7 +92,7 @@ export default function EnquireModal() {
         size="sm"
         open={open}
         handler={handleOpen}
-        className="!w-[400px] !max-h-[600px] p-5 overflow-y-scroll !-z-10"
+        className="!max-w-[400px] w-auto !max-h-[500px] p-5 overflow-y-scroll !-z-10"
       >
         <DialogHeader className="relative m-0 block">
           <div className="w-4/5">
@@ -164,7 +166,7 @@ export default function EnquireModal() {
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-3">
               {/* Email */}
               <div>
                 <Typography
@@ -266,7 +268,7 @@ export default function EnquireModal() {
             </div>
           </DialogBody>
           <DialogFooter>
-            <Button type="submit" className="ml-auto bg-[#00399F]" onClick={handleOpen}>
+            <Button type="submit" className="ml-auto bg-[#00399F]" >
               Submit Enquiry
             </Button>
           </DialogFooter>
