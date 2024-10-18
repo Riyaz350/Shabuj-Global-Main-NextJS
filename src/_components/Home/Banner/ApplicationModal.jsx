@@ -18,52 +18,56 @@ import { HiXMark } from "react-icons/hi2";
 import { Slide, toast } from "react-toastify";
 import { useCountries } from "use-react-countries";
 
-export default function EnquireModal() {
+export default function ApplicationModal() {
   const [open, setOpen] = useState(false);
   const { countries } = useCountries();
   const handleOpen = () => setOpen(!open);
 
-  const HandleEnquies = async (e) => {
+  const HandleApplication = async (e) => {
     e.preventDefault(); // Prevent the default form submission
     const form = e.target; // Get the form element
     const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-    // Gather all form data
+    const name = form.name.value;
+    const email = form.email.value;
+    const phoneNumber = form.number.value;
+    const studyIntake = form.intake.value;
+    const studyYear = form.year.value;
+    const studyDestination = form.destination.value;
+
     const data = {
-      // name: form.name.value,
-      email: form.email.value,
-      subject: form.subject.value,
-      // phone: form.phone.value,
-      // country: form.country.value,
-      message: form.question.value,
+      name,
+      email,
+      phoneNumber,
+      studyIntake,
+      studyYear,
+      studyDestination,
     };
 
     console.log(data);
+
     try {
       // Make sure to pass 'data' in the request body
-      await axios.post(`${apiUrl}/enquire`, data);
+      await axios.post(`${apiUrl}/apply`, data);
       console.log("Data submitted successfully");
-      toast.success(
-        "Your enquiry submitted successfully. We will contact with you very soon",
-        {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-          transition: Slide,
-          style: { zIndex: 999999999 },
-        }
-      );
-      handleOpen()
+      toast.success("Your application submitted successfully", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+      });
+
+      handleOpen();
     } catch (error) {
       console.error("Error submitting the form:", error);
       let errMessage = "An unknown error occurred"; // Default message
       if (error instanceof Error) {
-        errMessage = error.response.data || error.message;
+        error.response.data.message || error.response.data || error.message;
       }
 
       toast.error(errMessage, {
@@ -77,14 +81,14 @@ export default function EnquireModal() {
         theme: "light",
         transition: Slide,
       });
-      handleOpen()
+      handleOpen();
     }
   };
 
   return (
     <>
       <Link href={"/"} className="flex justify-between" onClick={handleOpen}>
-        Enquire
+        Apply
       </Link>
       <Dialog
         size="sm"
@@ -95,11 +99,12 @@ export default function EnquireModal() {
         <DialogHeader className="relative m-0 block">
           <div className="w-4/5">
             <Typography variant="h4" color="blue-gray">
-              Enquire About Your Future Study Plan
+              Apply for Your Study Abroad Program{" "}
             </Typography>
             <Typography className="mt-1 font-normal text-gray-600">
-              Have questions? Reach out to us with your queries, and we'll
-              assist you in your journey to studying abroad.
+              Ready to take the next step? Fill out the form below, and we'll
+              guide you through the process of applying for your study abroad
+              program.
             </Typography>
           </div>
           <IconButton
@@ -111,35 +116,10 @@ export default function EnquireModal() {
             <HiXMark className="h-4 w-4 stroke-2" />
           </IconButton>
         </DialogHeader>
-        <form onSubmit={(e) => HandleEnquies(e)}>
+        <form onSubmit={(e) => HandleApplication(e)}>
           <DialogBody className="space-y-4 pb-0">
-              {/* Subject */}
-              <div>
-              <Typography
-                variant="small"
-                color="blue-gray"
-                className="mb-2 text-left font-medium"
-              >
-                Subject
-              </Typography>
-              <Input
-                required
-                type="text"
-                color="gray"
-                size="lg"
-                placeholder="eg. Want to know about the process"
-                name="subject"
-                className="placeholder:opacity-100 focus:!border-gray-400 !border-gray-400"
-                containerProps={{
-                  className: "!min-w-full",
-                }}
-                labelProps={{
-                  className: "hidden",
-                }}
-              />
-            </div>
             {/* Full Name */}
-            {/* <div>
+            <div>
               <Typography
                 variant="small"
                 color="blue-gray"
@@ -162,9 +142,9 @@ export default function EnquireModal() {
                   className: "hidden",
                 }}
               />
-            </div> */}
+            </div>
 
-            <div className="grid grid-cols-1 gap-3">
+            <div className="grid md:grid-cols-2 grid-cols-2 gap-3">
               {/* Email */}
               <div>
                 <Typography
@@ -192,7 +172,7 @@ export default function EnquireModal() {
               </div>
 
               {/* Phone Number */}
-              {/* <div>
+              <div>
                 <Typography
                   variant="small"
                   color="blue-gray"
@@ -206,7 +186,7 @@ export default function EnquireModal() {
                   color="gray"
                   size="lg"
                   placeholder="eg. 01700000000"
-                  name="phone"
+                  name="number"
                   className="placeholder:opacity-100 !border-gray-400 focus:!border-gray-400"
                   containerProps={{
                     className: "!min-w-full",
@@ -215,59 +195,102 @@ export default function EnquireModal() {
                     className: "hidden",
                   }}
                 />
-              </div> */}
+              </div>
             </div>
 
-            {/* Your Country */}
-            {/* <div>
-              <Typography
-                variant="small"
-                color="blue-gray"
-                className="mb-2 text-left font-medium"
-              >
-                Your Country
-              </Typography>
-              <select
-                required
-                className={`w-full  outline-0 focus:outline-none  px-5 py-3 rounded-md  !border-gray-400  border placeholder:opacity-100 focus:!border-2 text-sm`}
-                name="country"
-                defaultValue={""}
-              >
-                <option value={""} disabled>
-                  <p>Select Your Country</p>
-                </option>
-                {countries.map(({ name, flags }) => (
-                  <option key={name} value={name}>
-                    {name}
-                  </option>
-                ))}
-              </select>
-            </div> */}
+            {/* Preferred Study Destination */}
 
-            {/* Your Question */}
             <div>
               <Typography
                 variant="small"
                 color="blue-gray"
                 className="mb-2 text-left font-medium"
               >
-                Your Question
+                Select Study Destination
               </Typography>
-              <Textarea
-                rows={4}
+              <select
+                name="destination"
                 required
-                placeholder="eg. Start Your Path to Global Education"
-                name="question" // Added name attribute for question
-                className="placeholder:opacity-100 focus:!border-gray-400 !border-gray-400"
-                labelProps={{
-                  className: "hidden",
-                }}
-              />
+                defaultValue={""}
+                className={`w-full  outline-0 focus:outline-none  px-5 py-3 rounded-md  !border-gray-400  border placeholder:opacity-100 focus:!border-2 text-sm`}
+              >
+                <option value={""} disabled>
+                  Preferred Study Destination
+                </option>
+                <option>UK</option>
+                <option>USA</option>
+                <option>Canada</option>
+                <option>NewZealand</option>
+                <option>Germany</option>
+                <option>UAE</option>
+                <option>Georgia</option>
+                <option>Finland</option>
+                <option>Cyprus</option>
+                <option>Switzerland</option>
+                <option>France</option>
+                <option>West Indies</option>
+                <option>Australia</option>
+                <option>Others</option>
+              </select>
+            </div>
+
+            {/* select study year */}
+
+            <div>
+              <Typography
+                variant="small"
+                color="blue-gray"
+                className="mb-2 text-left font-medium"
+              >
+                Select Study Year
+              </Typography>
+              <select
+                defaultValue={""}
+                name="year"
+                required
+                className={`w-full  outline-0 focus:outline-none  px-5 py-3 rounded-md  !border-gray-400  border placeholder:opacity-100 focus:!border-2 text-sm`}
+              >
+                {/* Preferred Study Year */}
+                <option value={""} disabled>
+                  Preferred Study Year
+                </option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+                <option>2027</option>
+                <option>2028</option>
+              </select>
+            </div>
+
+            {/* select study Intake */}
+
+            <div>
+              <Typography
+                variant="small"
+                color="blue-gray"
+                className="mb-2 text-left font-medium"
+              >
+                Select Study Intakr
+              </Typography>
+              <select
+                defaultValue={""}
+                required
+                name="intake"
+                className={`w-full  outline-0 focus:outline-none  px-5 py-3 rounded-md  !border-gray-400  border placeholder:opacity-100 focus:!border-2 text-sm`}
+              >
+                {/* Preferred Study Intake */}
+                <option value={""} disabled>
+                  Preferred Study Intake
+                </option>
+                <option>Summer</option>
+                <option>Fall</option>
+                <option>Winter</option>
+              </select>
             </div>
           </DialogBody>
           <DialogFooter>
-            <Button type="submit" className="ml-auto bg-[#00399F]" >
-              Submit Enquiry
+            <Button type="submit" className="ml-auto bg-[#00399F]">
+              Submit Application
             </Button>
           </DialogFooter>
         </form>
