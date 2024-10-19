@@ -409,7 +409,7 @@ const Navbar2 = () => {
 
                         <Link
                           onClick={closeNavbar}
-                          href={"/comingSoon"}
+                          href={"/who-we"}
                           className={`${iconStyle} flex gap-2 items-center  py-3 `}
                         >
                           <BsGridFill />
@@ -732,7 +732,7 @@ const Navbar2 = () => {
         {navIndex == 4 && (
           <div className="hidden lg:grid  lg:grid-cols-3 px-10 max-w-7xl mx-10 space-y-2 lg:space-y-0 lg:mx-auto my-10">
             <ul className="col-span-1 space-y-4 text-lg ">
-              <Link href="/comingSoon" className={iconStyle}>
+              <Link href="/who-we" className={iconStyle}>
                 <BsGridFill />
                 Who We Are
               </Link>
