@@ -8,9 +8,6 @@ import {
   Typography,
   TimelineHeader,
 } from "@material-tailwind/react";
-import { PiBuildingsThin, PiGlobeHemisphereEastThin } from "react-icons/pi";
-import { LiaUniversitySolid } from "react-icons/lia";
-import { GiGraduateCap } from "react-icons/gi";
 
 export default function TimelineLayout({timelineData}) {
  

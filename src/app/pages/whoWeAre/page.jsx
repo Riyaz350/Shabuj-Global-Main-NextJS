@@ -1,13 +1,14 @@
 import Image from "next/image";
 import SubHeading from "../../../_components/AboutUs/Who_we_are/SubHeading";
 import TimelineLayout from "../../../_components/AboutUs/Who_we_are/TimelineLayout";
-import { GiDrippingStar, GiGraduateCap } from "react-icons/gi";
+import { GiDrippingStar } from "react-icons/gi";
 import {
   PiAirplaneTiltThin,
   PiChalkboardTeacherLight,
   PiEyeLight,
   PiGlobeStandLight,
   PiGlobeThin,
+  PiGraduationCapThin,
   PiHandshakeThin,
   PiLightbulbThin,
   PiMoneyWavyLight,
@@ -21,6 +22,9 @@ import ParaGraph from "@/_components/shared/About/ParaGraph";
 import FloatingCard from "@/_components/shared/About/FloatingCard";
 import HoverCard from "@/_components/shared/About/HoverCard";
 import IconCard from "@/_components/shared/About/IconCard";
+import { PiBuildingsThin, PiGlobeHemisphereEastThin } from "react-icons/pi";
+import { LiaUniversitySolid } from "react-icons/lia";
+
 
 export default function page() {
   const services = [
@@ -51,7 +55,7 @@ export default function page() {
       title: "Student-Centred Approach",
       description:
         "Prioritising the individual needs and aspirations of each student, ensuring personalised support and guidance.",
-      icon: <GiGraduateCap className="text-4xl text-[#00399F] font-thin" />,
+      icon: <PiGraduationCapThin className="text-3xl text-[#00399F] font-thin" />,
     },
     {
       title: "Integrity and Transparency",
@@ -197,7 +201,7 @@ export default function page() {
       title: "2020s",
       description:
         "Shabuj Global continued to grow, placing over 145,000 students worldwide, and expanded its services to facilitate student transfers between universities.",
-      icon: <GiGraduateCap className="h-5 w-5  text-white" />,
+      icon: <PiGraduationCapThin className="h-5 w-5  text-white" />,
     },
   ];
 
