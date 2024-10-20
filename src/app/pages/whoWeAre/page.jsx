@@ -4,11 +4,14 @@ import TimelineLayout from "../../../_components/AboutUs/Who_we_are/TimelineLayo
 import { GiDrippingStar, GiGraduateCap } from "react-icons/gi";
 import {
   PiAirplaneTiltThin,
+  PiChalkboardTeacherLight,
   PiEyeLight,
   PiGlobeStandLight,
   PiGlobeThin,
   PiHandshakeThin,
   PiLightbulbThin,
+  PiMoneyWavyLight,
+  PiPencilSimpleLineThin,
 } from "react-icons/pi";
 import { GoSync } from "react-icons/go";
 import { BsCheck2Circle } from "react-icons/bs";
@@ -112,6 +115,37 @@ export default function page() {
     },
   ];
 
+  const helpServices = [
+    {
+      title: "University Admission Assistance",
+      description:
+        "They help students apply to universities, offering guidance through the entire process from selecting institutions to preparing application materials.",
+      icon: (
+        <PiPencilSimpleLineThin className="text-5xl text-[#00399F] font-thin" />
+      ),
+    },
+    {
+      title: "Scholarship Guidance",
+      description:
+        "They assist students in finding and applying for scholarships, improving chances of financial support for education.",
+      icon: <PiMoneyWavyLight className="text-5xl text-[#00399F] font-thin" />,
+    },
+    {
+      title: "Educational Consulting",
+      description:
+        "Expert consultants provide personalised advice on course selection, career planning, and the best pathways for academic success.",
+      icon: (
+        <PiChalkboardTeacherLight className="text-5xl text-[#00399F] font-thin" />
+      ),
+    },
+    {
+      title: "Support for International Students",
+      description:
+        "Shabuj Global provides specialised services for students coming from abroad, including visa support, accommodation assistance, and helping them adjust to the new environment.",
+      icon: <PiGlobeThin className="text-5xl text-[#00399F] font-thin" />,
+    },
+  ];
+
   return (
     <div className=" ">
       {/* header */}
@@ -181,7 +215,7 @@ export default function page() {
             <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px]">
               What We Stand For
             </h2>
-            <p className="text-gray-700 text-center max-w-lg">
+            <p className="text-gray-700 text-center max-w-2xl">
               Shabuj Global Education is an organisation dedicated to assisting
               students, particularly from Bangladesh, in pursuing education
               abroad. Its values and goals likely focus on the following key
@@ -277,6 +311,38 @@ export default function page() {
               </p>
             </div>
             <TimelineLayout />
+          </div>
+        </div>
+      </div>
+
+      {/* how we help */}
+      <div className="bg-[#EFF6FF] py-12">
+        <div className=" container mx-auto">
+          <div className="flex flex-col items-center mb-14 ">
+            <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px]">
+              How We Help
+            </h2>
+            <p className="text-gray-700 text-center max-w-2xl">
+              Shabuj Global Education offers a range of services to support
+              students in pursuing higher education, primarily focused on
+              facilitating university admissions, particularly in the UK.
+            </p>
+            <p>Their services include:</p>
+          </div>
+          <div>
+            {/* values */}
+            <div className="grid grid-cols-4 gap-10  mt-10">
+              {helpServices?.map((service) => (
+                <div className="flex flex-col justify-center text-center items-center gap-5 hover:bg-white p-6 transition duration-500 rounded-2xl hover:shadow-xl ">
+                  <p className="">{service?.icon}</p>
+
+                  <div className="">
+                    <h2 className="mb-1 font-bold text-lg">{service?.title}</h2>
+                    <p className="text-sm">{service?.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
