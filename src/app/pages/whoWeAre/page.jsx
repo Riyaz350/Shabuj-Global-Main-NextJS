@@ -223,36 +223,6 @@ export default function page() {
             </p>
           </div>
           <div className="grid grid-cols-3 gap-10 justify-between  mt-10">
-            {/* values */}
-            <div>
-              <SubHeading label="Values" />
-              <div className="flex-col gap-10 flex mt-10">
-                {values?.map((value) => (
-                  <div className="flex gap-5 ">
-                    <div className="w-auto">
-                      <div className="w-10 h-10 rounded-full bg-white relative">
-                        <p className="absolute -top-1 -left-1">{value?.icon}</p>
-                      </div>
-                    </div>
-
-                    <div className="">
-                      <h2 className="mb-1 font-bold text-lg">{value?.title}</h2>
-                      <p className="text-sm">{value?.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* center img */}
-            <Image
-              width={100}
-              height={100}
-              className="w-full h-full rounded-2xl"
-              src="https://pfecglobal.com.bd/wp-content/uploads/2023/08/How-Education-Consultants-Can-Help.jpg"
-              alt=""
-            />
-
             {/* goals */}
             <div>
               <SubHeading label="Goals" />
@@ -270,6 +240,36 @@ export default function page() {
                         {goal?.title}
                       </h2>
                       <p className="text-sm">{goal?.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* center img */}
+            <Image
+              width={100}
+              height={100}
+              className="w-full h-full rounded-2xl"
+              src="https://pfecglobal.com.bd/wp-content/uploads/2023/08/How-Education-Consultants-Can-Help.jpg"
+              alt=""
+            />
+
+            {/* values */}
+            <div>
+              <SubHeading label="Values" />
+              <div className="flex-col gap-10 flex mt-10">
+                {values?.map((value) => (
+                  <div className="flex gap-5 ">
+                    <div className="w-auto">
+                      <div className="w-10 h-10 rounded-full bg-white relative">
+                        <p className="absolute -top-1 -left-1">{value?.icon}</p>
+                      </div>
+                    </div>
+
+                    <div className="">
+                      <h2 className="mb-1 font-bold text-lg">{value?.title}</h2>
+                      <p className="text-sm">{value?.description}</p>
                     </div>
                   </div>
                 ))}
