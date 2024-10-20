@@ -14,7 +14,7 @@ export default function Banner({ title, description, style }) {
       <div className="hero-content text-neutral-content  flex justify-start w-full px-16">
         <div className="max-w-4xl ml-0 py-28 pb-20  text-start ">
           <div>
-            <h1 className={`mb-5 text-5xl font-bold poppins-bold`}>{title}</h1>
+            <h1 className={`mb-5 text-5xl font-bold poppins-bold capitalize`}>{title}</h1>
             <ParaGraph description={description} style={style}/>
           </div>
         </div>

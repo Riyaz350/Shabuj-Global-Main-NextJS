@@ -18,6 +18,7 @@ import { BsCheck2Circle } from "react-icons/bs";
 import { TfiBriefcase } from "react-icons/tfi";
 import Banner from "../../../_components/shared/About/Banner";
 import ParaGraph from "@/_components/shared/About/ParaGraph";
+import FloatingCard from "@/_components/shared/About/FloatingCard";
 
 export default function page() {
   const services = [
@@ -183,23 +184,7 @@ export default function page() {
       />
 
       {/* service section */}
-      <div className=" w-3/4 max-w-4xl mx-auto relative -top-12">
-        <div className="bg-white p-8 rounded-lg shadow-xl grid grid-cols-2 gap-5">
-          {services?.map((service, index) => (
-            <div className="flex  items-start gap-3">
-              <div className="italic text-[#00399F]  text-3xl font-bold ">
-                {index + 1 < 10 ? `0${index + 1}` : index + 1}
-              </div>
-              <div>
-                <h2 className="mb-1  text-lg poppins-semibold ">
-                  {service?.title}
-                </h2>
-                <p className="text-sm">{service?.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <FloatingCard services={services} style={'grid-cols-2'}/>
 
       {/*What We Stand For */}
       <div className="bg-[#EFF6FF] py-12">
