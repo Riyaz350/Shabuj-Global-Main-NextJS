@@ -19,6 +19,7 @@ import { TfiBriefcase } from "react-icons/tfi";
 import Banner from "../../../_components/shared/About/Banner";
 import ParaGraph from "@/_components/shared/About/ParaGraph";
 import FloatingCard from "@/_components/shared/About/FloatingCard";
+import HoverCard from "@/_components/shared/About/HoverCard";
 
 export default function page() {
   const services = [
@@ -176,7 +177,7 @@ export default function page() {
   return (
     <div className="">
       {/* header */}
- 
+
       <Banner
         title={"Know More About We"}
         description={BannerDescription}
@@ -184,11 +185,11 @@ export default function page() {
       />
 
       {/* service section */}
-      <FloatingCard services={services} style={'grid-cols-2'}/>
+      <FloatingCard services={services} style={"grid-cols-2"} />
 
       {/*What We Stand For */}
       <div className="bg-[#EFF6FF] py-12">
-        <div className=" container mx-auto">
+        <div className=" max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-14 ">
             <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px] ">
               What We Stand For
@@ -260,7 +261,7 @@ export default function page() {
       </div>
 
       {/* Journey */}
-      <div className=" container mx-auto py-14">
+      <div className=" max-w-6xl mx-auto py-14">
         <div className=" mb-14 ">
           <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
             Our Journey
@@ -278,7 +279,7 @@ export default function page() {
 
       {/* how we help */}
       <div className="bg-[#EFF6FF] py-12">
-        <div className=" container mx-auto">
+        <div className=" max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-14 ">
             <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px]">
               How We Help
@@ -292,23 +293,12 @@ export default function page() {
           </div>
           <div>
             {/* values */}
-            <div className="grid grid-cols-4 gap-10  mt-10">
-              {helpServices?.map((service) => (
-                <div className="flex flex-col justify-center text-center items-center gap-5 hover:bg-white p-6 transition duration-500 rounded-2xl hover:shadow-xl ">
-                  <p className="">{service?.icon}</p>
-
-                  <div className="">
-                    <h2 className="mb-1 font-semibold text-lg poppins-semibold ">
-                      {service?.title}
-                    </h2>
-                    <p className="text-sm">{service?.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <HoverCard data={helpServices} style={'grid-cols-4'} />
           </div>
         </div>
       </div>
+
+
       <div className="pb-64"></div>
     </div>
   );
