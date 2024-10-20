@@ -1,6 +1,7 @@
 import Link from "next/link";
 import "./Banner.css";
 import EnquireModal from '../Banner/EnquireModal'
+import ApplicationModal from '../Banner/ApplicationModal'
 const Banner = () => {
   const text = "DREAM BIG STUDY ABROAD.";
   const Letter = text.split("");
@@ -21,7 +22,8 @@ const Banner = () => {
               <div className="buttons-group">
                 
                 <EnquireModal />
-                <Link href="/comingSoon">Apply</Link>
+                <ApplicationModal />
+                {/* <Link href="/comingSoon">Apply</Link> */}
               </div>
             </div>
           </div>

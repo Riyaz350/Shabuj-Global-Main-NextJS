@@ -6,6 +6,8 @@ const nextConfig = {
       { source: '/services', destination: '/pages/services' },
       { source: '/contact', destination: '/pages/contactUs' },
       { source: '/about', destination: '/pages/aboutUs' },
+      { source: '/who-we', destination: '/pages/whoWeAre' },
+      { source: '/partners', destination: '/pages/partners' },
       { source: '/events', destination: '/pages/events' },
       { source: '/singleEvent', destination: '/pages/singleEvent' },
       { source: '/blogs', destination: '/pages/blogs' },
