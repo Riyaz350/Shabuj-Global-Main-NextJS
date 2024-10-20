@@ -1,9 +1,6 @@
 import Image from "next/image";
 import SubHeading from "../../../_components/AboutUs/Who_we_are/SubHeading";
-import { FaRegEye, FaUserGraduate } from "react-icons/fa6";
-import { TiStarburstOutline } from "react-icons/ti";
-import { TbGlobe } from "react-icons/tb";
-import { LiaSyncAltSolid } from "react-icons/lia";
+import TimelineLayout from "../../../_components/AboutUs/Who_we_are/TimelineLayout";
 import { GiDrippingStar, GiGraduateCap } from "react-icons/gi";
 import {
   PiAirplaneTiltThin,
@@ -13,7 +10,7 @@ import {
   PiHandshakeThin,
   PiLightbulbThin,
 } from "react-icons/pi";
-import { GoLightBulb, GoSync } from "react-icons/go";
+import { GoSync } from "react-icons/go";
 import { BsCheck2Circle } from "react-icons/bs";
 import { TfiBriefcase } from "react-icons/tfi";
 
@@ -181,7 +178,7 @@ export default function page() {
       <div className="bg-[#EFF6FF] py-12">
         <div className=" container mx-auto">
           <div className="flex flex-col items-center mb-14 ">
-            <h2 className="poppins-semibold text-[28px] text-[#00399F] leading-[39.2px]">
+            <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px]">
               What We Stand For
             </h2>
             <p className="text-gray-700 text-center max-w-lg">
@@ -244,6 +241,42 @@ export default function page() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Journey */}
+      <div className=" container mx-auto py-14">
+        <div className=" mb-14 ">
+          <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
+            Our Journey
+          </h2>
+          <div className="grid grid-cols-2 gap-10 items-center justify-between">
+            <div className="flex flex-col gap-y-5 mt-9">
+              <p className="text-gray-700 max-w-lg">
+                Shabuj Global Education is dedicated to helping students from
+                around the world access higher education, particularly in the
+                UK. Its mission is to provide personalised support to students,
+                guiding them through the process of selecting the right courses
+                and universities based on their individual needs. The
+                organisation aims to bridge the gap between students and
+                educational institutions, facilitating over 145,000 successful
+                admissions.
+              </p>
+              <p className="text-gray-700 max-w-lg">
+                Their vision focuses on enabling students to achieve academic
+                success by offering tailored advice, ensuring that the
+                educational programs align with both personal goals and career
+                aspirations. Shabuj Global Education is committed to empowering
+                students to access quality education, regardless of their
+                financial situation, and they actively promote scholarships to
+                support.
+              </p>{" "}
+              <p className="text-gray-700 max-w-lg">
+                Shabuj Global Education Key milestones include:
+              </p>
+            </div>
+            <TimelineLayout />
           </div>
         </div>
       </div>
