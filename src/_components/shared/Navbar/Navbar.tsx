@@ -458,7 +458,7 @@ const Navbar2 = () => {
                         </Link>
                         <Link
                           onClick={closeNavbar}
-                          href={"/comingSoon"}
+                          href={"/leader"}
                           className={`${iconStyle} flex gap-2 items-center  py-3`}
                         >
                           <FaUserFriends />
@@ -798,7 +798,7 @@ const Navbar2 = () => {
                 <FaClock />
                 Our Timeline
               </Link>
-              <Link href="/comingSoon" className={iconStyle}>
+              <Link href="/leader" className={iconStyle}>
                 <FaUserFriends />
                 Our Leadership Team
               </Link>
