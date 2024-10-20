@@ -1,9 +1,9 @@
 import axios from "axios";
 
 const axiosPublic = axios.create({
-    baseURL:'https://api.studyuk.today'
+    // baseURL:'https://api.studyuk.today'
     // baseURL:'https://nodebot-umber.vercel.app'
-    // baseURL:'http://localhost:5003'
+    baseURL:'http://localhost:5003' 
 })
 const useAxiosPublic = () => {
     return axiosPublic

@@ -7,8 +7,6 @@ import {
   DialogHeader,
   IconButton,
   Input,
-  Option,
-  Select,
   Textarea,
   Typography,
 } from "@material-tailwind/react";
