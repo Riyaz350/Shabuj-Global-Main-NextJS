@@ -1,24 +1,27 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
 import { BsGridFill, BsCameraVideoFill } from "react-icons/bs";
-import { IoShieldCheckmarkSharp, IoCheckmarkDoneCircleSharp, } from "react-icons/io5";
+import {
+  IoShieldCheckmarkSharp,
+  IoCheckmarkDoneCircleSharp,
+} from "react-icons/io5";
 import { FaClock, FaUserFriends, FaHeart } from "react-icons/fa";
 import { SiGooglesheets } from "react-icons/si";
 import { RiNewsFill } from "react-icons/ri";
 import { BiSolidMessageSquareError, BiSolidPhoneCall } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaMicrophoneLines, FaChevronUp } from "react-icons/fa6";
-import countryData from '../../../assets/json/countries.json'
+import countryData from "../../../assets/json/countries.json";
 import Link from "next/link";
 import Image from "next/image";
-  
 
 const Navbar2 = () => {
   const [navButton, setNavButton] = useState(0);
   const [navIndex, setNavIndex] = useState(0);
   const [width, setWidth] = useState(1024);
-  
-  const iconStyle = "flex bg-gray-200 lg:bg-white px-5 gap-2 lg:items-center hover:text-blue-500";
+
+  const iconStyle =
+    "flex bg-gray-200 lg:bg-white px-5 gap-2 lg:items-center hover:text-blue-500";
   const flagClass = " text-center my-2  ";
   const enterNavButton = (index: number) => {
     setNavButton(index);
@@ -27,7 +30,7 @@ const Navbar2 = () => {
     setNavButton(0);
   };
 
-  const NavButton = ({ ind, text }:{ind:number, text:string}) => {
+  const NavButton = ({ ind, text }: { ind: number; text: string }) => {
     return (
       <div className={`cursor-pointer font-poppins`}>
         <div
@@ -40,8 +43,9 @@ const Navbar2 = () => {
             </p>
           </button>
           <span
-            className={` ${navButton == ind && "rotate-180 transition ease-in-out delay-450"
-              }`}
+            className={` ${
+              navButton == ind && "rotate-180 transition ease-in-out delay-450"
+            }`}
           >
             <FaChevronUp />
           </span>
@@ -50,12 +54,14 @@ const Navbar2 = () => {
     );
   };
 
-  const closeNavbar =()=>{
-    const drawerElement = document.getElementById('my-drawer-4') as HTMLInputElement | null;
+  const closeNavbar = () => {
+    const drawerElement = document.getElementById(
+      "my-drawer-4"
+    ) as HTMLInputElement | null;
     if (drawerElement) {
-      drawerElement.checked = false; 
+      drawerElement.checked = false;
     }
-  }
+  };
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
@@ -71,9 +77,12 @@ const Navbar2 = () => {
     >
       <div className="inter px-3 text-black lg:px-14 gap-10 flex flex-row items-center    justify-between py-10  lg:py-5">
         <Link href={"/"}>
-          <Image width={100} height={100}
+          <Image
+            width={100}
+            height={100}
             className="h-[30px] w-[200px] lg:mx-0 md:h-[40px] md:w-[250px] lg:h-[50px] lg:w-[350px]"
-            src='https://i.ibb.co/nBJ5Lsg/Logo.png' priority
+            src="https://i.ibb.co/nBJ5Lsg/Logo.png"
+            priority
             alt="logo"
           />
         </Link>
@@ -93,7 +102,6 @@ const Navbar2 = () => {
               </label>
             </div>
 
-
             <div className="drawer-side ">
               <label
                 htmlFor="my-drawer-4"
@@ -102,28 +110,37 @@ const Navbar2 = () => {
               ></label>
 
               <ul className="  z-50 menu bg-base-200 space-y-2 py-10 text-base-content min-h-full w-80 p-4">
-
                 <div>
-                  <Link onClick={closeNavbar} href="/" className="pl-5 text-xl font-medium">
+                  <Link
+                    onClick={closeNavbar}
+                    href="/"
+                    className="pl-5 text-xl font-medium"
+                  >
                     Home
                   </Link>
-
                 </div>
 
-
                 <div className="collapse collapse-arrow">
-                  <input
-                    type="checkbox"
-                    name="my-accordion-2"
-                  />
+                  <input type="checkbox" name="my-accordion-2" />
                   <div className="collapse-title  text-xl font-medium   ">
                     Study Destination
                   </div>
                   <div className="collapse-content text-sm ">
                     <ul className="grid grid-cols-2 justify-between items-start max-w-7xl mx-auto my-8 gap-3">
                       {countryData.map((country) => (
-                        <Link onClick={closeNavbar} key={country.name} className=' my-2 text-center flex flex-col justify-between' href={country.to}>
-                          <Image width={100} height={100} className="w-2/4 h-auto mx-auto rounded-lg  -rotate-90" src={country.img} alt={country.name} />
+                        <Link
+                          onClick={closeNavbar}
+                          key={country.name}
+                          className=" my-2 text-center flex flex-col justify-between"
+                          href={country.to}
+                        >
+                          <Image
+                            width={100}
+                            height={100}
+                            className="w-2/4 h-auto mx-auto rounded-lg  -rotate-90"
+                            src={country.img}
+                            alt={country.name}
+                          />
                           <li>{country.label}</li>
                         </Link>
                       ))}
@@ -131,13 +148,8 @@ const Navbar2 = () => {
                   </div>
                 </div>
 
-
                 <div className="collapse collapse-arrow">
-                  <input
-                    type="checkbox"
-                    name="my-accordion-2"
-
-                  />
+                  <input type="checkbox" name="my-accordion-2" />
                   <div className="collapse-title  text-xl font-medium   ">
                     Services
                   </div>
@@ -365,33 +377,44 @@ const Navbar2 = () => {
                 </div>
 
                 <div className="collapse collapse-arrow">
-                  <input
-                    type="checkbox"
-                    name="my-accordion-2"
-
-                  />
+                  <input type="checkbox" name="my-accordion-2" />
                   <div className="collapse-title  text-xl font-medium   ">
                     Test Prep
                   </div>
                   <div className="collapse-content text-sm  ">
                     <div className="flex gap-5 flex-col justify-around py-10">
-                      <Link onClick={closeNavbar} className="" href="/comingSoon">
-                        <Image width={100} height={100} className="w-3/4 h-auto lg:w-2/12" src='https://i.ibb.co/JCsX1Q0/IELTS-Logo.jpg' alt="Image1" />
+                      <Link
+                        onClick={closeNavbar}
+                        className=""
+                        href="/comingSoon"
+                      >
+                        <Image
+                          width={100}
+                          height={100}
+                          className="w-3/4 h-auto lg:w-2/12"
+                          src="https://i.ibb.co/JCsX1Q0/IELTS-Logo.jpg"
+                          alt="Image1"
+                        />
                       </Link>
-                      <Link onClick={closeNavbar} className="" href="/comingSoon">
-                        <Image width={100} height={100 } className="w-3/4 lg:w-2/12 h-auto" src='https://i.ibb.co/hH49jpH/SELT-Logo.png' alt="Image 2" />
+                      <Link
+                        onClick={closeNavbar}
+                        className=""
+                        href="/comingSoon"
+                      >
+                        <Image
+                          width={100}
+                          height={100}
+                          className="w-3/4 lg:w-2/12 h-auto"
+                          src="https://i.ibb.co/hH49jpH/SELT-Logo.png"
+                          alt="Image 2"
+                        />
                       </Link>
                     </div>
                   </div>
                 </div>
 
-
                 <div className="collapse collapse-arrow">
-                  <input
-                    type="checkbox"
-                    name="my-accordion-2"
-
-                  />
+                  <input type="checkbox" name="my-accordion-2" />
                   <div className="collapse-title  text-xl font-medium   ">
                     About Us
                   </div>
@@ -427,7 +450,7 @@ const Navbar2 = () => {
 
                         <Link
                           onClick={closeNavbar}
-                          href={"/comingSoon"}
+                          href={"/timeline"}
                           className={`${iconStyle} flex gap-2 items-center  py-3`}
                         >
                           <FaClock />
@@ -495,7 +518,7 @@ const Navbar2 = () => {
 
                         <Link
                           onClick={closeNavbar}
-                           href="/events"
+                          href="/events"
                           className={`${iconStyle} flex gap-2 items-center  py-3 pb-5`}
                         >
                           <BsCameraVideoFill />
@@ -506,17 +529,21 @@ const Navbar2 = () => {
                   </div>
                 </div>
 
-
-
                 <div className="flex flex-col gap-2 px-4">
                   <Link
-                    onClick={closeNavbar} href="/registration" className={`  text-xl font-medium`}>
+                    onClick={closeNavbar}
+                    href="/registration"
+                    className={`  text-xl font-medium`}
+                  >
                     <button className="bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl w-full">
                       Registration
                     </button>
                   </Link>
                   <Link
-                    onClick={closeNavbar} href={"/login"} className={` text-xl font-medium`}>
+                    onClick={closeNavbar}
+                    href={"/login"}
+                    className={` text-xl font-medium`}
+                  >
                     <button className="bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl w-full">
                       Log In
                     </button>
@@ -533,7 +560,10 @@ const Navbar2 = () => {
           className={`  hidden items-center   my-5 lg:flex flex-wrap justify-end gap-3`}
         >
           <div className={` flex items-center gap-1`}>
-            <Link className={` bg-white  lg:bg-[#F0F8FF] font-semibold`} href="/">
+            <Link
+              className={` bg-white  lg:bg-[#F0F8FF] font-semibold`}
+              href="/"
+            >
               Home
             </Link>
           </div>
@@ -557,8 +587,9 @@ const Navbar2 = () => {
             </Link>
           </div>
           <div
-            className={`${width >= 1244 ? "text-base" : "text-sm"
-              } flex items-center justify-end gap-1`}
+            className={`${
+              width >= 1244 ? "text-base" : "text-sm"
+            } flex items-center justify-end gap-1`}
           >
             <Link
               className={`  bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl`}
@@ -582,8 +613,18 @@ const Navbar2 = () => {
           <div className="md:px-10">
             <ul className="lg:grid hidden lg:grid-cols-7 justify-between items-center max-w-7xl mx-auto my-8 gap-3">
               {countryData.map((country) => (
-                <Link key={country.name} className={flagClass} href={country.to}>
-                  <Image width={100} height={100} className="w-2/4 h-auto mx-auto rounded-lg  -rotate-90" src={country.img} alt='country' />
+                <Link
+                  key={country.name}
+                  className={flagClass}
+                  href={country.to}
+                >
+                  <Image
+                    width={100}
+                    height={100}
+                    className="w-2/4 h-auto mx-auto rounded-lg  -rotate-90"
+                    src={country.img}
+                    alt="country"
+                  />
                   <li className="">{country.label}</li>
                 </Link>
               ))}
@@ -593,8 +634,9 @@ const Navbar2 = () => {
         {navIndex == 2 && (
           <>
             <div
-              className={`${width <= 1450 ? "grid-cols-4" : "grid-cols-5"
-                }   mx-10 gap-5 hidden  lg:grid md:mx-auto   md:max-w-[1800px]`}
+              className={`${
+                width <= 1450 ? "grid-cols-4" : "grid-cols-5"
+              }   mx-10 gap-5 hidden  lg:grid md:mx-auto   md:max-w-[1800px]`}
             >
               <div className="col-span-1 md:my-10 my-5">
                 <h2 className="my-5 text-lg font-medium border-b-2 w-fit border-[#f85424]">
@@ -722,10 +764,22 @@ const Navbar2 = () => {
         {navIndex == 3 && (
           <div className="lg:flex max-w-7xl  mx-auto hidden justify-around py-10">
             <Link href="comingSoon" className=" first-line:">
-              <Image width={100} height={100} className=" w-3/4 h-auto lg:w-[200px]" src='https://i.ibb.co/hH49jpH/SELT-Logo.png' alt="Image 1" />
+              <Image
+                width={100}
+                height={100}
+                className=" w-3/4 h-auto lg:w-[200px]"
+                src="https://i.ibb.co/hH49jpH/SELT-Logo.png"
+                alt="Image 1"
+              />
             </Link>
             <Link href="comingSoon" className=" ">
-              <Image width={100} height={100} className="w-3/4 h-auto lg:w-[200px]" src='https://i.ibb.co/JCsX1Q0/IELTS-Logo.jpg' alt="Image 2" />
+              <Image
+                width={100}
+                height={100}
+                className="w-3/4 h-auto lg:w-[200px]"
+                src="https://i.ibb.co/JCsX1Q0/IELTS-Logo.jpg"
+                alt="Image 2"
+              />
             </Link>
           </div>
         )}
@@ -740,7 +794,7 @@ const Navbar2 = () => {
                 <FaHeart />
                 Our Partners
               </Link>
-              <Link href="/comingSoon" className={iconStyle}>
+              <Link href="/timeline" className={iconStyle}>
                 <FaClock />
                 Our Timeline
               </Link>
