@@ -2,11 +2,19 @@ import Banner from "@/_components/shared/About/Banner";
 import FloatingCard from "@/_components/shared/About/FloatingCard";
 import HoverCard from "@/_components/shared/About/HoverCard";
 import ParaGraph from "@/_components/shared/About/ParaGraph";
+import IconCard from "@/_components/shared/About/IconCard";
 import Image from "next/image";
 import React from "react";
 import { CiDiscount1 } from "react-icons/ci";
-import { PiPathThin } from "react-icons/pi";
+import {
+  PiChalkboardTeacherThin,
+  PiGlobeHemisphereEastThin,
+  PiGraduationCapThin,
+  PiPathThin,
+} from "react-icons/pi";
 import { TfiSupport } from "react-icons/tfi";
+import { FaRegHandshake } from "react-icons/fa6";
+import { GiBullseye } from "react-icons/gi";
 
 export default function page() {
   const PartnersDescription = [
@@ -63,43 +71,59 @@ export default function page() {
       title: "Pathway Programs",
       description:
         "SGE provides access to pathway programs that help students who may not meet the direct entry requirements for certain degree programs. These pathway courses enable students to improve their qualifications and transition smoothly into full degree programs.",
-      icon: <PiPathThin className="text-5xl text-[#00399F] font-thin" />, 
+      icon: <PiPathThin className="text-5xl text-[#00399F] font-thin" />,
     },
     {
       title: "Comprehensive Support",
       description:
         "SGE offers free career counselling, visa application assistance, and help with admission processing. This guidance covers the entire application process, from choosing the right university and course to finalising applications, making it easier for students to navigate their study abroad journey.",
-      icon: <TfiSupport className="text-4xl text-[#00399F] font-thin" />, 
+      icon: <TfiSupport className="text-4xl text-[#00399F] font-thin" />,
     },
   ];
   const overview = [
     {
       title: "Mission Statement",
-      description: "Shabuj Global Education is dedicated to providing world-class educational opportunities, empowering individuals to achieve their academic and professional goals through innovative learning solutions.",
-      icon: "icon-mission.png" // Suggested icon name for mission
+      description:
+        "Shabuj Global Education is dedicated to providing world-class educational opportunities, empowering individuals to achieve their academic and professional goals through innovative learning solutions.",
+      icon: <GiBullseye className="text-3xl text-[#00399F] font-thin" />,
     },
     {
       title: "Programs Offered",
-      description: "Our Master’s in Business Administration (MBA) program equips students with cutting-edge management skills, focusing on leadership, global business trends, and strategic thinking. Key features include: ● Interactive online courses ● Global networking opportunities ● Industry-relevant case studies",
-      icon: "icon-programs.png" // Suggested icon name for programs
+      description:
+        "Our Master’s in Business Administration (MBA) program equips students with cutting-edge management skills, focusing on leadership, global business trends, and strategic thinking. Key features include: ",
+      features: [
+        "Interactive online courses",
+        "Global networking opportunities",
+        "Industry-relevant case studies",
+      ],
+      icon: (
+        <PiGraduationCapThin className="text-3xl text-[#00399F] font-thin" />
+      ),
     },
     {
       title: "Learning Approach",
-      description: "Shabuj Global Education adopts a flexible, learner-centred approach, utilising digital platforms and interactive resources to ensure a personalised learning experience. We support our students with expert faculty, real-world projects, and collaborative learning.",
-      icon: "icon-learning.png" // Suggested icon name for learning approach
+      description:
+        "Shabuj Global Education adopts a flexible, learner-centred approach, utilising digital platforms and interactive resources to ensure a personalised learning experience. We support our students with expert faculty, real-world projects, and collaborative learning.",
+      icon: (
+        <PiChalkboardTeacherThin className="text-3xl text-[#00399F] font-thin" />
+      ),
     },
     {
       title: "Global Reach",
-      description: "With a global footprint spanning over 50 countries, Shabuj Global Education partners with leading institutions worldwide to offer accredited, globally recognized programs. Our alumni network continues to expand, empowering individuals across continents.",
-      icon: "icon-global.png" // Suggested icon name for global reach
+      description:
+        "With a global footprint spanning over 50 countries, Shabuj Global Education partners with leading institutions worldwide to offer accredited, globally recognized programs. Our alumni network continues to expand, empowering individuals across continents.",
+      icon: (
+        <PiGlobeHemisphereEastThin className="text-3xl text-[#00399F] font-thin" />
+      ),
     },
     {
       title: "Student Support",
-      description: "Our dedicated support team is here to assist you throughout your educational journey. From academic advising to career counselling, Shabuj Global Education ensures that every student receives personalised guidance to achieve their goals.",
-      icon: "icon-support.png" // Suggested icon name for student support
-    }
+      description:
+        "Our dedicated support team is here to assist you throughout your educational journey. From academic advising to career counselling, Shabuj Global Education ensures that every student receives personalised guidance to achieve their goals.",
+      icon: <FaRegHandshake className="text-3xl text-[#00399F] font-thin" />,
+    },
   ];
-  
+
   return (
     <div>
       {/* header */}
@@ -110,6 +134,24 @@ export default function page() {
       />
       {/* parts & program */}
       <FloatingCard services={PartnersProgram} style={"grid-cols-3"} />
+
+      {/* overview */}
+      <div className="bg-[#EFF6FF] py-12">
+        <div className=" max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 gap-20 justify-between items-center">
+            {/* values */}
+            <Image
+              width={100}
+              height={100}
+              className="w-full h-2/3 rounded-2xl"
+              src="https://img.freepik.com/premium-vector/study-abroad_866965-6.jpg"
+              alt=""
+            />
+            <IconCard data={overview} />
+          </div>
+        </div>
+      </div>
+
       {/* channel partner */}
       <div className=" max-w-6xl px- mx-auto py-14">
         <div className="grid grid-cols-2 gap-10 items-center justify-between mb-14">
@@ -196,6 +238,7 @@ export default function page() {
           </div>
         </div>
       </div>
+
       {/* overview */}
       <div className="pb-64"></div>
     </div>
