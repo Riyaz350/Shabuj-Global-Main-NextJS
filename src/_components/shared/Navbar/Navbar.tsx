@@ -418,7 +418,7 @@ const Navbar2 = () => {
 
                         <Link
                           onClick={closeNavbar}
-                          href={"/comingSoon"}
+                          href={"/partners"}
                           className={`${iconStyle} flex gap-2 items-center  py-3`}
                         >
                           <FaHeart />
@@ -736,7 +736,7 @@ const Navbar2 = () => {
                 <BsGridFill />
                 Who We Are
               </Link>
-              <Link href="/comingSoon" className={iconStyle}>
+              <Link href="/partners" className={iconStyle}>
                 <FaHeart />
                 Our Partners
               </Link>

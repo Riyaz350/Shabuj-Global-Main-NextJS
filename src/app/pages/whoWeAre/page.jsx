@@ -16,6 +16,8 @@ import {
 import { GoSync } from "react-icons/go";
 import { BsCheck2Circle } from "react-icons/bs";
 import { TfiBriefcase } from "react-icons/tfi";
+import Banner from "../../../_components/shared/About/Banner";
+import ParaGraph from "@/_components/shared/About/ParaGraph";
 
 export default function page() {
   const services = [
@@ -146,61 +148,52 @@ export default function page() {
     },
   ];
 
+  const BannerDescription = [
+    {
+      para: "Shabuj Global Education is an enlisted professional student consultancy firm, approved by the British Council. It specialises in academic counselling, course placement, and internal student recruitment. It has been working with universities from around the world to find the right UK course placements since 2010. Shabuj Global helps its customers find undergraduate, postgraduate, and foundation courses, and also aids MBA and MSc students.",
+    },
+    {
+      para: "Shabuj Global Education was founded in 2010. It is a UK-based consultancy that provides services to students, primarily from Bangladesh, seeking to study abroad in countries like the UK, Canada, the US, and Australia. The organisation has supported over 145,000 students in their educational journeys, assisting them in securing admissions to top universities worldwide.",
+    },
+    {
+      para: "Shabuj Global Education provides a variety of services to help students pursue higher education abroad. Their core offerings include:",
+    },
+  ];
+
+  const JourneyDescription = [
+    {
+      para: "Shabuj Global Education is dedicated to helping students from around the world access higher education, particularly in the UK. Its mission is to provide personalised support to students, guiding them through the process of selecting the right courses and universities based on their individual needs. The organisation aims to bridge the gap between students and educational institutions, facilitating over 145,000 successful admissions.",
+    },
+    {
+      para: "Their vision focuses on enabling students to achieve academic success by offering tailored advice, ensuring that the educational programs align with both personal goals and career aspirations. Shabuj Global Education is committed to empowering students to access quality education, regardless of their financial situation, and they actively promote scholarships to support.",
+    },
+    {
+      para: "Shabuj Global Education Key milestones include:",
+    },
+  ];
+
   return (
-    <div className=" ">
+    <div className="">
       {/* header */}
-      <div
-        className="hero h-full "
-        style={{
-          backgroundImage:
-            "url(https://pfecglobal.com.bd/wp-content/uploads/2023/08/How-Education-Consultants-Can-Help.jpg)",
-        }}
-      >
-        <div className="hero-overlay bg-opacity-60 bg-black "></div>
-        <div className="hero-content text-neutral-content  flex justify-start w-full px-16">
-          <div className="max-w-4xl ml-0 py-28 pb-20  text-start ">
-            <div>
-              <h1 className="mb-5 text-5xl font-bold">Know More About We</h1>
-              <div className="flex-col gap-3 flex text-white">
-                <p className="text-base">
-                  Shabuj Global Education is an enlisted professional student
-                  consultancy firm, approved by the British Council. It
-                  specialises in academic counselling, course placement, and
-                  internal student recruitment. It has been working with
-                  universities from around the world to find the right UK course
-                  placements since 2010. Shabuj Global helps its customers find
-                  undergraduate, postgraduate, and foundation courses, and also
-                  aids MBA and MSc students.
-                </p>
-                <p className=" text-base">
-                  Shabuj Global Education was founded in 2010. It is a UK-based
-                  consultancy that provides services to students, primarily from
-                  Bangladesh, seeking to study abroad in countries like the UK,
-                  Canada, the US, and Australia. The organisation has supported
-                  over 145,000 students in their educational journeys, assisting
-                  them in securing admissions to top universities worldwide.
-                </p>
-                <p className=" text-base">
-                  Shabuj Global Education provides a variety of services to help
-                  students pursue higher education abroad. Their core offerings
-                  include:
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+ 
+      <Banner
+        title={"Know More About We"}
+        description={BannerDescription}
+        style={"text-white"}
+      />
 
       {/* service section */}
       <div className=" w-3/4 max-w-4xl mx-auto relative -top-12">
         <div className="bg-white p-8 rounded-lg shadow-xl grid grid-cols-2 gap-5">
           {services?.map((service, index) => (
             <div className="flex  items-start gap-3">
-              <div className="italic text-[#00399F]  text-3xl font-bold">
+              <div className="italic text-[#00399F]  text-3xl font-bold ">
                 {index + 1 < 10 ? `0${index + 1}` : index + 1}
               </div>
               <div>
-                <h2 className="mb-1 font-bold text-lg">{service?.title}</h2>
+                <h2 className="mb-1  text-lg poppins-semibold ">
+                  {service?.title}
+                </h2>
                 <p className="text-sm">{service?.description}</p>
               </div>
             </div>
@@ -212,10 +205,10 @@ export default function page() {
       <div className="bg-[#EFF6FF] py-12">
         <div className=" container mx-auto">
           <div className="flex flex-col items-center mb-14 ">
-            <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px]">
+            <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px] ">
               What We Stand For
             </h2>
-            <p className="text-gray-700 text-center max-w-2xl">
+            <p className="text-gray-700 text-center max-w-2xl poppins-regular ">
               Shabuj Global Education is an organisation dedicated to assisting
               students, particularly from Bangladesh, in pursuing education
               abroad. Its values and goals likely focus on the following key
@@ -236,7 +229,7 @@ export default function page() {
                     </div>
 
                     <div className="">
-                      <h2 className="mb-1 font-bold text-base">
+                      <h2 className="mb-1 font-semibold text-base poppins-semibold">
                         {goal?.title}
                       </h2>
                       <p className="text-sm">{goal?.description}</p>
@@ -268,7 +261,9 @@ export default function page() {
                     </div>
 
                     <div className="">
-                      <h2 className="mb-1 font-bold text-lg">{value?.title}</h2>
+                      <h2 className="mb-1 font-semibold text-base poppins-semibold">
+                        {value?.title}
+                      </h2>
                       <p className="text-sm">{value?.description}</p>
                     </div>
                   </div>
@@ -286,30 +281,11 @@ export default function page() {
             Our Journey
           </h2>
           <div className="grid grid-cols-2 gap-10 items-center justify-between">
-            <div className="flex flex-col gap-y-5 mt-9">
-              <p className="text-gray-700 max-w-lg">
-                Shabuj Global Education is dedicated to helping students from
-                around the world access higher education, particularly in the
-                UK. Its mission is to provide personalised support to students,
-                guiding them through the process of selecting the right courses
-                and universities based on their individual needs. The
-                organisation aims to bridge the gap between students and
-                educational institutions, facilitating over 145,000 successful
-                admissions.
-              </p>
-              <p className="text-gray-700 max-w-lg">
-                Their vision focuses on enabling students to achieve academic
-                success by offering tailored advice, ensuring that the
-                educational programs align with both personal goals and career
-                aspirations. Shabuj Global Education is committed to empowering
-                students to access quality education, regardless of their
-                financial situation, and they actively promote scholarships to
-                support.
-              </p>{" "}
-              <p className="text-gray-700 max-w-lg">
-                Shabuj Global Education Key milestones include:
-              </p>
-            </div>
+            <ParaGraph
+              description={JourneyDescription}
+              style={"text-gray-700 max-w-lg"}
+            />
+
             <TimelineLayout />
           </div>
         </div>
@@ -322,12 +298,12 @@ export default function page() {
             <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px]">
               How We Help
             </h2>
-            <p className="text-gray-700 text-center max-w-2xl">
+            <p className="text-gray-700 text-center max-w-2xl poppins-regular ">
               Shabuj Global Education offers a range of services to support
               students in pursuing higher education, primarily focused on
               facilitating university admissions, particularly in the UK.
             </p>
-            <p>Their services include:</p>
+            <p className="poppins-regular ">Their services include:</p>
           </div>
           <div>
             {/* values */}
@@ -337,7 +313,9 @@ export default function page() {
                   <p className="">{service?.icon}</p>
 
                   <div className="">
-                    <h2 className="mb-1 font-bold text-lg">{service?.title}</h2>
+                    <h2 className="mb-1 font-semibold text-lg poppins-semibold ">
+                      {service?.title}
+                    </h2>
                     <p className="text-sm">{service?.description}</p>
                   </div>
                 </div>

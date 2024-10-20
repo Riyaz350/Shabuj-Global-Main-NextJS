@@ -51,7 +51,7 @@ export default function TimelineLayout() {
                 {data?.icon}
               </TimelineIcon>
               <div className="flex flex-col gap-1">
-                <Typography variant="h6" color="blue-gray">
+                <Typography variant="h6" color="blue-gray" className="!poppins-semibold">
                   {data?.title}
                 </Typography>
                 <Typography
