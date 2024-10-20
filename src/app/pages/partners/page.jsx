@@ -15,6 +15,7 @@ import {
 import { TfiSupport } from "react-icons/tfi";
 import { FaRegHandshake } from "react-icons/fa6";
 import { GiBullseye } from "react-icons/gi";
+import TimelineLayout from "@/_components/AboutUs/Who_we_are/TimelineLayout";
 
 export default function page() {
   const PartnersDescription = [
@@ -123,6 +124,15 @@ export default function page() {
       icon: <FaRegHandshake className="text-3xl text-[#00399F] font-thin" />,
     },
   ];
+
+  const OrganizationHistory = [
+    {
+        para: "Shabuj Global Education (SGE) was established in 2010 as an education consultancy, primarily focused on facilitating university admissions in the UK for both local and international students. Over the years, it has grown into a prominent player in the education services sector, assisting students from South Asia and beyond to secure admissions in prestigious institutions worldwide."
+    },
+    {
+        para: "Key milestones in the organisation's history include:"
+    }
+];
 
   return (
     <div>
@@ -239,7 +249,22 @@ export default function page() {
         </div>
       </div>
 
-      {/* overview */}
+      {/* timeline */}
+      <div className=" max-w-6xl mx-auto py-14">
+        <div className=" mb-14 ">
+          <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
+          Our Timeline
+          </h2>
+          <div className="grid grid-cols-2 gap-10 items-center justify-between">
+            <ParaGraph
+              description={JourneyDescription}
+              style={"text-gray-700 max-w-lg"}
+            />
+
+            <TimelineLayout timelineData={OrganizationHistory} />
+          </div>
+        </div>
+      </div>
       <div className="pb-64"></div>
     </div>
   );

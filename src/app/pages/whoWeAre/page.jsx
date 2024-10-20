@@ -175,6 +175,32 @@ export default function page() {
     },
   ];
 
+  const milestones = [
+    {
+      title: "2010",
+      description: "Establishment in the UK.",
+      icon: <PiBuildingsThin className="h-5 w-5  text-white" />,
+    },
+    {
+      title: "Early 2010s",
+      description:
+        "Expanded operations to serve Bangladeshi students, aiming at placing them in prestigious global universities.",
+      icon: <PiGlobeHemisphereEastThin className="h-5 w-5  text-white" />,
+    },
+    {
+      title: "2013-2015",
+      description:
+        "The company began working with top-tier universities, including those from the Russell Group in the UK, marking a major expansion in its portfolio of partners.",
+      icon: <LiaUniversitySolid className="h-5 w-5  text-white" />,
+    },
+    {
+      title: "2020s",
+      description:
+        "Shabuj Global continued to grow, placing over 145,000 students worldwide, and expanded its services to facilitate student transfers between universities.",
+      icon: <GiGraduateCap className="h-5 w-5  text-white" />,
+    },
+  ];
+
   return (
     <div className="">
       {/* header */}
@@ -259,7 +285,7 @@ export default function page() {
               style={"text-gray-700 max-w-lg"}
             />
 
-            <TimelineLayout />
+            <TimelineLayout timelineData={milestones}/>
           </div>
         </div>
       </div>
