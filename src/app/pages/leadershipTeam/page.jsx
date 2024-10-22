@@ -19,15 +19,15 @@ export default function page() {
     <div>
       <div className="">
         {/* banner img */}
-        <Image
+        {/* <Image
           width={80}
           height={80}
           className=" w-full h-[600px]  grayscale"
           src="https://i.ibb.co.com/JyQBfH3/founder.png"
           alt=""
-        />
+        /> */}
 
-        <div className="relative bg-white  -top-[200px] left-0 right-0 shadow-lg w-3/4 mx-auto grid grid-cols-2 shadow-about rounded-[32px] items-center p-[30px] gap-x-10 ">
+        <div className=" max-w-6xl mx-auto grid grid-cols-2 shadow-about rounded-[32px] items-center p-[30px] gap-x-10 ">
           <div>
             {/* card left */}
             <div className="flex flex-col justify-between items-center ">
@@ -38,19 +38,7 @@ export default function page() {
                 className=" w-full h-full"
                 alt="image"
               />
-              <div className="flex gap-2 justify-center items-center  mt-6">
-                <RiFacebookLine className="bg-gray-300 text-3xl p-3 hover:translate-y-2 hover:bg-blue-900 hover:text-white duration-500 transition-all w-12 h-12 rounded" />
-                <RiLinkedinLine className="bg-gray-300 text-3xl p-3 hover:translate-y-2 hover:bg-blue-900 hover:text-white duration-500 transition-all w-12 h-12 rounded" />
-                <CiTwitter className="bg-gray-300 text-3xl p-3 hover:translate-y-2 hover:bg-blue-900 hover:text-white duration-500 transition-all w-12 h-12 rounded" />
-                <PiInstagramLogoLight className="bg-gray-300 text-3xl p-3 hover:translate-y-2 hover:bg-blue-900 hover:text-white duration-500 transition-all w-12 h-12 rounded" />
-                <PiYoutubeLogoThin className="bg-gray-300 text-3xl p-3 hover:translate-y-2 hover:bg-blue-900 hover:text-white duration-500 transition-all w-12 h-12 rounded" />
-              </div>
-            </div>
-          </div>
-
-          {/* card right */}
-          <div className="">
-            <div className="mb-8">
+                 <div className="mt-8 text-center">
               {/* info */}
               <h2 className="poppins-semibold text-[30px] text-[#081831] ">
                 MD. Zahidul Alam
@@ -61,9 +49,24 @@ export default function page() {
               </p>
               <p className="poppin-normal tracking-wide ">Premium member</p>
             </div>
+           
+            </div>
+          </div>
+
+          {/* card right */}
+          <div className="">
+         
 
             {/* about */}
             <ParaGraph description={bio} style={"text-gray-700 w-full"} />
+
+            <div className="flex gap-2  items-center  mt-6">
+                <RiFacebookLine className="bg-gray-300 text-3xl p-3 hover:translate-y-2 hover:bg-blue-900 hover:text-white duration-500 transition-all w-12 h-12 rounded" />
+                <RiLinkedinLine className="bg-gray-300 text-3xl p-3 hover:translate-y-2 hover:bg-blue-900 hover:text-white duration-500 transition-all w-12 h-12 rounded" />
+                <CiTwitter className="bg-gray-300 text-3xl p-3 hover:translate-y-2 hover:bg-blue-900 hover:text-white duration-500 transition-all w-12 h-12 rounded" />
+                <PiInstagramLogoLight className="bg-gray-300 text-3xl p-3 hover:translate-y-2 hover:bg-blue-900 hover:text-white duration-500 transition-all w-12 h-12 rounded" />
+                <PiYoutubeLogoThin className="bg-gray-300 text-3xl p-3 hover:translate-y-2 hover:bg-blue-900 hover:text-white duration-500 transition-all w-12 h-12 rounded" />
+              </div>
 
             {/* experience */}
             <div>
@@ -92,7 +95,7 @@ export default function page() {
           </div>
         </div>
       </div>
-      <div className="pb-20"></div>
+      <div className="pb-48"></div>
     </div>
   );
 }
