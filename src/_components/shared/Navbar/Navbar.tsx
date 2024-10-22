@@ -482,7 +482,7 @@ const Navbar2 = () => {
                         </Link>
                         <Link
                           onClick={closeNavbar}
-                          href={"/comingSoon"}
+                          href={"/career"}
                           className={`${iconStyle} flex gap-2 items-center  py-3`}
                         >
                           <SiGooglesheets />
@@ -813,7 +813,7 @@ const Navbar2 = () => {
                 Award Recognitions
               </Link>
               <Link
-                href="/comingSoon"
+                href="/career"
                 className={`${iconStyle} hover:text-blue-500 flex gap-2 items-center`}
               >
                 <SiGooglesheets />

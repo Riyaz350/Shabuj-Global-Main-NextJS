@@ -11,6 +11,7 @@ const nextConfig = {
       { source: "/timeline", destination: "/pages/timeline" },
       { source: "/leader", destination: "/pages/leadershipTeam" },
       { source: "/partner-with-us", destination: "/pages/partnerWithUs" },
+      { source: "/career", destination: "/pages/careers" },
       { source: "/privacy", destination: "/pages/privacy" },
       { source: "/events", destination: "/pages/events" },
       { source: "/singleEvent", destination: "/pages/singleEvent" },

@@ -73,13 +73,14 @@ export default function page() {
         style={"text-white"}
       />
 
+      {/* card */}
       <div className="  py-14 bg-[#EFF6FF] ">
         <div className=" max-w-6xl px-12 mx-auto">
           <HoverCard data={partnerInfo} style={"grid-cols-4"} />
         </div>
       </div>
 
-      {/* channel partner */}
+      {/* contact */}
       <div className=" max-w-6xl px- mx-auto py-14">
         <div className="grid grid-cols-2 gap-10 items-center justify-between mb-14">
           <div>
