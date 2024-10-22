@@ -104,6 +104,10 @@ body {
 
 }
 
+.bg-gradient-two {
+  background: linear-gradient(99.46deg, rgba(38, 107, 202, 0.2) 8.9%, rgba(0, 0, 0, 0.2) 94.85%), linear-gradient(80.71deg, #3187FC 39.24%, #0522E6 95.08%);
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
