@@ -10,6 +10,7 @@ const nextConfig = {
       { source: "/partners", destination: "/pages/partners" },
       { source: "/timeline", destination: "/pages/timeline" },
       { source: "/leader", destination: "/pages/leadershipTeam" },
+      { source: "/partner-with-us", destination: "/pages/partnerWithUs" },
       { source: "/privacy", destination: "/pages/privacy" },
       { source: "/events", destination: "/pages/events" },
       { source: "/singleEvent", destination: "/pages/singleEvent" },
