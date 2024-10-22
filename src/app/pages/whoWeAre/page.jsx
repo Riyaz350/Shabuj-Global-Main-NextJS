@@ -1,13 +1,14 @@
 import Image from "next/image";
 import SubHeading from "../../../_components/AboutUs/Who_we_are/SubHeading";
 import TimelineLayout from "../../../_components/AboutUs/Who_we_are/TimelineLayout";
-import { GiDrippingStar, GiGraduateCap } from "react-icons/gi";
+import { GiDrippingStar } from "react-icons/gi";
 import {
   PiAirplaneTiltThin,
   PiChalkboardTeacherLight,
   PiEyeLight,
   PiGlobeStandLight,
   PiGlobeThin,
+  PiGraduationCapThin,
   PiHandshakeThin,
   PiLightbulbThin,
   PiMoneyWavyLight,
@@ -19,6 +20,11 @@ import { TfiBriefcase } from "react-icons/tfi";
 import Banner from "../../../_components/shared/About/Banner";
 import ParaGraph from "@/_components/shared/About/ParaGraph";
 import FloatingCard from "@/_components/shared/About/FloatingCard";
+import HoverCard from "@/_components/shared/About/HoverCard";
+import IconCard from "@/_components/shared/About/IconCard";
+import { PiBuildingsThin, PiGlobeHemisphereEastThin } from "react-icons/pi";
+import { LiaUniversitySolid } from "react-icons/lia";
+
 
 export default function page() {
   const services = [
@@ -49,7 +55,7 @@ export default function page() {
       title: "Student-Centred Approach",
       description:
         "Prioritising the individual needs and aspirations of each student, ensuring personalised support and guidance.",
-      icon: <GiGraduateCap className="text-4xl text-[#00399F] font-thin" />,
+      icon: <PiGraduationCapThin className="text-3xl text-[#00399F] font-thin" />,
     },
     {
       title: "Integrity and Transparency",
@@ -173,10 +179,36 @@ export default function page() {
     },
   ];
 
+  const milestones = [
+    {
+      title: "2010",
+      description: "Establishment in the UK.",
+      icon: <PiBuildingsThin className="h-5 w-5  text-white" />,
+    },
+    {
+      title: "Early 2010s",
+      description:
+        "Expanded operations to serve Bangladeshi students, aiming at placing them in prestigious global universities.",
+      icon: <PiGlobeHemisphereEastThin className="h-5 w-5  text-white" />,
+    },
+    {
+      title: "2013-2015",
+      description:
+        "The company began working with top-tier universities, including those from the Russell Group in the UK, marking a major expansion in its portfolio of partners.",
+      icon: <LiaUniversitySolid className="h-5 w-5  text-white" />,
+    },
+    {
+      title: "2020s",
+      description:
+        "Shabuj Global continued to grow, placing over 145,000 students worldwide, and expanded its services to facilitate student transfers between universities.",
+      icon: <PiGraduationCapThin className="h-5 w-5  text-white" />,
+    },
+  ];
+
   return (
     <div className="">
       {/* header */}
- 
+
       <Banner
         title={"Know More About We"}
         description={BannerDescription}
@@ -184,11 +216,11 @@ export default function page() {
       />
 
       {/* service section */}
-      <FloatingCard services={services} style={'grid-cols-2'}/>
+      <FloatingCard services={services} style={"grid-cols-2"} />
 
       {/*What We Stand For */}
       <div className="bg-[#EFF6FF] py-12">
-        <div className=" container mx-auto">
+        <div className=" max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-14 ">
             <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px] ">
               What We Stand For
@@ -204,39 +236,24 @@ export default function page() {
             {/* goals */}
             <div>
               <SubHeading label="Goals" />
-              <div className="flex-col gap-10 flex mt-10">
-                {goals?.map((goal) => (
-                  <div className="flex gap-5 ">
-                    <div className="w-auto">
-                      <div className="w-10 h-10 rounded-full bg-white relative">
-                        <p className="absolute -top-1 -left-1">{goal?.icon}</p>
-                      </div>
-                    </div>
-
-                    <div className="">
-                      <h2 className="mb-1 font-semibold text-base poppins-semibold">
-                        {goal?.title}
-                      </h2>
-                      <p className="text-sm">{goal?.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <IconCard data={goals} />
             </div>
 
             {/* center img */}
-            <Image
-              width={100}
-              height={100}
-              className="w-full h-full rounded-2xl"
-              src="https://pfecglobal.com.bd/wp-content/uploads/2023/08/How-Education-Consultants-Can-Help.jpg"
-              alt=""
-            />
+            <div className="w-full flex justify-center items-center">
+        <Image
+            width={100}
+            height={100}
+            className="w-auto h-2/3 rounded-2xl"
+            src="https://i.ibb.co.com/6g2cqsq/hand-drawn-study-abroad-illustration-23-2150314526-removebg-preview.png"
+            alt="Study Concept"
+        />
+    </div>
 
             {/* values */}
             <div>
               <SubHeading label="Values" />
-              <div className="flex-col gap-10 flex mt-10">
+              {/* <div className="flex-col gap-10 flex mt-10">
                 {values?.map((value) => (
                   <div className="flex gap-5 ">
                     <div className="w-auto">
@@ -253,14 +270,15 @@ export default function page() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
+              <IconCard data={values} />
             </div>
           </div>
         </div>
       </div>
 
       {/* Journey */}
-      <div className=" container mx-auto py-14">
+      <div className=" max-w-6xl mx-auto py-14">
         <div className=" mb-14 ">
           <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
             Our Journey
@@ -271,14 +289,14 @@ export default function page() {
               style={"text-gray-700 max-w-lg"}
             />
 
-            <TimelineLayout />
+            <TimelineLayout timelineData={milestones}/>
           </div>
         </div>
       </div>
 
       {/* how we help */}
       <div className="bg-[#EFF6FF] py-12">
-        <div className=" container mx-auto">
+        <div className=" max-w-6xl mx-auto">
           <div className="flex flex-col items-center mb-14 ">
             <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px]">
               How We Help
@@ -292,23 +310,11 @@ export default function page() {
           </div>
           <div>
             {/* values */}
-            <div className="grid grid-cols-4 gap-10  mt-10">
-              {helpServices?.map((service) => (
-                <div className="flex flex-col justify-center text-center items-center gap-5 hover:bg-white p-6 transition duration-500 rounded-2xl hover:shadow-xl ">
-                  <p className="">{service?.icon}</p>
-
-                  <div className="">
-                    <h2 className="mb-1 font-semibold text-lg poppins-semibold ">
-                      {service?.title}
-                    </h2>
-                    <p className="text-sm">{service?.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <HoverCard data={helpServices} style={"grid-cols-4"} />
           </div>
         </div>
       </div>
+
       <div className="pb-64"></div>
     </div>
   );
