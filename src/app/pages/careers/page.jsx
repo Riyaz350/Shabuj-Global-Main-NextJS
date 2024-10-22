@@ -71,63 +71,63 @@ export default function page() {
       mail: "hrm@hsedu.co.uk",
       location: "Not specified",
       description: `We are seeking a skilled and experienced Digital Marketing Executive to join our team. As a Digital Marketing Executive, you will be responsible for managing and optimizing advertising campaigns on Facebook and Google platforms.`,
-      cvInstructions:'To apply, send your CV and a brief cover letter introducing ourself and the role you are applying for to'
+      cvInstructions:
+        "To apply, send your CV and a brief cover letter introducing ourself and the role you are applying for to",
     },
   ];
 
   const UkJobs = [
     {
-        title: "Senior Student Recruitment Manager",
-        jobType: "fulltime",
-        weekdays: "Monday to Friday",
-        salary: "negotiable",
-        mail: "hrm@shabujglobal.com",
-        location: "Not specified",
-        description: `Drive and manage our global student recruitment activities. Your expertise will drive student recruitment and shape strategies to attract the brightest talent from around the world. This target-driven role requires a deep understanding of international education systems and excellent networking skills.`,
-        cvInstructions: `To apply, send your CV and a brief cover letter introducing yourself and the role you are applying for to hrm@shabujglobal.com.`,
+      title: "Senior Student Recruitment Manager",
+      jobType: "fulltime",
+      weekdays: "Monday to Friday",
+      salary: "negotiable",
+      mail: "hrm@shabujglobal.com",
+      location: "Not specified",
+      description: `Drive and manage our global student recruitment activities. Your expertise will drive student recruitment and shape strategies to attract the brightest talent from around the world. This target-driven role requires a deep understanding of international education systems and excellent networking skills.`,
+      cvInstructions: `To apply, send your CV and a brief cover letter introducing yourself and the role you are applying for to hrm@shabujglobal.com.`,
     },
     {
-        title: "Global Social Media Manager",
-        jobType: "fulltime",
-        weekdays: "Monday to Friday",
-        salary: "negotiable",
-        mail: "hrm@shabujglobal.com",
-        location: "Not specified",
-        description: `Take the reins of our global social media accounts. Your primary responsibility will be to create engaging content, manage and grow our online presence. Candidates should have a strong understanding of global market trends and proven experience managing multiple platforms.`,
-        cvInstructions: `To apply, send your CV and a brief cover letter introducing yourself and the role you are applying for to hrm@shabujglobal.com.`,
+      title: "Global Social Media Manager",
+      jobType: "fulltime",
+      weekdays: "Monday to Friday",
+      salary: "negotiable",
+      mail: "hrm@shabujglobal.com",
+      location: "Not specified",
+      description: `Take the reins of our global social media accounts. Your primary responsibility will be to create engaging content, manage and grow our online presence. Candidates should have a strong understanding of global market trends and proven experience managing multiple platforms.`,
+      cvInstructions: `To apply, send your CV and a brief cover letter introducing yourself and the role you are applying for to hrm@shabujglobal.com.`,
     },
     {
-        title: "Regional Manager - UK International Students",
-        jobType: "fulltime",
-        weekdays: "Monday to Friday",
-        salary: "negotiable",
-        mail: "hrm@shabujglobal.com",
-        location: "Not specified",
-        description: `Steer the recruitment and admissions processes for international students based in the UK. You'll serve as the crucial link between the students and Shabuj Global Education, ensuring a smooth transition from applicant to enrolled student.`,
-        cvInstructions: `To apply, send your CV and a brief cover letter introducing yourself and the role you are applying for to hrm@shabujglobal.com.`,
+      title: "Regional Manager - UK International Students",
+      jobType: "fulltime",
+      weekdays: "Monday to Friday",
+      salary: "negotiable",
+      mail: "hrm@shabujglobal.com",
+      location: "Not specified",
+      description: `Steer the recruitment and admissions processes for international students based in the UK. You'll serve as the crucial link between the students and Shabuj Global Education, ensuring a smooth transition from applicant to enrolled student.`,
+      cvInstructions: `To apply, send your CV and a brief cover letter introducing yourself and the role you are applying for to hrm@shabujglobal.com.`,
     },
     {
-        title: "Regional Manager - EU Students",
-        jobType: "fulltime",
-        weekdays: "Monday to Friday",
-        salary: "negotiable",
-        mail: "hrm@shabujglobal.com",
-        location: "Not specified",
-        description: `Lead our outreach to both UK-based and overseas EU students. A keen understanding of European education systems and an ability to communicate effectively across cultures are vital in this role.`,
-        cvInstructions: `To apply, send your CV and a brief cover letter introducing yourself and the role you are applying for to hrm@shabujglobal.com.`,
+      title: "Regional Manager - EU Students",
+      jobType: "fulltime",
+      weekdays: "Monday to Friday",
+      salary: "negotiable",
+      mail: "hrm@shabujglobal.com",
+      location: "Not specified",
+      description: `Lead our outreach to both UK-based and overseas EU students. A keen understanding of European education systems and an ability to communicate effectively across cultures are vital in this role.`,
+      cvInstructions: `To apply, send your CV and a brief cover letter introducing yourself and the role you are applying for to hrm@shabujglobal.com.`,
     },
     {
-        title: "Student Liaison Officer",
-        jobType: "fulltime",
-        weekdays: "Monday to Friday",
-        salary: "negotiable",
-        mail: "hrm@shabujglobal.com",
-        location: "Not specified",
-        description: `Provide support to our students and team by aiding the progression of the student pipeline. You'll be instrumental in smoothing the journey from prospect to student, ensuring that everyone is informed, engaged, and ready for the next step.`,
-        cvInstructions: `To apply, send your CV and a brief cover letter introducing yourself and the role you are applying for to hrm@shabujglobal.com.`,
+      title: "Student Liaison Officer",
+      jobType: "fulltime",
+      weekdays: "Monday to Friday",
+      salary: "negotiable",
+      mail: "hrm@shabujglobal.com",
+      location: "Not specified",
+      description: `Provide support to our students and team by aiding the progression of the student pipeline. You'll be instrumental in smoothing the journey from prospect to student, ensuring that everyone is informed, engaged, and ready for the next step.`,
+      cvInstructions: `To apply, send your CV and a brief cover letter introducing yourself and the role you are applying for to hrm@shabujglobal.com.`,
     },
-];
-
+  ];
 
   const data = [
     {
@@ -138,7 +138,7 @@ export default function page() {
     {
       label: "UK based Job Openings",
       value: "UK",
-      desc: <UkCareer UkJobs={UkJobs}/>,
+      desc: <UkCareer UkJobs={UkJobs} />,
     },
   ];
 
@@ -146,7 +146,7 @@ export default function page() {
   const Letter = text.split("");
 
   return (
-    <div>
+    <div className="bg-[#EFF6FF]">
       {/* banner */}
       <div className="relative z-[2]">
         <div className="section">
@@ -154,12 +154,14 @@ export default function page() {
           <div className="section-content pt-[31px] lg:pt-[93px] lg:pb-[206px] pb-[70px] max-w-[1155px] mx-auto">
             <div className="text-center lg:text-left lg:pl-10">
               <h2 className="text-[#00399f] text-center tracking-tight lg:text-left text-[45px] lg:text-[90px] font-bold lg:leading-[110px] leading-[130%]">
-                Launch Your Career Journey{" "}
+                Our Awards and Recognitions
               </h2>
               <p className="font-normal lg:text-left text-center text-[14px] leading-[160%] lg:text-[21px] text-[#081831]   pt-[14px] lg:pb-[61px] pb-[19px]">
-                We are dedicated to empowering professionals to achieve their
-                <br></br> career aspirations and thrive in the global
-                marketplace.
+                We take pride in our achievements and the accolades we have
+                received over the years.
+                <br></br> Each award reflects our commitment to excellence,
+                innovation, and dedication to our community.
+                
               </p>
             </div>
           </div>
@@ -203,8 +205,8 @@ export default function page() {
       </div>
 
       {/* tab section */}
-      <div className=" py-14 bg-[#EFF6FF]">
-        <div className="mt-24 max-w-6xl mx-auto   ">
+      <div className=" py-14 ">
+        <div className="mt-24  max-w-6xl mx-auto   ">
           <Tabs
             value="Bangladesh"
             orientation="vertical"

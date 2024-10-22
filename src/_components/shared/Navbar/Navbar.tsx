@@ -474,7 +474,7 @@ const Navbar2 = () => {
                         </Link>
                         <Link
                           onClick={closeNavbar}
-                          href={"/comingSoon"}
+                          href={"/award"}
                           className={`${iconStyle} flex gap-2 items-center  py-3`}
                         >
                           <IoCheckmarkDoneCircleSharp />
@@ -808,7 +808,7 @@ const Navbar2 = () => {
                 <IoShieldCheckmarkSharp />
                 Partner With Us
               </Link>
-              <Link href="/comingSoon" className={iconStyle}>
+              <Link href="/award" className={iconStyle}>
                 <IoCheckmarkDoneCircleSharp />
                 Award Recognitions
               </Link>

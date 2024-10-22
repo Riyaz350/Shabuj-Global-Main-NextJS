@@ -11,7 +11,7 @@ export default function BangleshCareer({ BangladeshJob }) {
           className="hover:shadow-lg bg-white rounded border p-5 pb-0 h-full flex flex-col justify-between "
         >
           <div>
-            <p className="text-gray-600 text-sm">{job.weekdays}</p>
+            <p className="text-gray-500 text-sm">{job.weekdays}</p>
             <p className="text-xl poppins-semibold">{job.title}</p>
             <p className="bg-gray-200 rounded text-xs px-2 py-1 uppercase w-fit my-3">
               {job.jobType}
@@ -22,7 +22,7 @@ export default function BangleshCareer({ BangladeshJob }) {
               <AiOutlineMail className=""/>
               <a
                 href={`mailto:${job.mail}`}
-                className="hover:text-blue-800 transition-all duration-150 underline"
+                className="hover:text-blue-500 transition-all duration-150 underline"
               >
                 {job.mail}
               </a>

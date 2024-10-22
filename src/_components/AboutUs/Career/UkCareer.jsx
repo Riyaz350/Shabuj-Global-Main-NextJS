@@ -22,7 +22,7 @@ export default function UkCareer({UkJobs}) {
             <AiOutlineMail className=""/>
             <a
               href={`mailto:${job.mail}`}
-              className="hover:text-blue-800 transition-all duration-150 underline"
+              className="hover:text-blue-500 transition-all duration-150 underline"
             >
               {job.mail}
             </a>
