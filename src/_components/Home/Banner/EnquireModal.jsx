@@ -16,11 +16,9 @@ import React from "react";
 import { useState } from "react";
 import { HiXMark } from "react-icons/hi2";
 import { Slide, toast } from "react-toastify";
-import { useCountries } from "use-react-countries";
 
 export default function EnquireModal() {
   const [open, setOpen] = useState(false);
-  const { countries } = useCountries();
   const handleOpen = () => setOpen(!open);
 
   const HandleEnquies = async (e) => {

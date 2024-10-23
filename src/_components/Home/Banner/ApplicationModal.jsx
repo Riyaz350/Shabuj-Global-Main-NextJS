@@ -7,7 +7,6 @@ import {
   DialogHeader,
   IconButton,
   Input,
-  Textarea,
   Typography,
 } from "@material-tailwind/react";
 import axios from "axios";
@@ -16,11 +15,9 @@ import React from "react";
 import { useState } from "react";
 import { HiXMark } from "react-icons/hi2";
 import { Slide, toast } from "react-toastify";
-import { useCountries } from "use-react-countries";
 
 export default function ApplicationModal() {
   const [open, setOpen] = useState(false);
-  const { countries } = useCountries();
   const handleOpen = () => setOpen(!open);
 
   const HandleApplication = async (e) => {
@@ -63,11 +60,13 @@ export default function ApplicationModal() {
       });
 
       handleOpen();
-    } catch (error) {
+    } catch (error ) {
       console.error("Error submitting the form:", error);
       let errMessage = "An unknown error occurred"; // Default message
-      if (error instanceof Error) {
-        error.response.data.message || error.response.data || error.message;
+      if (error.response?.data?.message) {
+        errMessage = error.response.data.message;
+      } else if (error.message) {
+        errMessage = error.message;
       }
 
       toast.error(errMessage, {
@@ -102,7 +101,7 @@ export default function ApplicationModal() {
               Apply for Your Study Abroad Program{" "}
             </Typography>
             <Typography className="mt-1 font-normal text-gray-600">
-              Ready to take the next step? Fill out the form below, and we'll
+              Ready to take the next step? Fill out the form below, and {`we'll`}
               guide you through the process of applying for your study abroad
               program.
             </Typography>
