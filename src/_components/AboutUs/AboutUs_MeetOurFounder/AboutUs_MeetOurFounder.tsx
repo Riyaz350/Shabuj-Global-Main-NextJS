@@ -16,7 +16,7 @@ const AboutUs_MeetOurFounder = () => {
                 </div>
                 <div className="flex shadow-about rounded-[32px] lg:flex-row flex-col items-center">
                     <div className="lg:w-[28%] w-full">
-                        <Image width={100} height={100} src="https://i.ibb.co.com/JyQBfH3/founder.png" className="p-[31px] mx-auto w-auto h-auto" alt="image" />
+                        <Image priority width={100} height={100} src="https://i.ibb.co.com/JyQBfH3/founder.png" className="p-[31px] mx-auto w-auto h-auto" alt="image" />
                     </div>
                     <div className="lg:w-[72%] w-full lg:pr-[34px] lg:py-3 p-6">
                         <div className='flex justify-between items-center '>
