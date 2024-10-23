@@ -94,8 +94,8 @@ export default function page() {
       />
 
       {/* timeline */}
-      <div className=" max-w-6xl mx-auto py-14">
-        <div className="grid grid-cols-2 gap-10 items-center justify-between mt-8 mb-14 ">
+      <div className=" max-w-6xl mx-auto py-14 px-5">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2  gap-10 items-center justify-between mt-8 mb-14 ">
           <TimelineLayout timelineData={milestones} />
 
           <div>
@@ -111,8 +111,8 @@ export default function page() {
       </div>
 
       {/* support  */}
-      <div className="  py-14 bg-[#EFF6FF] ">
-        <div className="grid grid-cols-2 gap-10 items-center justify-between max-w-6xl px-12 mx-auto">
+      <div className="  py-14 bg-[#EFF6FF] px-5 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-between max-w-6xl  mx-auto">
           <div>
             <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
               Global Education Support
@@ -134,8 +134,8 @@ export default function page() {
       </div>
 
        {/* development milestone */}
-       <div className=" max-w-6xl mx-auto py-14">
-        <div className="grid grid-cols-2 gap-10 items-center justify-between mt-8 mb-14 ">
+       <div className=" max-w-6xl mx-auto py-14 px-5">
+        <div className="grid grid-cols-1  md:grid-cols-2  gap-10 items-center justify-between mt-8 mb-14 ">
           <div>
             <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
               Development of Shabuj Global Education{" "}
@@ -148,7 +148,7 @@ export default function page() {
           <TimelineLayout timelineData={development} />
         </div>
       </div>
-      <div className="pb-52"></div>
+      <div className="pb-32"></div>
     </div>
   );
 }

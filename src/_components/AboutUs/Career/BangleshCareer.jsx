@@ -4,7 +4,7 @@ import { AiOutlineMail } from "react-icons/ai";
 
 export default function BangleshCareer({ BangladeshJob }) {
   return (
-    <div className="grid grid-cols-3 gap-6 justify-between items-center ">
+    <div className="grid grid-cols-1  lg:grid-cols-3 gap-6 justify-between items-center ">
       {BangladeshJob.map((job, i) => (
         <div
           key={i}

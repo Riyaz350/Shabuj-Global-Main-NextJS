@@ -136,13 +136,12 @@ export default function page() {
         style={"text-white"}
       />
       {/* parts & program */}
-      <FloatingCard services={PartnersProgram} style={"grid-cols-3"} />
+      <FloatingCard services={PartnersProgram} style={"geid-cols-1 lg:grid-cols-3"} />
 
       {/* overview */}
       <div className="bg-[#EFF6FF] py-12">
-        <div className=" max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 gap-20 justify-between items-center">
-            {/* values */}
+        <div className=" max-w-6xl mx-auto px-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 justify-between items-center">
             <Image
               width={100}
               height={100}
@@ -150,14 +149,16 @@ export default function page() {
               src="https://i.ibb.co.com/MpS2X1Z/study-abroad-866965-6-removebg-preview.png"
               alt=""
             />
+            <div className="-mt-10">
             <IconCard data={overview} />
+            </div>
           </div>
         </div>
       </div>
 
       {/* channel partner */}
       <div className=" max-w-6xl px- mx-auto py-14">
-        <div className="grid grid-cols-2 gap-10 items-center justify-between mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-between mb-14 px-5">
           <div>
             <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
               Join Our Team of Dedicated Channel Partner at SGE
@@ -179,7 +180,7 @@ export default function page() {
 
       {/* how Success */}
       <div className="  py-14 bg-[#EFF6FF] ">
-        <div className="grid grid-cols-2 gap-10 items-center justify-between max-w-6xl px-12 mx-auto">
+        <div className="md:grid flex flex-col-reverse md:grid-cols-2 px-5 gap-10 items-center justify-between max-w-6xl  mx-auto">
           <Image
             width={100}
             height={100}
@@ -201,7 +202,7 @@ export default function page() {
 
       {/* committed professionals */}
       <div className=" max-w-6xl mx-auto py-14">
-        <div className="grid grid-cols-2 gap-10 items-center justify-between mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-between mb-14 px-5">
           <div>
             <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
               Join our team of committed professionals at SGE{" "}
@@ -223,7 +224,7 @@ export default function page() {
 
       {/* benefits */}
       <div className="bg-[#EFF6FF] py-12">
-        <div className=" max-w-6xl mx-auto">
+        <div className=" max-w-6xl mx-auto px-5">
           <div className="flex flex-col items-center mb-14 ">
             <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px]">
               Benefits for Students
@@ -237,7 +238,7 @@ export default function page() {
           </div>
           <div>
             {/* values */}
-            <HoverCard data={benefits} style={"grid-cols-3"} />
+            <HoverCard data={benefits} style={"grid-cols-1 md:grid-cols-3"} />
           </div>
         </div>
       </div>
@@ -247,7 +248,7 @@ export default function page() {
 
      
 
-      <div className="pb-52"></div>
+      <div className="pb-40"></div>
     </div>
   );
 }

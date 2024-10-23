@@ -75,14 +75,14 @@ export default function page() {
 
       {/* card */}
       <div className="  py-14 bg-[#EFF6FF] ">
-        <div className=" max-w-6xl px-12 mx-auto">
-          <HoverCard data={partnerInfo} style={"grid-cols-4"} />
+        <div className=" max-w-6xl px-5 mx-auto">
+          <HoverCard data={partnerInfo} style={"grid-cols-1 md:grid-cols-2 lg:grid-cols-4"} />
         </div>
       </div>
 
       {/* contact */}
-      <div className=" max-w-6xl px- mx-auto py-14">
-        <div className="grid grid-cols-2 gap-10 items-center justify-between mb-14">
+      <div className=" max-w-6xl px- mx-auto py-14 px-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-between mb-14">
           <div>
             <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
               Partner with Us

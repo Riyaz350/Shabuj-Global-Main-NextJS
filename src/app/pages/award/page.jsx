@@ -51,10 +51,10 @@ export default function page() {
       <div className="relative z-[2]">
         <div className="section">
           <div className="section-bg"></div>
-          <div className="section-content pt-[31px] lg:pt-[93px] lg:pb-[206px] pb-[70px] max-w-[1155px] mx-auto">
+          <div className="section-content pt-[31px] lg:pt-[93px] lg:pb-[206px] pb-[70px] max-w-[1155px] mx-auto px-5">
             <div className="text-center lg:text-left lg:pl-10">
               <h2 className="text-[#00399f] text-center tracking-tight lg:text-left text-[45px] lg:text-[90px] font-bold lg:leading-[110px] leading-[130%]">
-                Launch Your Career Journey{" "}
+                Our Awards and Recognitions
               </h2>
               <p className="font-normal lg:text-left text-center text-[14px] leading-[160%] lg:text-[21px] text-[#081831]   pt-[14px] lg:pb-[61px] pb-[19px]">
                 We are dedicated to empowering professionals to achieve their
@@ -104,9 +104,9 @@ export default function page() {
 
       {/* award */}
       {/* tab section */}
-      <div className=" py-14 ">
-        <div className="mt-24  max-w-6xl mx-auto px-12  ">
-          <div className="grid grid-cols-2 justify-between items-center gap-10">
+      <div className=" py-15 ">
+        <div className="mt-0 lg:mt-24  max-w-6xl mx-auto px-10 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-between items-center gap-10">
           <Image
             width={100}
             height={100}
