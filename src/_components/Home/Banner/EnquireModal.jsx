@@ -96,7 +96,7 @@ export default function EnquireModal() {
               Enquire About Your Future Study Plan
             </Typography>
             <Typography className="mt-1 font-normal text-gray-600">
-              Have questions? Reach out to us with your queries, and we'll
+              Have questions? Reach out to us with your queries, and {`we'll`}
               assist you in your journey to studying abroad.
             </Typography>
           </div>
