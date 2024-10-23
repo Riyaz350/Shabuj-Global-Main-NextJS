@@ -6,7 +6,7 @@ import {
   TabsBody,
   TabsHeader,
 } from "@material-tailwind/react";
-import React, { useState } from "react";
+import React from "react";
 import BangladeshCareer from "@/_components/AboutUs/Career/BangleshCareer";
 import UkCareer from "@/_components/AboutUs/Career/UkCareer";
 import "@/_components/Home/Banner/Banner.css";

@@ -1,6 +1,5 @@
 import TimelineLayout from "@/_components/AboutUs/Who_we_are/TimelineLayout";
 import Banner from "@/_components/shared/About/Banner";
-import FloatingCard from "@/_components/shared/About/FloatingCard";
 import ParaGraph from "@/_components/shared/About/ParaGraph";
 import React from "react";
 import { PiGlobeHemisphereEastThin, PiTrophy } from "react-icons/pi";
