@@ -209,7 +209,7 @@ export default function page() {
           <Tabs
             value="Bangladesh"
             orientation="vertical"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-5 "
+            className="grid grid-cols-1  lg:grid-cols-5 gap-5 "
           >
             <TabsHeader className="w-full bg-gray-200 p-4">
               {data.map(({ label, value }) => (
