@@ -7,27 +7,28 @@ import Single_University_Form from "../../../Pages/Single_University/Single_Univ
 import Single_University_Banner from "../../Single_University_Components/Single_University_Banner";
 
 const HomeSingleUniversity = () => {
-  const { id } = useParams();
-  const [university, setUniversity] = useState({});
+  const { university } = useParams();
+  const [selectedUniversity, setSelectedUniversity] = useState({});
   useEffect(() => {
-    fetch("/universities_json/allUni.json")
+    fetch("../../../assets/json/ukUni.json")
       .then((response) => response.json())
       .then((data) => {
-        const singleUniversity = data.find((uni) => uni.id === parseInt(id));
-        setUniversity(singleUniversity);
+        const singleUniversity = data.find((uni) => uni.university == university);
+        setSelectedUniversity(singleUniversity);
       })
       .catch((error) => console.error("Error fetching data:", error));
-  }, [id]);
+  }, [university]);
   useEffect(() => {
     window.scrollTo(0, 0);
   });
   return (
     <div className="mb-20 pb-20">
-      <Single_University_Banner university={university} />
+      <Single_University_Banner university={selectedUniversity} />
       <div className="max-w-7xl mx-auto">
         <p className="text-center md:text-6xl text-4xl font-semibold md:mt-36 mt-28 md:mx-0 mx-5">
-          {university.name}
+          {selectedUniversity.name}
         </p>
+        <p>hello</p>
         <div className="md:grid md:grid-cols-12 grid-cols-1 mt-8 md:mt-12 gap-10 px-5">
           <div className="lg:col-span-7 col-span-6">
             <Single_Universty_Accordion />

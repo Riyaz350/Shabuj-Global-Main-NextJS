@@ -1,97 +1,83 @@
-'use client'
+'use client';
 import { useState } from "react";
 import { LuTriangle } from "react-icons/lu";
 
-const Single_Universty_Accordion = () => {
-  const [isOpen, setIsOpen] = useState<number | null>(null);
-  const dataArr = [
-    {
-      title: "Overview",
-      description:
-        'To create an account, click on the "Sign Up" button and fill out the required information. Once done, you can enjoy the benefits of being a registered member.',
-    },
-    {
-      title: "History",
-      description:
-        "Our return policy allows you to return items within 30 days of purchase. Please visit our returns page for detailed instructions and to initiate a return.",
-    },
-    {
-      title: "Ranking & Achievements",
-      description:
-        "Yes, you can change your shipping address before your order is shipped. Go to your account settings and update the shipping information accordingly.",
-    },
-    {
-      title: "Courses",
-      description:
-        "We appreciate our loyal customers! Stay tuned for exclusive discounts, promotions, and special offers available to members of our loyalty program.",
-    },
-    {
-      title: "Departments and Faculties",
-      description:
-        "We appreciate our loyal customers! Stay tuned for exclusive discounts, promotions, and special offers available to members of our loyalty program.",
-    },
-    {
-      title: "Fees & Scholarships",
-      description:
-        "We appreciate our loyal customers! Stay tuned for exclusive discounts, promotions, and special offers available to members of our loyalty program.We appreciate our loyal customers! Stay tuned for exclusive discounts, promotions, and special offers available to members of our loyalty program.We appreciate our loyal customers! Stay tuned for exclusive discounts, promotions, and special offers available to members of our loyalty program.",
-    },
-    {
-      title: "Facilities & Services",
-      description:
-        "We appreciate our loyal customers! Stay tuned for exclusive discounts, promotions, and special offers available to members of our loyalty program.",
-    },
-    {
-      title: "Accommodation",
-      description:
-        "We appreciate our loyal customers! Stay tuned for exclusive discounts, promotions, and special offers available to members of our loyalty program.",
-    },
-    {
-      title: "Location",
-      description:
-        "We appreciate our loyal customers! Stay tuned for exclusive discounts, promotions, and special offers available to members of our loyalty program.",
-    },
-  ];
+interface UniversityData {
+  Name: string | number | null;
+  Overview: string | number | null;
+  History: string | number | null;
+  "ranking and achievement": string | number | null;
+  courses: string | number | null;
+  "depertment and feculty": string | number | null;
+  fee: string | number | null;
+  services: number | string | null;
+  accomondation: number | string | null;
+  established: number | string| null;
+  rank: number | string |null;
+  location: string | number | null;
+  "international student": number | string | null;
+  country: string | number | null;
+  logo: string | number | null;
+}
 
-  const toggle = (idx:number | null) => {
-    setIsOpen((prevIdx) => (prevIdx === idx ? null : idx));
+const Single_Universty_Accordion = ({ university }: { university: UniversityData | null }) => {
+  const [isOpen, setIsOpen] = useState<string | null>(null);
+
+  const toggle = (key: string | null) => {
+    setIsOpen((prevIdx) => (prevIdx === key ? null : key));
+  };
+
+  const UniversityInfo = ({ data }: { data: UniversityData }) => {
+    const entries = Object.entries(data).slice(0, -1); 
+
+    return (
+      <div>
+        {entries.map(([key, value]) => (
+          <div key={key} className="mb-4">
+            <div className="w-full font-poppins h-auto rounded-lg pb-0">
+              <div key={key} className="my-3">
+                <button
+                  onClick={() => toggle(key)}
+                  className="flex w-full rounded-full bg-[#EEEEEE] items-center justify-between font-medium outline-none"
+                >
+                  <span className="pl-5 py-3 text-lg md:text-2xl font-bold text-[#00399F] text-left">
+                    {key}
+                  </span>
+                  <span
+                    className={`rounded-full text-lg md:text-xl px-8 py-4 ${isOpen === key ? "bg-[#00399F]" : "bg-[#e1e1e1]"
+                      }`}
+                  >
+                    <LuTriangle
+                      className={`origin-center transform transition duration-200 ease-out rotate-90 text-[#00399F] ${isOpen === key && "!rotate-180 text-white"
+                        }`}
+                    />
+                  </span>
+                </button>
+                <div
+                  className={`grid overflow-hidden transition-all duration-300 ease-in-out ${isOpen === key
+                    ? "grid-rows-[1fr] pb-1 pt-3 opacity-100"
+                    : "grid-rows-[0fr] opacity-0"
+                    }`}
+                >
+                  <div className="overflow-hidden pr-4 text-sm">
+                    {Array.isArray(value) ? value.join(', ') : value}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    );
   };
 
   return (
-    <div className="w-full font-poppins h-auto rounded-lg  py-10 pb-0">
-      {dataArr.map((PerAccordion, idx) => (
-        <div key={idx} className="my-3">
-          <button
-            onClick={() => toggle(idx)}
-            className="flex w-full rounded-full bg-[#EEEEEE] items-center justify-between font-medium outline-none"
-          >
-            <span className="pl-5 py-3 text-lg md:text-2xl font-bold text-[#00399F] text-left">
-              {PerAccordion.title}
-            </span>
-            <span
-              className={`rounded-full text-lg md:text-xl px-8 py-4 ${
-                isOpen === idx ? "bg-[#00399F]" : "bg-[#e1e1e1]"
-              }`}
-            >
-              <LuTriangle
-                className={`origin-center transform transition duration-200 ease-out rotate-90 text-[#00399F] ${
-                  isOpen === idx && "!rotate-180 text-white"
-                }`}
-              />
-            </span>
-          </button>
-          <div
-            className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
-              isOpen === idx
-                ? "grid-rows-[1fr] pb-1 pt-3 opacity-100"
-                : "grid-rows-[0fr] opacity-0"
-            }`}
-          >
-            <div className="overflow-hidden pr-4 text-sm">
-              {PerAccordion.description}
-            </div>
-          </div>
-        </div>
-      ))}
+    <div>
+      {university ? (
+        <UniversityInfo data={university} />
+      ) : (
+        <p>No university data available.</p>
+      )}
     </div>
   );
 };

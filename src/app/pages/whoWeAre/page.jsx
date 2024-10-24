@@ -211,7 +211,7 @@ export default function page() {
       {/* header */}
 
       <Banner
-        title={"Know More About We"}
+        title={"Know More About Us"}
         description={BannerDescription}
         style={"text-white"}
       />

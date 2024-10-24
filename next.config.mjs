@@ -47,8 +47,8 @@ const nextConfig = {
         destination: "/pages/studyDestinations/West-Indies",
       },
       {
-        source: "/singleUniversity/:id",
-        destination: "/pages/singleUniversity/:id",
+        source: "/singleUniversity/:university",
+        destination: "/pages/singleUniversity/:university",
       },
     ];
   },
