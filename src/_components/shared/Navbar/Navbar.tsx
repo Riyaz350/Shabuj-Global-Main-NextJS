@@ -509,7 +509,7 @@ const Navbar2 = () => {
                         </Link>
                         <Link
                           onClick={closeNavbar}
-                          href={"/comingSoon"}
+                          href={"/news"}
                           className={`${iconStyle} flex gap-2 items-center  py-3`}
                         >
                           <FaMicrophoneLines />
@@ -832,7 +832,7 @@ const Navbar2 = () => {
                 <BiSolidPhoneCall />
                 Contact Us
               </Link>
-              <Link className={iconStyle} href="/comingSoon">
+              <Link className={iconStyle} href="/news">
                 <FaMicrophoneLines />
                 News & Press
               </Link>

@@ -27,7 +27,7 @@ export default function page() {
           alt=""
         /> */}
 
-        <div className=" max-w-6xl mx-auto grid grid-cols-2 shadow-about rounded-[32px] items-center p-[30px] gap-x-10 ">
+        <div className=" max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2  items-center p-[30px] px-5 gap-10 ">
           <div>
             {/* card left */}
             <div className="flex flex-col justify-between items-center ">

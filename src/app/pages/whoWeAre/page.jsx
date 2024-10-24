@@ -25,7 +25,6 @@ import IconCard from "@/_components/shared/About/IconCard";
 import { PiBuildingsThin, PiGlobeHemisphereEastThin } from "react-icons/pi";
 import { LiaUniversitySolid } from "react-icons/lia";
 
-
 export default function page() {
   const services = [
     {
@@ -55,7 +54,9 @@ export default function page() {
       title: "Student-Centred Approach",
       description:
         "Prioritising the individual needs and aspirations of each student, ensuring personalised support and guidance.",
-      icon: <PiGraduationCapThin className="text-3xl text-[#00399F] font-thin" />,
+      icon: (
+        <PiGraduationCapThin className="text-3xl text-[#00399F] font-thin" />
+      ),
     },
     {
       title: "Integrity and Transparency",
@@ -210,17 +211,17 @@ export default function page() {
       {/* header */}
 
       <Banner
-        title={"Know More About We"}
+        title={"Know More About Us"}
         description={BannerDescription}
         style={"text-white"}
       />
 
       {/* service section */}
-      <FloatingCard services={services} style={"grid-cols-2"} />
+      <FloatingCard services={services} style={"grid-cols-1 md:grid-cols-2 "} />
 
       {/*What We Stand For */}
       <div className="bg-[#EFF6FF] py-12">
-        <div className=" max-w-6xl mx-auto">
+        <div className=" max-w-6xl mx-auto px-10">
           <div className="flex flex-col items-center mb-14 ">
             <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px] ">
               What We Stand For
@@ -232,7 +233,7 @@ export default function page() {
               aspects:
             </p>
           </div>
-          <div className="grid grid-cols-3 gap-10 justify-between  mt-10">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 justify-between  mt-10">
             {/* goals */}
             <div>
               <SubHeading label="Goals" />
@@ -241,14 +242,14 @@ export default function page() {
 
             {/* center img */}
             <div className="w-full flex justify-center items-center">
-        <Image
-            width={100}
-            height={100}
-            className="w-auto h-2/3 rounded-2xl"
-            src="https://i.ibb.co.com/6g2cqsq/hand-drawn-study-abroad-illustration-23-2150314526-removebg-preview.png"
-            alt="Study Concept"
-        />
-    </div>
+              <Image
+                width={100}
+                height={100}
+                className="w-auto h-2/3 rounded-2xl"
+                src="https://i.ibb.co.com/6g2cqsq/hand-drawn-study-abroad-illustration-23-2150314526-removebg-preview.png"
+                alt="Study Concept"
+              />
+            </div>
 
             {/* values */}
             <div>
@@ -278,25 +279,25 @@ export default function page() {
       </div>
 
       {/* Journey */}
-      <div className=" max-w-6xl mx-auto py-14">
+      <div className=" max-w-6xl mx-auto py-14 px-5">
         <div className=" mb-14 ">
           <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
             Our Journey
           </h2>
-          <div className="grid grid-cols-2 gap-10 items-center justify-between">
+          <div className="grid grid-cols-1  md:grid-cols-2 gap-10 items-center justify-between">
             <ParaGraph
               description={JourneyDescription}
               style={"text-gray-700 max-w-lg"}
             />
 
-            <TimelineLayout timelineData={milestones}/>
+            <TimelineLayout timelineData={milestones} />
           </div>
         </div>
       </div>
 
       {/* how we help */}
       <div className="bg-[#EFF6FF] py-12">
-        <div className=" max-w-6xl mx-auto">
+        <div className=" max-w-6xl mx-auto px-5">
           <div className="flex flex-col items-center mb-14 ">
             <h2 className="poppins-semibold text-[28px] mb-2 leading-[39.2px]">
               How We Help
@@ -310,12 +311,12 @@ export default function page() {
           </div>
           <div>
             {/* values */}
-            <HoverCard data={helpServices} style={"grid-cols-4"} />
+            <HoverCard data={helpServices} style={"grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"} />
           </div>
         </div>
       </div>
 
-      <div className="pb-64"></div>
+      <div className="pb-52"></div>
     </div>
   );
 }

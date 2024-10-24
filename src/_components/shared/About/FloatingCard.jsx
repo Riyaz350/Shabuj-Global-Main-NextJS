@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export default function FloatingCard({services,style}) {
+export default function FloatingCard({ services, style }) {
   return (
 
 <div className=" w-3/4 max-w-4xl mx-auto relative -top-12">

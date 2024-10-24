@@ -1,5 +1,5 @@
 import './Home_UniversityList.css'
-import allUni from '../../../assets/json/allUni.json'
+import allUni from '../../../assets/json/ukUni.json'
 import Marquee from 'react-fast-marquee';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,18 +13,18 @@ const Home_UniversityList = () => {
             </div>
             <Marquee className='mb-10' pauseOnHover={true} speed={250} direction='right'>
                 <div className='flex  gap-10'>
-                    {allUni.slice(0, 40).map((uni) => (
-                        <Link href={`/singleUniversityAll/${uni.id}`} className='cursor-pointer' key={uni?.id}>
-                            <Image width={100} height={100} className='w-[200px] h-auto' src={uni.logo} alt="university" />
+                    {allUni.map((uni) => (
+                        <Link href={`/singleUniversity/${uni.Name}`} className='cursor-pointer' key={uni?.Name}>
+                            <Image width={100} height={100} className='w-[200px] h-auto' src={uni.logo ? uni.logo : ''} alt="university" />
                         </Link>
                     ))}
                 </div>
             </Marquee>
             <Marquee pauseOnHover={true} speed={250}>
                 <div className='flex  gap-10'>
-                    {allUni.slice(41, 76).map((uni) => (
-                        <Link href={`/singleUniversityAll/${uni.id}`} className='cursor-pointer' key={uni?.id}>
-                            <Image width={100} height={100} className='w-[200px] h-auto' src={uni.logo} alt="university" />
+                    {allUni.map((uni) => (
+                        <Link href={`/singleUniversity/${uni.Name}`} className='cursor-pointer' key={uni?.Name}>
+                            <Image width={100} height={100} className='w-[200px] h-auto' src={uni.logo ? uni.logo : ''} alt="university" />
                         </Link>
                     ))}
                 </div>

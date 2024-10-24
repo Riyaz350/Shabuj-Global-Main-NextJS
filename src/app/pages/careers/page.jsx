@@ -151,17 +151,16 @@ export default function page() {
       <div className="relative z-[2]">
         <div className="section">
           <div className="section-bg"></div>
-          <div className="section-content pt-[31px] lg:pt-[93px] lg:pb-[206px] pb-[70px] max-w-[1155px] mx-auto">
+          <div className="section-content pt-[31px] lg:pt-[93px] lg:pb-[206px] pb-[70px] max-w-[1155px] mx-auto px-5">
             <div className="text-center lg:text-left lg:pl-10">
               <h2 className="text-[#00399f] text-center tracking-tight lg:text-left text-[45px] lg:text-[90px] font-bold lg:leading-[110px] leading-[130%]">
-                Our Awards and Recognitions
+                Launch Your Career Journey{" "}
               </h2>
               <p className="font-normal lg:text-left text-center text-[14px] leading-[160%] lg:text-[21px] text-[#081831]   pt-[14px] lg:pb-[61px] pb-[19px]">
                 We take pride in our achievements and the accolades we have
                 received over the years.
                 <br></br> Each award reflects our commitment to excellence,
                 innovation, and dedication to our community.
-                
               </p>
             </div>
           </div>
@@ -206,20 +205,20 @@ export default function page() {
 
       {/* tab section */}
       <div className=" py-14 ">
-        <div className="mt-24  max-w-6xl mx-auto   ">
+        <div className="lg:mt-24  max-w-6xl mx-auto px-5   ">
           <Tabs
             value="Bangladesh"
             orientation="vertical"
-            className="grid grid-cols-5 gap-5"
+            className="grid grid-cols-1  lg:grid-cols-5 gap-5 "
           >
-            <TabsHeader className="w-full bg-gray-300 p-4">
+            <TabsHeader className="w-full bg-gray-200 p-4">
               {data.map(({ label, value }) => (
                 <Tab key={value} value={value}>
                   {label}
                 </Tab>
               ))}
             </TabsHeader>
-            <TabsBody className="col-span-4">
+            <TabsBody className=" lg:col-span-4">
               {data.map(({ value, desc }) => (
                 <TabPanel key={value} value={value} className="py-0">
                   {desc}
