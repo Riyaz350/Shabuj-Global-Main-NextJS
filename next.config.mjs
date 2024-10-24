@@ -13,6 +13,7 @@ const nextConfig = {
       { source: "/partner-with-us", destination: "/pages/partnerWithUs" },
       { source: "/career", destination: "/pages/careers" },
       { source: "/award", destination: "/pages/award" },
+      { source: "/news", destination: "/pages/news&press" },
       { source: "/privacy", destination: "/pages/privacy" },
       { source: "/events", destination: "/pages/events" },
       { source: "/singleEvent", destination: "/pages/singleEvent" },
