@@ -115,8 +115,8 @@ export default function page() {
             alt=""
           />
           <div className="flex-col gap-10 flex mt-10">
-            {awards?.map((value) => (
-              <div className="flex gap-5 ">
+            {awards?.map((value, index) => (
+              <div key={index} className="flex gap-5 ">
                 <div className="w-auto">
                   <div className="w-14 h-14 rounded-full bg-white relative">
                     <p className="absolute -top-1 -left-1">{value?.icon}</p>

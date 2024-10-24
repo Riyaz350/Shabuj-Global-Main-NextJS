@@ -15,8 +15,8 @@ export default function TimelineLayout({timelineData}) {
   return (
     <div className="w-full flex flex-col gap-6 relative">
       <div className="absolute top-0 bottom-0  left-9 h-full w-1 bg-gray-200"></div>
-      {timelineData?.map((data) => (
-        <Timeline>
+      {timelineData?.map((data, index) => (
+        <Timeline key={index}>
           <TimelineItem className="h-full ">
             <TimelineConnector className="!w-[78px]" />
             <TimelineHeader className="relative rounded-xl border border-blue-gray-50 bg-white py-3 pl-4 pr-8 shadow-lg shadow-blue-gray-900/5">

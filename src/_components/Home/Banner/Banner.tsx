@@ -1,4 +1,3 @@
-import Link from "next/link";
 import "./Banner.css";
 import EnquireModal from '../Banner/EnquireModal'
 import ApplicationModal from '../Banner/ApplicationModal'

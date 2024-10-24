@@ -7,9 +7,7 @@ import { PiChalkboardTeacherFill } from "react-icons/pi";
 import { FaHandsHelping } from "react-icons/fa";
 import { TiStarburst } from "react-icons/ti";
 import Image from "next/image";
-import ParaGraph from "@/_components/shared/About/ParaGraph";
 import { TfiEmail } from "react-icons/tfi";
-import Link from "next/link";
 
 export default function page() {
   const bannerDescription = [

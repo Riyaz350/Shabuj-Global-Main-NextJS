@@ -16,11 +16,9 @@ import React from "react";
 import { useState } from "react";
 import { HiXMark } from "react-icons/hi2";
 import { Slide, toast } from "react-toastify";
-import { useCountries } from "use-react-countries";
 
 export default function EnquireModal() {
   const [open, setOpen] = useState(false);
-  const { countries } = useCountries();
   const handleOpen = () => setOpen(!open);
 
   const HandleEnquies = async (e) => {
@@ -98,7 +96,7 @@ export default function EnquireModal() {
               Enquire About Your Future Study Plan
             </Typography>
             <Typography className="mt-1 font-normal text-gray-600">
-              Have questions? Reach out to us with your queries, and we'll
+              Have questions? Reach out to us with your queries, and {`we'll`}
               assist you in your journey to studying abroad.
             </Typography>
           </div>

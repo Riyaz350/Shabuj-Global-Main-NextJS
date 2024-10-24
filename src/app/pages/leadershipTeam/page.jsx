@@ -37,6 +37,7 @@ export default function page() {
                 src="https://i.ibb.co.com/JyQBfH3/founder.png"
                 className=" w-full h-full"
                 alt="image"
+                priority
               />
                  <div className="mt-8 text-center">
               {/* info */}

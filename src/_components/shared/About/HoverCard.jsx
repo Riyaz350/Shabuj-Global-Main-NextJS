@@ -3,8 +3,8 @@ import React from 'react'
 export default function HoverCard({data,style}) {
   return (
     <div className={`grid ${style} gap-10  mt-10`}>
-    {data?.map((service) => (
-      <div className="flex flex-col justify-center text-center items-center gap-5 hover:bg-white p-6 transition duration-500 rounded-2xl hover:shadow-xl ">
+    {data?.map((service, index) => (
+      <div key={index} className="flex flex-col justify-center text-center items-center gap-5 hover:bg-white p-6 transition duration-500 rounded-2xl hover:shadow-xl ">
         <p className="">{service?.icon}</p>
 
         <div className="">
