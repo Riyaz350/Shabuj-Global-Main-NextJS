@@ -11,12 +11,12 @@ interface University  {
   Name: string |   null;
   Overview: string | number | null;
   History: string | number | null;
-  "ranking and achievement": string | number | null;
+  "Ranking & Achievement": string | number | null;
   courses: string | number | null;
-  "depertment and feculty": string | number | null;
-  fee: string | number | null;
-  services: number | string | null;
-  accomondation: number | string | null;
+  "Department & Faculty": string | number | null;
+  Fee: string | number | null;
+  Services: number | string | null;
+  Accommodation: number | string | null;
   established: number | string| null;
   rank: number | string |null;
   location: string | number | null;
@@ -57,7 +57,7 @@ const SingleUniversity = ({ Name }: { Name: string }) => {
               <Single_University_Check />
             </div>
             <div className="lg:col-span-5 col-span-6">
-              <Single_University_Info />
+              <Single_University_Info university={selectedUniversity}/>
               <Single_University_Form />
             </div>
           </div>
