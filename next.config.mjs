@@ -19,37 +19,25 @@ const nextConfig = {
       { source: "/singleEvent", destination: "/pages/singleEvent" },
       { source: "/blogs", destination: "/pages/blogs" },
       { source: "/singleBlog", destination: "/pages/singleBlog" },
+      { source: "/personalizedUniversity", destination: "/pages/ServicesPages/personalizedUniversity" },
+      { source: "/applicationAssistance", destination: "/pages/ServicesPages/applicationAssistance" },
+
       { source: "/logIn", destination: "/pages/logIn" },
       { source: "/registration", destination: "/pages/registration" },
       { source: "/UK", destination: "/pages/studyDestinations/UK" },
       { source: "/USA", destination: "/pages/studyDestinations/USA" },
-      {
-        source: "/Australia",
-        destination: "/pages/studyDestinations/Australia",
-      },
+      { source: "/Australia", destination: "/pages/studyDestinations/Australia", },
       { source: "/Canada", destination: "/pages/studyDestinations/Canada" },
       { source: "/Germany", destination: "/pages/studyDestinations/Germany" },
-      {
-        source: "/New-Zealand",
-        destination: "/pages/studyDestinations/NewZealand",
-      },
+      { source: "/New-Zealand", destination: "/pages/studyDestinations/NewZealand", },
       { source: "/UAE", destination: "/pages/studyDestinations/UAE" },
       { source: "/Georgia", destination: "/pages/studyDestinations/Georgia" },
       { source: "/Finland", destination: "/pages/studyDestinations/Finland" },
       { source: "/Cyprus", destination: "/pages/studyDestinations/Cyprus" },
-      {
-        source: "/Switzerland",
-        destination: "/pages/studyDestinations/Switzerland",
-      },
+      { source: "/Switzerland", destination: "/pages/studyDestinations/Switzerland", },
       { source: "/France", destination: "/pages/studyDestinations/France" },
-      {
-        source: "/West-Indies",
-        destination: "/pages/studyDestinations/West-Indies",
-      },
-      {
-        source: "/singleUniversity/:university",
-        destination: "/pages/singleUniversity/:university",
-      },
+      { source: "/West-Indies", destination: "/pages/studyDestinations/West-Indies", },
+      { source: "/singleUniversity/:university", destination: "/pages/singleUniversity/:university", },
     ];
   },
   images: {

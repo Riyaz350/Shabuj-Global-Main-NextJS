@@ -2,22 +2,22 @@
 import { useState } from "react";
 import { LuTriangle } from "react-icons/lu";
 
-interface UniversityData {
-  Name: string | number | null;
+interface UniversityData  {
+  Name: string |   null;
   Overview: string | number | null;
   History: string | number | null;
-  "ranking and achievement": string | number | null;
+  "Ranking & Achievement": string | number | null;
   courses: string | number | null;
-  "depertment and feculty": string | number | null;
-  fee: string | number | null;
-  services: number | string | null;
-  accomondation: number | string | null;
+  "Department & Faculty": string | number | null;
+  Fee: string | number | null;
+  Services: number | string | null;
+  Accommodation: number | string | null;
   established: number | string| null;
   rank: number | string |null;
   location: string | number | null;
   "international student": number | string | null;
   country: string | number | null;
-  logo: string | number | null;
+  logo: string |   null;
 }
 
 const Single_Universty_Accordion = ({ university }: { university: UniversityData | null }) => {
@@ -28,7 +28,8 @@ const Single_Universty_Accordion = ({ university }: { university: UniversityData
   };
 
   const UniversityInfo = ({ data }: { data: UniversityData }) => {
-    const entries = Object.entries(data).slice(0, -1); 
+    // Convert object to entries and remove specific indexes (e.g., 2 and 5)
+    const entries = Object.entries(data).slice(0,9).filter((_, index) => index !== 0 && index !== 4 )
 
     return (
       <div>

@@ -170,16 +170,16 @@ const Navbar2 = () => {
                             <Link
                               onClick={closeNavbar}
                               className="hover:text-blue-600"
-                              href={"/comingSoon"}
+                              href={"/personalizedUniversity"}
                             >
-                              <li>Free Study Abroad Counselling</li>
+                              <li>Personalized University Selection</li>
                             </Link>
                             <Link
                               onClick={closeNavbar}
                               className="hover:text-blue-600"
-                              href={"/comingSoon"}
+                              href={"/applicationAssistance"}
                             >
-                              <li>Student Visa</li>
+                              <li>Application Assistance                              </li>
                             </Link>
                             <Link
                               onClick={closeNavbar}
@@ -644,11 +644,11 @@ const Navbar2 = () => {
                 </h2>
                 <div className="flex flex-col md:flex-row  justify-center md:justify-start gap-10">
                   <ul className="space-y-2 text-base">
-                    <Link className="hover:text-blue-600" href={"/comingSoon"}>
-                      <li>Free Study Abroad Counselling</li>
+                    <Link className="hover:text-blue-600" href={"/personalizedUniversity"}>
+                      <li>Personalized University Selection</li>
                     </Link>
-                    <Link className="hover:text-blue-600" href={"/comingSoon"}>
-                      <li>Student Visa</li>
+                    <Link className="hover:text-blue-600" href={"/applicationAssistance"}>
+                      <li>Application Assistance                      </li>
                     </Link>
                     <Link className="hover:text-blue-600" href={"/comingSoon"}>
                       <li>University Application Process</li>
