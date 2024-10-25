@@ -31,9 +31,9 @@ const page = () => {
     }
 
     return (
-        <div className='mb-20'>
+        <div className=' '>
             <Banner title='Application Assistance' />
-            <div className="  py-14 bg-[#EFF6FF] px-5 ">
+            <div className="  py-14 pb-32 bg-[#EFF6FF] px-5 ">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-between max-w-6xl  mx-auto">
                     <div>
                         <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">

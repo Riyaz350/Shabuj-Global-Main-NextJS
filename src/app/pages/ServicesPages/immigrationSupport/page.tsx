@@ -7,36 +7,39 @@ const page = () => {
 
     const Para = () => {
         return (
-            <span className="   max-w-xl mx-auto">
-                <p className="text-lg font-medium mb-4">
-                    We help you find the best-fit university based on:
+            <span className=" p-6   max-w-xl mx-auto">
+                <h4 className="text-lg font-semibold mb-4">4. Visa and Immigration Support</h4>
+                <p className="text-base text-gray-700 mb-4">
+                    Navigating visa applications can be complex, but our team provides step-by-step assistance, including:
                 </p>
                 <ul className="list-disc pl-6 mb-4">
                     <li>
-                        <strong>Academic Profile:</strong> Your grades, skills, and aspirations.
+                        <strong>Visa Application Guidance:</strong> Ensuring you have the right documents and know the process.
                     </li>
                     <li>
-                        <strong>Preferred Country:</strong> UK, USA, Canada, Australia, Europe, or beyond.
+                        <strong>Interview Preparation:</strong> Helping you prepare for visa interviews with tips and practice sessions.
                     </li>
                     <li>
-                        <strong>Career Goals:</strong> Aligning your education with future ambitions.
+                        <strong>Document Verification:</strong> Double-checking all necessary documents for a smooth visa approval process.
                     </li>
                 </ul>
                 <p className="text-base text-gray-700">
-                    Our experienced counselors analyze your profile and recommend top universities where {`you'll`} thrive, ensuring you get the best education for your chosen career path.
+                    We aim to make the visa process hassle-free, so you can focus on your studies.
                 </p>
             </span>
+
+
         )
     }
 
     return (
-        <div>
-            <Banner title='Personalized University Selection' />
+        <div className=' '>
+            <Banner title=' Visa and Immigration Support' />
             <div className="  py-14 pb-32 bg-[#EFF6FF] px-5 ">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-between max-w-6xl  mx-auto">
                     <div>
                         <h2 className="poppins-semibold text-[28px] text-[#00399F] mb-2 leading-[39.2px]">
-                        University Selection Support
+                            Immigration Support
                         </h2>
                         <div className="flex-col gap-3 flex ">
                             <span className="text-base  text-gray-700 max-w-lg "  >

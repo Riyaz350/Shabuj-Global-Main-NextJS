@@ -43,9 +43,8 @@ const Navbar2 = () => {
             </p>
           </button>
           <span
-            className={` ${
-              navButton == ind && "rotate-180 transition ease-in-out delay-450"
-            }`}
+            className={` ${navButton == ind && "rotate-180 transition ease-in-out delay-450"
+              }`}
           >
             <FaChevronUp />
           </span>
@@ -184,6 +183,34 @@ const Navbar2 = () => {
                             <Link
                               onClick={closeNavbar}
                               className="hover:text-blue-600"
+                              href={"/aidGuidance"}
+                            >
+                              <li>Scholarship and Financial Aid Guidance</li>
+                            </Link>
+                            <Link
+                              onClick={closeNavbar}
+                              className="hover:text-blue-600"
+                              href={"/immigrationSupport"}
+                            >
+                              <li> Visa and Immigration Support                            </li>
+                            </Link>
+                            <Link
+                              onClick={closeNavbar}
+                              className="hover:text-blue-600"
+                              href={"/travelAssistance"}
+                            >
+                              <li>  Pre-Departure and Post-Arrival Assistance                            </li>
+                            </Link>
+                            <Link
+                              onClick={closeNavbar}
+                              className="hover:text-blue-600"
+                              href={"/postGraduationAid"}
+                            >
+                              <li>   Post-Graduation Support                            </li>
+                            </Link>
+                            {/* <Link
+                              onClick={closeNavbar}
+                              className="hover:text-blue-600"
                               href={"/comingSoon"}
                             >
                               <li>University Application Process</li>
@@ -194,9 +221,9 @@ const Navbar2 = () => {
                               href={"/comingSoon"}
                             >
                               <li>International Student Visa Guidance</li>
-                            </Link>
+                            </Link> */}
                           </ul>
-                          <ul className="flex-col flex gap-2 text-lg">
+                          {/* <ul className="flex-col flex gap-2 text-lg">
                             <Link
                               onClick={closeNavbar}
                               className="hover:text-blue-600"
@@ -225,11 +252,61 @@ const Navbar2 = () => {
                             >
                               <li>Study Accommodation</li>
                             </Link>
-                          </ul>
+                          </ul> */}
                         </div>
                       </div>
-
                       <div className="col-span-1 md:my-10">
+                        <h2 className="my-5 text-xl font-medium border-b-2 w-fit border-[#f85424]">
+                          FOR PARTNERS
+                        </h2>
+                        <ul className="space-y-2 text-lg">
+                          <Link
+                            onClick={closeNavbar}
+                            className="hover:text-blue-600"
+                            href={"/admissionProcess"}
+                          >
+                            <li> Seamless Admissions Process</li>
+                          </Link>
+                          <Link
+                            onClick={closeNavbar}
+                            className="hover:text-blue-600"
+                            href={"/studentGuidance"}
+                          >
+                            <li>Expert Student Guidance                              </li>
+                          </Link>
+                          <Link
+                            onClick={closeNavbar}
+                            className="hover:text-blue-600"
+                            href={"/globalNetwork"}
+                          >
+                            <li> Access to a Global Network of Universities
+                            </li>
+                          </Link>
+                          <Link
+                            onClick={closeNavbar}
+                            className="hover:text-blue-600"
+                            href={"/studentSuccess"}
+                          >
+                            <li>  Enhanced Student Success</li>
+                          </Link>
+                          <Link
+                            onClick={closeNavbar}
+                            className="hover:text-blue-600"
+                            href={"/recruitmentSupport"}
+                          >
+                            <li>   Marketing and Recruitment Support</li>
+                          </Link>
+                          <Link
+                            onClick={closeNavbar}
+                            className="hover:text-blue-600"
+                            href={"/collaboration"}
+                          >
+                            <li> Long-Term Collaboration</li>
+                          </Link>
+                        </ul>
+                      </div>
+
+                      {/* <div className="col-span-1 md:my-10">
                         <h2 className="my-5 text-xl font-medium border-b-2 w-fit border-[#f85424]">
                           CHANNEL PARTNERS
                         </h2>
@@ -371,7 +448,7 @@ const Navbar2 = () => {
                             <li>Technological Support</li>
                           </Link>
                         </ul>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>
@@ -587,9 +664,8 @@ const Navbar2 = () => {
             </Link>
           </div>
           <div
-            className={`${
-              width >= 1244 ? "text-base" : "text-sm"
-            } flex items-center justify-end gap-1`}
+            className={`${width >= 1244 ? "text-base" : "text-sm"
+              } flex items-center justify-end gap-1`}
           >
             <Link
               className={`  bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl`}
@@ -634,9 +710,8 @@ const Navbar2 = () => {
         {navIndex == 2 && (
           <>
             <div
-              className={`${
-                width <= 1450 ? "grid-cols-4" : "grid-cols-5"
-              }   mx-10 gap-5 hidden  lg:grid md:mx-auto   md:max-w-[1800px]`}
+              className={`${width <= 1450 ? "grid-cols-4" : "grid-cols-5"
+                }   mx-10 gap-5 hidden  lg:grid md:mx-auto   md:max-w-[1800px]`}
             >
               <div className="col-span-1 md:my-10 my-5">
                 <h2 className="my-5 text-lg font-medium border-b-2 w-fit border-[#f85424]">
@@ -650,13 +725,25 @@ const Navbar2 = () => {
                     <Link className="hover:text-blue-600" href={"/applicationAssistance"}>
                       <li>Application Assistance                      </li>
                     </Link>
-                    <Link className="hover:text-blue-600" href={"/comingSoon"}>
+                    <Link className="hover:text-blue-600" href={"/aidGuidance"}>
+                      <li>Scholarship and Financial Aid Guidance                      </li>
+                    </Link>
+                    <Link className="hover:text-blue-600" href={"/immigrationSupport"}>
+                      <li>Visa and Immigration Support                      </li>
+                    </Link>
+                    <Link className="hover:text-blue-600" href={"/travelAssistance"}>
+                      <li> Pre-Departure and Post-Arrival Assistance</li>
+                    </Link>
+                    <Link className="hover:text-blue-600" href={"/postGraduationAid"}>
+                      <li>  Post-Graduation Support</li>
+                    </Link>
+
+                    {/* <Link className="hover:text-blue-600" href={"/comingSoon"}>
                       <li>University Application Process</li>
                     </Link>
                     <Link className="hover:text-blue-600" href={"/comingSoon"}>
                       <li>International Student Visa Guidance</li>
                     </Link>
-
                     <Link className="hover:text-blue-600" href={"/comingSoon"}>
                       <li>University Scholarship Guidance</li>
                     </Link>
@@ -668,12 +755,37 @@ const Navbar2 = () => {
                     </Link>
                     <Link className="hover:text-blue-600" href={"/comingSoon"}>
                       <li>Study Accommodation</li>
-                    </Link>
+                    </Link> */}
                   </ul>
                 </div>
               </div>
-
               <div className="col-span-1   md:my-10">
+                <h2 className="my-5 text-lg font-medium border-b-2 w-fit border-[#f85424]">
+                  CHANNEL PARTNERS
+                </h2>
+                <ul className="space-y-2 text-base">
+                  <Link className="hover:text-blue-600" href={"/admissionProcess"}>
+                    <li>Seamless Admissions Process</li>
+                  </Link>
+                  <Link className="hover:text-blue-600" href={"/studentGuidance"}>
+                    <li>Expert Student Guidance                      </li>
+                  </Link>
+                  <Link className="hover:text-blue-600" href={"/globalNetwork"}>
+                    <li>Access to a Global Network of Universities                      </li>
+                  </Link>
+                  <Link className="hover:text-blue-600" href={"/studentSuccess"}>
+                    <li> Enhanced Student Success                      </li>
+                  </Link>
+                  <Link className="hover:text-blue-600" href={"/recruitmentSupport"}>
+                    <li>  Marketing and Recruitment Support</li>
+                  </Link>
+                  <Link className="hover:text-blue-600" href={"/collaboration"}>
+                    <li>Long-Term Collaboration</li>
+                  </Link>
+                </ul>
+              </div>
+
+              {/* <div className="col-span-1   md:my-10">
                 <h2 className="my-5 text-lg font-medium border-b-2 w-fit border-[#f85424]">
                   CHANNEL PARTNERS
                 </h2>
@@ -691,9 +803,9 @@ const Navbar2 = () => {
                     <li>Technological Support</li>
                   </Link>
                 </ul>
-              </div>
+              </div> */}
 
-              <div className="col-span-1 md:my-10">
+              {/* <div className="col-span-1 md:my-10">
                 <h2 className="my-5 text-lg font-medium border-b-2 w-fit border-[#f85424]">
                   PARTNER INSTITUTION
                 </h2>
@@ -757,7 +869,7 @@ const Navbar2 = () => {
                     SERVICES
                   </Link>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </>
         )}
