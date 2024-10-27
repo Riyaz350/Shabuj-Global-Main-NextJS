@@ -1,14 +1,13 @@
-[debug] [2024-09-28T09:02:22.559Z] ----------------------------------------------------------------------
-[debug] [2024-09-28T09:02:22.562Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Riyaz\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
-[debug] [2024-09-28T09:02:22.562Z] CLI Version:   13.3.1
-[debug] [2024-09-28T09:02:22.562Z] Platform:      win32
-[debug] [2024-09-28T09:02:22.563Z] Node Version:  v21.6.1
-[debug] [2024-09-28T09:02:22.563Z] Time:          Sat Sep 28 2024 15:02:22 GMT+0600 (Bangladesh Standard Time)
-[debug] [2024-09-28T09:02:22.563Z] ----------------------------------------------------------------------
+[debug] [2024-10-27T05:04:11.280Z] ----------------------------------------------------------------------
+[debug] [2024-10-27T05:04:11.282Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\RiyazA\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-10-27T05:04:11.282Z] CLI Version:   13.23.0
+[debug] [2024-10-27T05:04:11.282Z] Platform:      win32
+[debug] [2024-10-27T05:04:11.282Z] Node Version:  v20.10.0
+[debug] [2024-10-27T05:04:11.282Z] Time:          Sun Oct 27 2024 11:04:11 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-10-27T05:04:11.282Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-09-28T09:02:22.578Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
-[debug] [2024-09-28T09:02:22.632Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-09-28T09:02:22.632Z] > authorizing via signed-in user (riyaz3582@gmail.com)
+[debug] [2024-10-27T05:04:11.287Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-27T05:04:11.287Z] > authorizing via signed-in user (shabujglobaleducation24@gmail.com)
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -18,11 +17,59 @@
 
 You're about to initialize a Firebase project in this directory:
 
-  C:\projects\shabuj-global-education-nextjs
+  C:\Projects\Shabuj-Global-Main-NextJS
 
 Before we get started, keep in mind:
 
   * You are currently outside your home directory
 
-[debug] [2024-09-28T09:02:23.327Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
-[debug] [2024-09-28T09:02:23.328Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-10-27T05:07:20.430Z] ----------------------------------------------------------------------
+[debug] [2024-10-27T05:07:20.432Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\RiyazA\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-10-27T05:07:20.433Z] CLI Version:   13.23.0
+[debug] [2024-10-27T05:07:20.433Z] Platform:      win32
+[debug] [2024-10-27T05:07:20.433Z] Node Version:  v20.10.0
+[debug] [2024-10-27T05:07:20.433Z] Time:          Sun Oct 27 2024 11:07:20 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-10-27T05:07:20.433Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-27T05:07:20.437Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-27T05:07:20.437Z] > authorizing via signed-in user (shabujglobaleducation24@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Projects\Shabuj-Global-Main-NextJS
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+
+[debug] [2024-10-27T05:08:53.429Z] ----------------------------------------------------------------------
+[debug] [2024-10-27T05:08:53.431Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\RiyazA\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-10-27T05:08:53.432Z] CLI Version:   13.23.0
+[debug] [2024-10-27T05:08:53.432Z] Platform:      win32
+[debug] [2024-10-27T05:08:53.432Z] Node Version:  v20.10.0
+[debug] [2024-10-27T05:08:53.432Z] Time:          Sun Oct 27 2024 11:08:53 GMT+0600 (Bangladesh Standard Time)
+[debug] [2024-10-27T05:08:53.432Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-27T05:08:53.436Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-27T05:08:53.437Z] > authorizing via signed-in user (shabujglobaleducation24@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Projects\Shabuj-Global-Main-NextJS
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+

@@ -1,9 +1,71 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import Image from "next/image";
-import { FaAngleDown } from "react-icons/fa";
+import Input from "./Input";
+import Swal from "sweetalert2";
 
 export default function Single_University_Form() {
-  const Label = ({ text }:{text:string}) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phoneNumber: 0,
+    countryOfResidence: "",
+    desiredCourse: "",
+    desiredUniversity: "",
+    lastAcademicQualification: "",
+    englishTestStatus: "",
+    nearestSGEOffice: "",
+  });
+  console.log(formData)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+
+    try {
+      const response = await fetch("http://localhost:5005/universityRegistrations", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Something went wrong!"
+        });
+      }
+
+      // Optionally handle success, e.g., show a message or reset the form
+      Swal.fire({
+        icon: "success",
+        title: "Thank You",
+        text: "Our counsellor will contact you soon"
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phoneNumber: 0,
+        countryOfResidence: "",
+        desiredCourse: "",
+        desiredUniversity: "",
+        lastAcademicQualification: "",
+        englishTestStatus: "",
+        nearestSGEOffice: "",
+      });
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error);
+    }
+  };
+
+  const Label = ({ text }: { text: string }) => {
     return (
       <p className="font-medium text-lg">
         {text}
@@ -12,116 +74,73 @@ export default function Single_University_Form() {
     );
   };
 
-  const Input = ({ text, type }:{text:string, type:string}) => {
-    return (
-      <input
-        className="overscroll-none border-[1px] hover:border-[#3b82f6] cursor-pointer w-full p-1 placeholder:text-xs placeholder:text-gray-300 focus:outline-[#3b82f6] rounded-md"
-        placeholder={text}
-        type={type}
-      />
-    );
-  };
-
   return (
-    <div className="font-poppins ml-auto w-full  mt-10">
+    <div className="font-poppins ml-auto w-full mt-10">
       <div className="shadow-xl rounded-2xl">
         <div className="bg-[#3b82f6] text-center text-white p-5 rounded-t-2xl">
           <h2 className="md:text-2xl text-xl font-semibold">
             Want to Study at The University of Aberdeen?
           </h2>
         </div>
-        <form className="p-6 space-y-5">
+        <form className="p-6 space-y-5" onSubmit={handleSubmit}>
           <div>
             <Label text="Name" />
-            <Input text="Your Name" type="text" />
+            <Input text="Your Name" type="text" name="name" value={formData.name} onChange={handleChange} />
           </div>
           <div>
             <Label text="Email" />
-            <div className="flex items-center justify-between  border-[2px] hover:border-[#3b82f6] cursor-pointer w-full p-1 rounded-md">
+            <div className="flex items-center justify-between border-[2px] hover:border-[#3b82f6] w-full p-1 rounded-md">
               <input
                 className="focus:outline-none placeholder:text-xs placeholder:text-gray-300 w-full"
                 placeholder="Your Email"
                 type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
               />
-              <span className="text-gray-400 bg-[#fafafa] text-xs px-2">
-                .com
-              </span>
+              <span className="text-gray-400 bg-[#fafafa] text-xs px-2">.com</span>
             </div>
           </div>
           <div>
             <Label text="Phone Number" />
-            <div className="flex items-center gap-5 text-gray-300 text-xs">
+            <div className="flex items-center gap-5 text-xs">
               <span className="flex p-2 border-[1px] rounded-md">
-                <Image width={100} height={100} className="w-auto h-auto" src='https://i.ibb.co.com/QjQfzT1/contents.png' alt="" />
+                <Image width={100} height={100} className="w-auto h-auto" src="https://i.ibb.co.com/QjQfzT1/contents.png" alt="" />
                 <p className="pr-2">+880</p>
               </span>
-              <Input text="1891123654" type="text" />
+              <Input text="1891123654" type="number" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} />
             </div>
           </div>
           <div>
             <Label text="Country of Residence" />
-            <div className="flex items-center justify-between border-[1px] hover:border-[#3b82f6] cursor-pointer w-full p-1 rounded-md">
-              <input
-                className="focus:outline-none placeholder:text-xs placeholder:text-gray-300 w-full"
-                readOnly
-                placeholder="Select your current country"
-                type="text"
-              />
-              <span className="text-gray-400 bg-[#fafafa] text-xs px-2">
-                <FaAngleDown />
-              </span>
-            </div>
-          </div>
-          <div>
-            <Label text="Desired Country" />
-            <div className="flex items-center justify-between border-[1px] hover:border-[#3b82f6] cursor-pointer w-full p-1 rounded-md">
-              <input
-                className="focus:outline-none placeholder:text-xs placeholder:text-gray-300 w-full"
-                readOnly
-                placeholder="Select your desired country"
-                type="text"
-              />
-              <span className="text-gray-400 bg-[#fafafa] text-xs px-2">
-                <FaAngleDown />
-              </span>
-            </div>
+            <Input text="Select your current country" type="text" name="countryOfResidence" value={formData.countryOfResidence} onChange={handleChange} />
           </div>
           <div>
             <Label text="Desired Course" />
-            <Input text="Write your desired course name" type="text" />
+            <Input text="Write your desired course name" type="text" name="desiredCourse" value={formData.desiredCourse} onChange={handleChange} />
           </div>
           <div>
             <Label text="Desired University" />
-            <Input text="Write your desired university name" type="text" />
+            <Input text="Write your desired university name" type="text" name="desiredUniversity" value={formData.desiredUniversity} onChange={handleChange} />
           </div>
           <div>
             <Label text="Last Academic Qualification" />
-            <Input text="Bachelor" type="text" />
+            <Input text="Bachelor" type="text" name="lastAcademicQualification" value={formData.lastAcademicQualification} onChange={handleChange} />
           </div>
           <div>
             <Label text="English Test Status" />
-            <Input text="IELTS" type="text" />
+            <Input text="IELTS" type="text" name="englishTestStatus" value={formData.englishTestStatus} onChange={handleChange} />
           </div>
           <div>
             <Label text="Which SGE Office is Nearest to You?" />
-            <div className="flex items-center justify-between border-[1px] hover:border-[#3b82f6] cursor-pointer w-full p-1 rounded-md">
-              <input
-                className="focus:outline-none placeholder:text-xs placeholder:text-gray-300 w-full"
-                readOnly
-                placeholder="Dhanmondi, Dhaka"
-                type="text"
-              />
-              <span className="text-gray-400 bg-[#fafafa] text-xs px-2">
-                <FaAngleDown />
-              </span>
-            </div>
+            <Input text="Dhanmondi, Dhaka" type="text" name="nearestSGEOffice" value={formData.nearestSGEOffice} onChange={handleChange} />
+          </div>
+          <div className="p-5">
+            <button type="submit" className="font-inter bg-[#2563EB] hover:bg-[#3b82f6] text-white px-5 py-4 text-xs w-full rounded-full">
+              Schedule Meeting
+            </button>
           </div>
         </form>
-        <div className="p-5">
-          <button className="font-inter bg-[#2563EB] hover:bg-[#3b82f6] text-white px-5 py-4 text-xs w-full rounded-full">
-            Schedule Meeting
-          </button>
-        </div>
       </div>
     </div>
   );

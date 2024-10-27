@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import './Home_Events.css'
 const Home_Events = () => {
 
@@ -60,35 +61,35 @@ const Home_Events = () => {
                         <picture >
                             <source media='(max-width : 640px)' srcSet='https://i.ibb.co.com/sqtJYff/pastevent1.png'></source>
                             <source media='(max-width : 768px)' srcSet='https://i.ibb.co.com/sqtJYff/pastevent1.png'></source>
-                            <img src="https://i.ibb.co.com/L0KDWhd/event1.png" alt=""   onClick={slideNext} />
+                            <Image className='w-auto h-auto' width={100} height={100} src="https://i.ibb.co.com/L0KDWhd/event1.png" alt=""   onClick={slideNext} />
                         </picture>
                     </div>
                     <div className='absolute left-[50%] -translate-x-1/2 slide-pos-right1 carousel-1 w-full'>
                         <picture>
                             <source media='(max-width : 640px)' srcSet='https://i.ibb.co.com/DRyQPG6/pastevent2.png'></source>
                             <source media='(max-width : 768px)' srcSet='https://i.ibb.co.com/DRyQPG6/pastevent2.png'></source>
-                            <img src="https://i.ibb.co.com/42TkLvW/event2.png" alt=""   onClick={slideNext} />
+                            <Image className='w-auto h-auto' width={100} height={100} src="https://i.ibb.co.com/42TkLvW/event2.png" alt=""   onClick={slideNext} />
                         </picture>
                     </div>
                     <div className='absolute left-[50%] -translate-x-1/2 slide-pos-right2 carousel-1 w-full'>
                         <picture>
                             <source media='(max-width : 640px, maxhe)' srcSet='https://i.ibb.co.com/x5bLtjZ/pastevent3.png'></source>
                             <source media='(max-width : 768px)' srcSet='https://i.ibb.co.com/x5bLtjZ/pastevent3.png'></source>
-                            <img src="https://i.ibb.co.com/PZP696M/event3.png" alt=""   onClick={slideNext} />
+                            <Image className='w-auto h-auto' width={100} height={100} src="https://i.ibb.co.com/PZP696M/event3.png" alt=""   onClick={slideNext} />
                         </picture>
                     </div>
                     <div className='absolute left-[50%] -translate-x-1/2 slide-pos-left1 carousel-1 w-full'>
                         <picture>
                             <source media='(max-width : 640px)' srcSet='https://i.ibb.co.com/vYPg7ZT/pastevent4.png'></source>
                             <source media='(max-width : 768px)' srcSet='https://i.ibb.co.com/vYPg7ZT/pastevent4.png'></source>
-                            <img src="https://i.ibb.co.com/QNjd3xZ/event4.png" alt=""   onClick={slideNext} />
+                            <Image className='w-auto h-auto' width={100} height={100} src="https://i.ibb.co.com/QNjd3xZ/event4.png" alt=""   onClick={slideNext} />
                         </picture>
                     </div>
                     <div className='absolute left-[50%] -translate-x-1/2 slide-pos-left2 carousel-1  w-full'>
                         <picture>
                             <source media='(max-width : 640px)' srcSet='https://i.ibb.co.com/R0ry8gP/pastevent5.png'></source>
                             <source media='(max-width : 768px)' srcSet='https://i.ibb.co.com/R0ry8gP/pastevent5.png'></source>
-                            <img src="https://i.ibb.co.com/KyDyrqr/event5.png" alt=""   onClick={slideNext} />
+                            <Image className='w-auto h-auto' width={100} height={100} src="https://i.ibb.co.com/KyDyrqr/event5.png" alt=""   onClick={slideNext} />
                         </picture>
                     </div>
                 

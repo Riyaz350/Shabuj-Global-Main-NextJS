@@ -14,12 +14,16 @@ import { FaMicrophoneLines, FaChevronUp } from "react-icons/fa6";
 import countryData from "../../../assets/json/countries.json";
 import Link from "next/link";
 import Image from "next/image";
+import { onAuthStateChanged, User, signOut } from "firebase/auth";
+import auth from "../../../../firebase.config";
 
 const Navbar2 = () => {
   const [navButton, setNavButton] = useState(0);
   const [navIndex, setNavIndex] = useState(0);
   const [width, setWidth] = useState(1024);
-
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  console.log(user);
   const iconStyle =
     "flex bg-gray-200 lg:bg-white px-5 gap-2 lg:items-center hover:text-blue-500";
   const flagClass = " text-center my-2  ";
@@ -43,8 +47,9 @@ const Navbar2 = () => {
             </p>
           </button>
           <span
-            className={` ${navButton == ind && "rotate-180 transition ease-in-out delay-450"
-              }`}
+            className={` ${
+              navButton == ind && "rotate-180 transition ease-in-out delay-450"
+            }`}
           >
             <FaChevronUp />
           </span>
@@ -68,6 +73,16 @@ const Navbar2 = () => {
   useEffect(() => {
     setNavIndex(navButton);
   }, [navButton, setNavIndex]);
+
+  useEffect(() => {
+    const unSubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setLoading(false);
+    });
+
+    // Cleanup subscription on unmount
+    return () => unSubscribe();
+  }, []);
 
   return (
     <div
@@ -178,7 +193,7 @@ const Navbar2 = () => {
                               className="hover:text-blue-600"
                               href={"/applicationAssistance"}
                             >
-                              <li>Application Assistance                              </li>
+                              <li>Application Assistance </li>
                             </Link>
                             <Link
                               onClick={closeNavbar}
@@ -192,21 +207,24 @@ const Navbar2 = () => {
                               className="hover:text-blue-600"
                               href={"/immigrationSupport"}
                             >
-                              <li> Visa and Immigration Support                            </li>
+                              <li> Visa and Immigration Support </li>
                             </Link>
                             <Link
                               onClick={closeNavbar}
                               className="hover:text-blue-600"
                               href={"/travelAssistance"}
                             >
-                              <li>  Pre-Departure and Post-Arrival Assistance                            </li>
+                              <li>
+                                {" "}
+                                Pre-Departure and Post-Arrival Assistance{" "}
+                              </li>
                             </Link>
                             <Link
                               onClick={closeNavbar}
                               className="hover:text-blue-600"
                               href={"/postGraduationAid"}
                             >
-                              <li>   Post-Graduation Support                            </li>
+                              <li> Post-Graduation Support </li>
                             </Link>
                             {/* <Link
                               onClick={closeNavbar}
@@ -272,29 +290,28 @@ const Navbar2 = () => {
                             className="hover:text-blue-600"
                             href={"/studentGuidance"}
                           >
-                            <li>Expert Student Guidance                              </li>
+                            <li>Expert Student Guidance </li>
                           </Link>
                           <Link
                             onClick={closeNavbar}
                             className="hover:text-blue-600"
                             href={"/globalNetwork"}
                           >
-                            <li> Access to a Global Network of Universities
-                            </li>
+                            <li> Access to a Global Network of Universities</li>
                           </Link>
                           <Link
                             onClick={closeNavbar}
                             className="hover:text-blue-600"
                             href={"/studentSuccess"}
                           >
-                            <li>  Enhanced Student Success</li>
+                            <li> Enhanced Student Success</li>
                           </Link>
                           <Link
                             onClick={closeNavbar}
                             className="hover:text-blue-600"
                             href={"/recruitmentSupport"}
                           >
-                            <li>   Marketing and Recruitment Support</li>
+                            <li> Marketing and Recruitment Support</li>
                           </Link>
                           <Link
                             onClick={closeNavbar}
@@ -606,26 +623,40 @@ const Navbar2 = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-2 px-4">
-                  <Link
-                    onClick={closeNavbar}
-                    href="/registration"
-                    className={`  text-xl font-medium`}
-                  >
-                    <button className="bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl w-full">
-                      Registration
+                {!user || loading ? (
+                  <div className="flex flex-col gap-2 px-4">
+                    <Link
+                      onClick={closeNavbar}
+                      href="/registration"
+                      className={`  text-xl font-medium`}
+                    >
+                      <button className="bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl w-full">
+                        Registration
+                      </button>
+                    </Link>
+                    <Link
+                      onClick={closeNavbar}
+                      href={"/login"}
+                      className={` text-xl font-medium`}
+                    >
+                      <button className="bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl w-full">
+                        Log In
+                      </button>
+                    </Link>
+                  </div>
+                ) : (
+                  <div className="flex flex-col gap-2">
+                    <p className="bg-[#BFDBFE] text-center text-lg p-2 py-1 rounded-lg">
+                      {user?.displayName}
+                    </p>
+                    <button
+                      onClick={() => signOut(auth)}
+                      className="text-sm font-bold bg-red-500 p-2 py-1 text-white rounded-lg"
+                    >
+                      Log Out
                     </button>
-                  </Link>
-                  <Link
-                    onClick={closeNavbar}
-                    href={"/login"}
-                    className={` text-xl font-medium`}
-                  >
-                    <button className="bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl w-full">
-                      Log In
-                    </button>
-                  </Link>
-                </div>
+                  </div>
+                )}
               </ul>
             </div>
           </div>
@@ -663,23 +694,68 @@ const Navbar2 = () => {
               <NavButton ind={4} text="About Us" />
             </Link>
           </div>
-          <div
-            className={`${width >= 1244 ? "text-base" : "text-sm"
+          {!user || loading ? (
+            <div
+              className={`${
+                width >= 1244 ? "text-base" : "text-sm"
               } flex items-center justify-end gap-1`}
-          >
-            <Link
-              className={`  bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl`}
-              href="/registration"
             >
-              Registration
-            </Link>
-            <Link
-              className={`  bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl`}
-              href="/login"
-            >
-              Log In
-            </Link>
-          </div>
+              <Link
+                className={`  bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl`}
+                href="/registration"
+              >
+                Registration
+              </Link>
+              <Link
+                className={`  bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl`}
+                href="/login"
+              >
+                Log In
+              </Link>
+            </div>
+          ) : (
+            <div>
+              {!user || loading ? (
+                <div className="flex flex-col gap-2 px-4">
+                  <Link
+                    onClick={closeNavbar}
+                    href="/registration"
+                    className="text-xl font-medium"
+                  >
+                    <button className="bg-[#BFDBFE] col-span-2 font-bold px-5 py-2 rounded-2xl w-full">
+                      Registration
+                    </button>
+                  </Link>
+                  <Link
+                    onClick={closeNavbar}
+                    href="/login"
+                    className="text-xl font-medium"
+                  >
+                    <button className="bg-[#BFDBFE] col-span-2 font-bold px-5 py-2 rounded-2xl w-full">
+                      Log In
+                    </button>
+                  </Link>
+                </div>
+              ) : (
+                <div className="flex   gap-2">
+                  {!loading && user ? (
+                    <p className="bg-[#BFDBFE] text-center text-lg p-2 py-1 rounded-lg">
+                      {user?.displayName}{" "}
+                      {/* Fallback to "User" if displayName is not set */}
+                    </p>
+                  ):(
+                    <></>
+                  )}
+                  <button
+                    onClick={() => signOut(auth)}
+                    className="text-sm font-bold bg-red-500 p-2 py-1 text-white rounded-lg"
+                  >
+                    Log Out
+                  </button>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
 
@@ -710,8 +786,9 @@ const Navbar2 = () => {
         {navIndex == 2 && (
           <>
             <div
-              className={`${width <= 1450 ? "grid-cols-4" : "grid-cols-5"
-                }   mx-10 gap-5 hidden  lg:grid md:mx-auto   md:max-w-[1800px]`}
+              className={`${
+                width <= 1450 ? "grid-cols-4" : "grid-cols-5"
+              }   mx-10 gap-5 hidden  lg:grid md:mx-auto   md:max-w-[1800px]`}
             >
               <div className="col-span-1 md:my-10 my-5">
                 <h2 className="my-5 text-lg font-medium border-b-2 w-fit border-[#f85424]">
@@ -719,23 +796,38 @@ const Navbar2 = () => {
                 </h2>
                 <div className="flex flex-col md:flex-row  justify-center md:justify-start gap-10">
                   <ul className="space-y-2 text-base">
-                    <Link className="hover:text-blue-600" href={"/personalizedUniversity"}>
+                    <Link
+                      className="hover:text-blue-600"
+                      href={"/personalizedUniversity"}
+                    >
                       <li>Personalized University Selection</li>
                     </Link>
-                    <Link className="hover:text-blue-600" href={"/applicationAssistance"}>
-                      <li>Application Assistance                      </li>
+                    <Link
+                      className="hover:text-blue-600"
+                      href={"/applicationAssistance"}
+                    >
+                      <li>Application Assistance </li>
                     </Link>
                     <Link className="hover:text-blue-600" href={"/aidGuidance"}>
-                      <li>Scholarship and Financial Aid Guidance                      </li>
+                      <li>Scholarship and Financial Aid Guidance </li>
                     </Link>
-                    <Link className="hover:text-blue-600" href={"/immigrationSupport"}>
-                      <li>Visa and Immigration Support                      </li>
+                    <Link
+                      className="hover:text-blue-600"
+                      href={"/immigrationSupport"}
+                    >
+                      <li>Visa and Immigration Support </li>
                     </Link>
-                    <Link className="hover:text-blue-600" href={"/travelAssistance"}>
+                    <Link
+                      className="hover:text-blue-600"
+                      href={"/travelAssistance"}
+                    >
                       <li> Pre-Departure and Post-Arrival Assistance</li>
                     </Link>
-                    <Link className="hover:text-blue-600" href={"/postGraduationAid"}>
-                      <li>  Post-Graduation Support</li>
+                    <Link
+                      className="hover:text-blue-600"
+                      href={"/postGraduationAid"}
+                    >
+                      <li> Post-Graduation Support</li>
                     </Link>
 
                     {/* <Link className="hover:text-blue-600" href={"/comingSoon"}>
@@ -764,20 +856,32 @@ const Navbar2 = () => {
                   CHANNEL PARTNERS
                 </h2>
                 <ul className="space-y-2 text-base">
-                  <Link className="hover:text-blue-600" href={"/admissionProcess"}>
+                  <Link
+                    className="hover:text-blue-600"
+                    href={"/admissionProcess"}
+                  >
                     <li>Seamless Admissions Process</li>
                   </Link>
-                  <Link className="hover:text-blue-600" href={"/studentGuidance"}>
-                    <li>Expert Student Guidance                      </li>
+                  <Link
+                    className="hover:text-blue-600"
+                    href={"/studentGuidance"}
+                  >
+                    <li>Expert Student Guidance </li>
                   </Link>
                   <Link className="hover:text-blue-600" href={"/globalNetwork"}>
-                    <li>Access to a Global Network of Universities                      </li>
+                    <li>Access to a Global Network of Universities </li>
                   </Link>
-                  <Link className="hover:text-blue-600" href={"/studentSuccess"}>
-                    <li> Enhanced Student Success                      </li>
+                  <Link
+                    className="hover:text-blue-600"
+                    href={"/studentSuccess"}
+                  >
+                    <li> Enhanced Student Success </li>
                   </Link>
-                  <Link className="hover:text-blue-600" href={"/recruitmentSupport"}>
-                    <li>  Marketing and Recruitment Support</li>
+                  <Link
+                    className="hover:text-blue-600"
+                    href={"/recruitmentSupport"}
+                  >
+                    <li> Marketing and Recruitment Support</li>
                   </Link>
                   <Link className="hover:text-blue-600" href={"/collaboration"}>
                     <li>Long-Term Collaboration</li>
