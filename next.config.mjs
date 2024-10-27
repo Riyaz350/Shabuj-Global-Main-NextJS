@@ -31,7 +31,6 @@ const nextConfig = {
       { source: "/studentSuccess", destination: "/pages/ServicesPages/studentSuccess" },
       { source: "/recruitmentSupport", destination: "/pages/ServicesPages/recruitmentSupport" },
       { source: "/collaboration", destination: "/pages/ServicesPages/collaboration" },
-
       { source: "/logIn", destination: "/pages/logIn" },
       { source: "/registration", destination: "/pages/registration" },
       { source: "/UK", destination: "/pages/studyDestinations/UK" },

@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useRef } from "react";
 import "./Footer.css";
@@ -21,14 +21,22 @@ const Footer = () => {
     <div>
       <div>
         <div className="w-full bg-transparent -mt-[110px] md:-mt-[80px] xl:-mt-[128px] mb-[-1px]">
-          <Image width={100} height={100} src="https://i.ibb.co.com/ss4fdHz/footer-Shape.png" className="w-full" alt="footer shape" />
+          <Image
+            width={100}
+            height={100}
+            src="https://i.ibb.co.com/ss4fdHz/footer-Shape.png"
+            className="w-full"
+            alt="footer shape"
+          />
         </div>
         <div className="bg-[#081831] px-6 relative">
           <div className="footer-1 text-center max-w-[1154px] mx-auto">
             <h2 className="font-poppins lg:text-[21px] text-[16px] text-white mb-4">
               Our Students are Our Reference
             </h2>
-            <Image width={100} height={100}
+            <Image
+              width={100}
+              height={100}
               className="mx-auto w-auto h-auto mb-[22px]"
               src="https://i.ibb.co.com/DRRN3ps/logo2.png"
               alt="logo"
@@ -56,52 +64,79 @@ const Footer = () => {
                 <Link href={"/UK"}>
                   <li className="hover:text-blue-600">UK</li>
                 </Link>
-                <Link href={"/USA"}>
-                  <li className="hover:text-blue-600">USA</li>
-                </Link>
-                <Link href={"/Canada"}>
-                  <li className="hover:text-blue-600">Canada</li>
-                </Link>
-                <Link href={"/Australia"}>
-                  <li className="hover:text-blue-600">Australia</li>
-                </Link>
-                <Link href={"/Germany"}>
-                  <li className="hover:text-blue-600">Germany</li>
-                </Link>
-                <Link href={"/New-Zealand"}>
-                  <li className="hover:text-blue-600">New Zealand</li>
-                </Link>
               </ul>
             </div>
             <div className="w-[282px]  mx-auto lg:mx-0 text-center lg:text-start">
               <h2 className="lg:mulish-bold mulish-regular text-base mb-4 mt-8 uppercase">
                 Services for students
               </h2>
-              <ul className="mulish-regular lg:text-base text-sm">
-                <Link href={"/comingSoon"}>
-                  <li className="hover:text-blue-600">Counselling</li>
+              <ul className="flex-col flex   text-lg">
+                <Link
+                  className="hover:text-blue-600 text-sm"
+                  href={"/personalizedUniversity"}
+                >
+                  <li>Personalized University Selection</li>
                 </Link>
-                <Link href={"/comingSoon"}>
-                  <li className="hover:text-blue-600">Test Preparation</li>
+                <Link
+                  className="hover:text-blue-600  text-sm"
+                  href={"/applicationAssistance"}
+                >
+                  <li>Application Assistance </li>
                 </Link>
-                <Link href={"/comingSoon"}>
-                  <li className="hover:text-blue-600">
-                    Course, Country & University Selection
-                  </li>
+                <Link
+                  className="hover:text-blue-600  text-sm"
+                  href={"/aidGuidance"}
+                >
+                  <li>Scholarship and Financial Aid Guidance</li>
                 </Link>
-                <Link href={"/comingSoon"}>
-                  <li className="hover:text-blue-600">Scholarship</li>
+                <Link
+                  className="hover:text-blue-600  text-sm"
+                  href={"/immigrationSupport"}
+                >
+                  <li> Visa and Immigration Support </li>
                 </Link>
-                <Link href={"/comingSoon"}>
-                  <li className="hover:text-blue-600">File Assessment</li>
+                <Link
+                  className="hover:text-blue-600  text-sm"
+                  href={"/travelAssistance"}
+                >
+                  <li> Pre-Departure and Post-Arrival Assistance </li>
+                </Link>
+                <Link
+                  className="hover:text-blue-600  text-sm"
+                  href={"/postGraduationAid"}
+                >
+                  <li> Post-Graduation Support </li>
                 </Link>
               </ul>
               <p className="lg:mulish-bold mulish-regular text-base mt-3 uppercase">
-                Services for institutions
-              </p>
-              <p className="lg:mulish-bold mulish-regular text-base mt-3 uppercase">
                 Services for partners
               </p>
+              <ul className=" my-4 text-lg">
+                <Link
+                  className="hover:text-blue-600  text-sm"
+                  href={"/admissionProcess"}
+                >
+                  <li> Seamless Admissions Process</li>
+                </Link>
+                <Link className="hover:text-blue-600  text-sm" href={"/studentGuidance"}>
+                  <li>Expert Student Guidance </li>
+                </Link>
+                <Link className="hover:text-blue-600  text-sm" href={"/globalNetwork"}>
+                  <li> Access to a Global Network of Universities</li>
+                </Link>
+                <Link className="hover:text-blue-600  text-sm" href={"/studentSuccess"}>
+                  <li> Enhanced Student Success</li>
+                </Link>
+                <Link
+                  className="hover:text-blue-600  text-sm"
+                  href={"/recruitmentSupport"}
+                >
+                  <li> Marketing and Recruitment Support</li>
+                </Link>
+                <Link className="hover:text-blue-600  text-sm" href={"/collaboration"}>
+                  <li> Long-Term Collaboration</li>
+                </Link>
+              </ul>
             </div>
             <div className="w-[229px]  mx-auto lg:mx-0 text-center lg:text-start">
               <h2 className="lg:mulish-bold mulish-regular text-base mb-4 mt-8 uppercase">
@@ -111,7 +146,7 @@ const Footer = () => {
                 <Link href={"/about"}>
                   <li className="hover:text-blue-600">About Us</li>
                 </Link>
-                <Link href={"/comingSoon"}>
+                <Link href={"/career"}>
                   <li className="hover:text-blue-600">Careers</li>
                 </Link>
                 <Link href={"/events"}>
@@ -124,17 +159,11 @@ const Footer = () => {
                   <li className="hover:text-blue-600">Contact Us</li>
                 </Link>
               </ul>
-              <p className="lg:mulish-bold mulish-regular text-base mt-9 uppercase">
-                search universities
-              </p>
               <Link href={"/events"}>
                 <p className="lg:mulish-bold mulish-regular text-base mt-3 uppercase hover:text-blue-600">
                   upcoming events
                 </p>
               </Link>
-              <p className="lg:mulish-bold mulish-regular text-base mt-3 lg:mb-[81px] mb-[41px] uppercase">
-                book online counselling
-              </p>
             </div>
           </div>
 
@@ -145,12 +174,16 @@ const Footer = () => {
                   UKVI Approved Test Centre for
                 </h2>
                 <div className="flex md:flex-row flex-col justify-center items-center gap-5 md:gap-[41px]">
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="https://i.ibb.co.com/x7CPRrb/footer1.png"
                     className="w-[125px] pb-8"
                     alt="footer1"
                   />
-                  <Image width={100} height={100}
+                  <Image
+                    width={100}
+                    height={100}
                     src="https://i.ibb.co.com/6FZyqQ3/footer2.png"
                     className="w-[166px] pb-8"
                     alt="footer2"
@@ -352,7 +385,7 @@ const Footer = () => {
                       Saudi Arabia
                     </div>
                     <div className="collapse-content text-sm text-[#CACACA]">
-                      <p>247/3 King Fahad Road, Saudi Arabia</p>
+                      <p>Email: info@shabujglobal.com </p>
                     </div>
                   </div>
                   <div className="collapse collapse-arrow">
@@ -368,25 +401,11 @@ const Footer = () => {
                     </div>
                     <div className="collapse-content text-sm text-[#CACACA]">
                       <p>
-                        546 Sheikh Zayed Road,Dubai 8679,United Arab Emirates
+                      Shabuj Global Education, Dubai Silicon Oasis, Dubai Digital Park - Dubai (Near to Dubai Academic City)- United Arab Emirates
                       </p>
                     </div>
                   </div>
-                  <div className="collapse collapse-arrow">
-                    <input
-                      type="checkbox"
-                      name="my-accordion-2"
-                      onClick={(e) => {
-                        handleClick(e);
-                      }}
-                    />
-                    <div className="collapse-title text-base mulish-medium text-[#CACACA]">
-                      Qatar
-                    </div>
-                    <div className="collapse-content text-sm text-[#CACACA]">
-                      <p>745 Al Corniche Street, Doha 796, Qatar</p>
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -397,7 +416,9 @@ const Footer = () => {
                 href="https://www.facebook.com/ShabujGlobaleducationuk/"
                 target="_blank"
               >
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   src="https://i.ibb.co.com/ZKrN7SD/facebook.png"
                   className="hover:bg-blue-500 w-10 p-1 rounded-md"
                   alt="facebook"
@@ -407,7 +428,9 @@ const Footer = () => {
                 href="https://www.instagram.com/shabujglobaleducation/"
                 target="_blank"
               >
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   src="https://i.ibb.co.com/BZ0mxMF/instagram.png"
                   className="hover:bg-blue-500 w-10 p-1 rounded-md"
                   alt="instagram"
@@ -417,7 +440,9 @@ const Footer = () => {
                 href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEkbZ14xeAt8wAAAZEXbnaoJWt-ogVrPCWsB3Ufw3gb3wrzBSE3XcNHequ5lpil4I54Crsk0qaoWcyHvqLrTdX2geridADLkgc3_cGAuBn7zb4v-iR2dBdszRH3_wEnsRkelIE=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fshabuj-global-education%2F"
                 target="_blank"
               >
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   src="https://i.ibb.co.com/FmtYMqv/linkedin.png"
                   className="hover:bg-blue-500 w-10 p-1 rounded-md"
                   alt="linkedin"
@@ -427,7 +452,9 @@ const Footer = () => {
                 href="https://www.youtube.com/@shabujglobaleducation1568"
                 target="_blank"
               >
-                <Image width={100} height={100}
+                <Image
+                  width={100}
+                  height={100}
                   src="https://i.ibb.co.com/Yh1fpgZ/youtube.png"
                   className="hover:bg-blue-500 w-10 p-1 rounded-md"
                   alt="youtube"
@@ -440,12 +467,7 @@ const Footer = () => {
                 <Link href="/">
                   <span className="underline">Shabuj Global Education</span>
                 </Link>
-              </p>
-              <Link href="/comingSoon">
-                <p className="mulish-regular text-[14px] text-[#CACACA]">
-                  Terms & Conditions
-                </p>
-              </Link>
+              </p> 
               <Link href="/Privacy">
                 <p className="mulish-regular text-[14px] text-[#CACACA]">
                   Privacy Policy
@@ -454,7 +476,9 @@ const Footer = () => {
             </div>
           </div>
           <div className="relative">
-            <Image width={100} height={100}
+            <Image
+              width={100}
+              height={100}
               src="https://i.ibb.co.com/PDLZwTB/vector7.png"
               alt="city bg"
               className="absolute h-auto w-auto bottom-0 hidden left-0 lg:block mx-auto right-0"

@@ -12,7 +12,7 @@ const Counselor = ( {country, bgColor}:{country:string, bgColor:string}) => {
               Talk to Our Expert<br></br> {country} Counselor
             </h1>
             <Link
-              href={"/comingSoon"}
+             href="https://wa.me/+447903108549"
               className="poppins-bold lg:text-[18px] text-[10px] bg-white lg:px-[124px] px-[66px] lg:py-[22px] py-[16px] rounded-[36px]"
             >
               Contact Now
