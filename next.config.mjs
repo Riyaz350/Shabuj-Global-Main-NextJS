@@ -46,7 +46,7 @@ const nextConfig = {
       { source: "/Switzerland", destination: "/pages/studyDestinations/Switzerland", },
       { source: "/France", destination: "/pages/studyDestinations/France" },
       { source: "/West-Indies", destination: "/pages/studyDestinations/West-Indies", },
-      { source: "/singleUniversity/:university", destination: "/pages/singleUniversity/:university", },
+      { source: "/singleUniversity/:Name", destination: "/pages/singleUniversity/:Name", },
     ];
   },
   images: {

@@ -25,14 +25,15 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "src/_components/shared/SingleUniversity/SingleUniversity.jsx", "src/app/pages/singleUniversity/[Name]/page.jsx"  ],
   "exclude": [
     "node_modules"
   ]

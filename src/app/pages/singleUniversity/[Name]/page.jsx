@@ -1,7 +1,7 @@
 import SingleUniversity from '@/_components/shared/SingleUniversity/SingleUniversity';
 import React from 'react';
 
-const page = ({ params }: { params: { Name: string } }) => {
+const page = ({ params }) => {
     return (
         <div>
             <SingleUniversity Name={params.Name}/>
