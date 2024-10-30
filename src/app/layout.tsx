@@ -6,6 +6,7 @@ import Providers from "@/_components/QueryClientProvider/Providers";
 import Chats from "@/_components/Chats/Chats";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { MyContextProvider } from "@/_components/Context/MyContextProvider";
 
 export const metadata: Metadata = {
   title: "Shabuj Global Education",
@@ -21,13 +22,15 @@ export default function RootLayout({
     <html lang="en" data-theme="light">
       <body className={` antialiased`}>
         <Providers>
-        <ToastContainer />
-          <Navbar2 />
-          <div className="pb-10">
-            {children}
-            <Chats />
-          </div>
-          <Footer />
+          <MyContextProvider>
+            <ToastContainer />
+            <Navbar2 />
+            <div className="pb-10">
+              {children}
+              <Chats />
+            </div>
+            <Footer />
+          </MyContextProvider>
         </Providers>
       </body>
     </html>
