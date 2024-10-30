@@ -170,7 +170,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-3 leading-[150%] max-w-[1154px] mx-auto flex lg:flex-row flex-col lg:gap-[114px] border-t border-white justify-center">
-            <div className='bg-[rgba(255,255,255,0.7)] p-5 m-2 rounded-2xl mx-auto'>
+            <div className='card-shine-effect-metal p-5 m-2 rounded-2xl mx-auto'>
               <BadgeComponent />
             </div>
             <div className="mx-auto">

@@ -23,7 +23,6 @@ const Navbar2 = () => {
   const [width, setWidth] = useState(1024);
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
-  console.log(user);
   const iconStyle =
     "flex bg-gray-200 lg:bg-white px-5 gap-2 lg:items-center hover:text-blue-500";
   const flagClass = " text-center my-2  ";
