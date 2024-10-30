@@ -27,7 +27,7 @@ export default function Single_University_Form() {
     e.preventDefault(); // Prevent the default form submission behavior
 
     try {
-      const response = await fetch("http://localhost:5005/universityRegistrations", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/universityRegistrations`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
