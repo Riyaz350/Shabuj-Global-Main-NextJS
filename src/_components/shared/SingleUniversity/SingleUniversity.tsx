@@ -7,8 +7,8 @@ import Single_University_Check from "./Single_University_Check";
 import Single_University_Info from "./Single_University_Info";
 import Single_University_Form from "./Single_University_Form";
 
-interface University  {
-  Name: string |   null;
+interface University {
+  Name: string | null;
   Overview: string | number | null;
   History: string | number | null;
   "Ranking & Achievement": string | number | null;
@@ -17,24 +17,25 @@ interface University  {
   Fee: string | number | null;
   Services: number | string | null;
   Accommodation: number | string | null;
-  established: number | string| null;
-  rank: number | string |null;
+  established: number | string | null;
+  rank: number | string | null;
   location: string | number | null;
   "international student": number | string | null;
   country: string | number | null;
-  logo: string |   null;
+  logo: string | null;
 }
 
-const SingleUniversity = ({ Name }: { Name: string }) => {
+const SingleUniversity = ({ Name }: { Name: string | null }) => {
   const [selectedUniversity, setSelectedUniversity] = useState<University | null>(null);
 
   useEffect(() => {
-    const singleUniversity = data.find((uni) => uni.Name === Name.replace(/%20/g, ' '));
-  
-    // If a university is found, set it to state; otherwise, set the state to null
-    setSelectedUniversity(singleUniversity || null);
+    if (Name) {
+      const singleUniversity = data.find((uni) => uni.Name === Name.replace(/%20/g, ' '));
+
+      setSelectedUniversity(singleUniversity || null);
+    }
   }, [Name]);
-  
+
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -57,7 +58,7 @@ const SingleUniversity = ({ Name }: { Name: string }) => {
               <Single_University_Check />
             </div>
             <div className="lg:col-span-5 col-span-6">
-              <Single_University_Info university={selectedUniversity}/>
+              <Single_University_Info university={selectedUniversity} />
               <Single_University_Form />
             </div>
           </div>
