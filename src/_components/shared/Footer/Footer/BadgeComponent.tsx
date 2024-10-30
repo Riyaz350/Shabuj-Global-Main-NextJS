@@ -15,9 +15,8 @@ const BadgeComponent = () => {
     }
 
     return () => {
-      if (badgeElement && badgeElement.firstChild) {
-        badgeElement.removeChild(scriptElement); 
-      }
+        badgeElement?.removeChild(scriptElement); 
+      
     };
   }, []); 
 
