@@ -1,9 +1,9 @@
-import Registration2 from "@/_components/Registration2/Registration2";
+import NewRegistration from "@/_components/Registration2/NewRegistration";
 
 const page = () => {
     return (
         <div className="bg-[#FAFAFA]  poppins pb-10">
-            <Registration2/>
+            <NewRegistration/>
         </div>
     );
 };

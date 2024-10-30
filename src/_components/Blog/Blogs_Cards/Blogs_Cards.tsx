@@ -1,5 +1,3 @@
-import { GoArrowLeft } from "react-icons/go";
-import { GoArrowRight } from "react-icons/go";
 import "./Blogs_Cards.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -107,24 +105,7 @@ const Blogs_Cards = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-5">
-          <ol className="flex items-center gap-5 font-semibold flex-wrap justify-center">
-            <li className="opacity-50">
-              <GoArrowLeft />
-            </li>
-            <li className="opacity-50">Previous</li>
-            <li className="bg-blue-500 px-3 py-1 text-white rounded ">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>...</li>
-            <li>67</li>
-            <li>68</li>
-            <li>Next</li>
-            <li>
-              <GoArrowRight />
-            </li>
-          </ol>
-        </div>
+         
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { useRef } from "react";
 import "./Footer.css";
 import Image from "next/image";
 import Link from "next/link";
+import BadgeComponent from "./BadgeComponent";
 
 const Footer = () => {
   const accordion = useRef<HTMLDivElement>(null);
@@ -17,6 +18,7 @@ const Footer = () => {
       });
     }
   };
+
   return (
     <div>
       <div>
@@ -167,9 +169,12 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="footer-3 leading-[150%] max-w-[1154px] mx-auto flex lg:flex-row flex-col lg:gap-[114px] border-t border-white justify-center ">
+          <div className="footer-3 leading-[150%] max-w-[1154px] mx-auto flex lg:flex-row flex-col lg:gap-[114px] border-t border-white justify-center">
+            <div className='bg-[rgba(255,255,255,0.7)] p-5 m-2 rounded-2xl mx-auto'>
+              <BadgeComponent />
+            </div>
             <div className="mx-auto">
-              <div className="md:w-[577px] w-full mx-auto lg:h-[164px]  bg-[rgba(255,255,255,0.7)] rounded-2xl text-center mt-[27px] mb-[31px]">
+              <div className="md:w-[577px] w-full mx-auto   bg-[rgba(255,255,255,0.7)] rounded-2xl text-center mt-[27px] mb-[31px] overflow-hidden">
                 <h2 className="px-4 lg:mulish-semibold mulish-bold lg:text-[28px] text-[18px] text-[#081831] leading-[39.2px] pt-[14px] pb-[30px]">
                   UKVI Approved Test Centre for
                 </h2>
@@ -178,20 +183,22 @@ const Footer = () => {
                     width={100}
                     height={100}
                     src="https://i.ibb.co.com/x7CPRrb/footer1.png"
-                    className="w-[125px] pb-8"
+                    className="w-[125px] max-w-full object-contain pb-8"
                     alt="footer1"
                   />
                   <Image
                     width={100}
                     height={100}
                     src="https://i.ibb.co.com/6FZyqQ3/footer2.png"
-                    className="w-[166px] pb-8"
+                    className="w-[166px] max-w-full object-contain pb-8"
                     alt="footer2"
                   />
+
                 </div>
               </div>
             </div>
           </div>
+
           <div className="border-t border-white max-w-[1154px] mx-auto">
             <h2 className="lg:mulish-bold mulish-regular uppercase lg:text-lg text-base text-center text-[#CACACA] mb-6 mt-4">
               Our offices
@@ -401,11 +408,11 @@ const Footer = () => {
                     </div>
                     <div className="collapse-content text-sm text-[#CACACA]">
                       <p>
-                      Shabuj Global Education, Dubai Silicon Oasis, Dubai Digital Park - Dubai (Near to Dubai Academic City)- United Arab Emirates
+                        Shabuj Global Education, Dubai Silicon Oasis, Dubai Digital Park - Dubai (Near to Dubai Academic City)- United Arab Emirates
                       </p>
                     </div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -467,7 +474,7 @@ const Footer = () => {
                 <Link href="/">
                   <span className="underline">Shabuj Global Education</span>
                 </Link>
-              </p> 
+              </p>
               <Link href="/Privacy">
                 <p className="mulish-regular text-[14px] text-[#CACACA]">
                   Privacy Policy

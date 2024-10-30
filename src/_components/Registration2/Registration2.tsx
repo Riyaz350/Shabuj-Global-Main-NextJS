@@ -43,6 +43,7 @@ const Registration2: React.FC = () => {
 
   return (
     <div className="bg-gray-100 pt-10 pb-52 px-4">
+      
       <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
         <div className="p-5 sm:p-10">
           <h2 className="text-2xl sm:text-3xl font-semibold text-gray-700 mb-5">

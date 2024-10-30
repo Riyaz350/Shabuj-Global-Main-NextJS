@@ -9,11 +9,13 @@ import Home_Destination from "@/_components/Home/Home_Destination/Home_Destinati
 import Home_UniversityList from "@/_components/Home/Home_UniversityList/Home_Universitylist";
 import ImageGallery from "@/_components/Home/Home_ImageGallery/ImageGallery";
 import Home_Contact from "@/_components/Home/Home_Contact/Home_Contact";
+import WelcomeModal from "@/_components/Home/WelcomeModal/WelcomeModal";
 
 
 export default function Home() {
   return (
     <div className=" font-poppins">
+      <WelcomeModal/>
       <Banner/>
       <Home_Events/>
       <Home_Tab/>
