@@ -4,7 +4,7 @@ import Image from "next/image";
 import Input from "./Input";
 import Swal from "sweetalert2";
 
-export default function Single_University_Form() {
+export default function Single_University_Form({Name}:{Name:string}) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -79,7 +79,7 @@ export default function Single_University_Form() {
       <div className="shadow-xl rounded-2xl">
         <div className="bg-[#3b82f6] text-center text-white p-5 rounded-t-2xl">
           <h2 className="md:text-2xl text-xl font-semibold">
-            Want to Study at The University of Aberdeen?
+            Want to Study at {Name}?
           </h2>
         </div>
         <form className="p-6 space-y-5" onSubmit={handleSubmit}>

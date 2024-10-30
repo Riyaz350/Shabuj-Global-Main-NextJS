@@ -59,7 +59,7 @@ const SingleUniversity = ({ Name }) => {
             </div>
             <div className="lg:col-span-5 col-span-6">
               <Single_University_Info university={selectedUniversity} />
-              <Single_University_Form />
+              <Single_University_Form Name={selectedUniversity.Name}/>
             </div>
           </div>
         }
