@@ -1,10 +1,56 @@
+'use client';
 
 import Link from "next/link";
+import axios from 'axios';
+import { useState } from 'react';
 import "./Home_Contact.css";
+import Swal from "sweetalert2";
 
 const Home_Contact = () => {
   const text = "DREAM BIG STUDY ABROAD.";
   const Letter = text.split("");
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '', 
+    mobile: '',
+    destination: '',
+    year: '',
+    intake: '',
+    agreeToTerms: false,
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      // Use checked property if input is a checkbox; otherwise, use value
+      [name]: e.target instanceof HTMLInputElement && e.target.type === 'checkbox' ? e.target.checked : value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+    try {
+      const response = await axios.post(`${apiUrl}/apply`, formData);
+      console.log('Form submitted successfully:', response.data);
+      Swal.fire({
+        icon: "success",
+        title: "Thank You",
+        text: "Our counsellor will contact you soon"
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Something went wrong!"
+      });
+    }
+  };
 
   return (
     <div className="bg-[#E7E7E7] pt-[98px] pb-[250px] overflow-hidden px-4 ">
@@ -22,16 +68,22 @@ const Home_Contact = () => {
       </div>
       <div className="flex justify-center text-center">
         <div className="max-w-[565px] lg:mx-auto md:mx-auto mx-5">
-          <form>
+          <form onSubmit={handleSubmit}>
             <input
               type="text"
               placeholder="Name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
               className="bg-white rounded w-full lg:h-[40px] h-[45px] pl-[12px] inter-regular text-[12px] leading-[12px] outline-none block mx-auto mb-[10px]"
             />
             <div className="relative text-center mb-[10px]">
               <input
                 type="text"
                 placeholder="Email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 className=" bg-white rounded w-full lg:h-[40px] h-[45px] pl-[12px] inter-regular text-[12px] leading-[12px] outline-none pr-10"
               />
               <span className="absolute flex items-center right-[10px] top-3 inter-regular text-[12px] text-[#8E8E8E]">
@@ -40,116 +92,69 @@ const Home_Contact = () => {
             </div>
             <div className="flex">
               <input
-                type="number"
+                readOnly
                 placeholder="+880"
+                name="phoneCode"
                 className="lg:w-[74px] w-[41px] lg:h-[40px] h-[45px] rounded inter-regular text-[12px] leading-[12px] lg:pl-4 pl-[5px] outline-none"
               />
               <input
                 type="number"
                 placeholder="Mobile Number"
+                name="mobile"
+                value={formData.mobile}
+                onChange={handleChange}
                 className="bg-white rounded flex-1 lg:h-[40px] h-[45px] pl-[12px]  inter-regular text-[12px] leading-[12px] outline-none mx-auto mb-[10px] lg:ml-[26px] ml-[14px]"
               />
             </div>
-            <div className="relative mb-[10px]">
-              <select
-                id="subcategory"
-                name="destination"
-                className="bg-white px-3 py-2 w-full outline-none inter-regular text-[12px] text-[#4B4B4B] appearance-none cursor-pointer rounded"
-              >
-                <option  defaultChecked>
-                  Preferred Study Destination
-                </option>
-                <option value="UK">UK</option>
-                <option value="USA">USA</option>
-                <option value="Australia">Australia</option>
-              </select>
-              <div className="absolute flex items-center right-[10px] top-2 pointer-events-none">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  className="text-xl text-[#8E8E8E]"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M7.99997 10.3904L2.47137 4.86182L1.52856 5.80463L7.99997 12.276L14.4714 5.80463L13.5286 4.86182L7.99997 10.3904Z"
-                    fill="#8E8E8E"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="relative mb-[10px]">
-              <select
-                id="subcategory"
-                name="year"
-                className="bg-white px-3 py-2 w-full outline-none inter-regular text-[12px] text-[#4B4B4B] appearance-none cursor-pointer rounded"
-              >
-                <option  defaultChecked>
-                  Preferred Study Year
-                </option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-                <option value="2024">2024</option>
-              </select>
-              <div className="absolute flex items-center right-[10px] top-2 pointer-events-none">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  className="text-xl text-[#8E8E8E]"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M7.99997 10.3904L2.47137 4.86182L1.52856 5.80463L7.99997 12.276L14.4714 5.80463L13.5286 4.86182L7.99997 10.3904Z"
-                    fill="#8E8E8E"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="relative mb-[10px]">
-              <select
-                id="subcategory"
-                name="subject"
-                className="bg-white px-3 py-2 w-full outline-none inter-regular text-[12px] text-[#4B4B4B] appearance-none cursor-pointer rounded"
-              >
-                <option   defaultChecked>
-                  Preferred Study Intake
-                </option>
-                <option value="Physics">Physics</option>
-                <option value="Chemistry">Chemistry</option>
-                <option value="Mathematics">Mathematics</option>
-              </select>
-              <div className="absolute flex items-center right-[10px] top-2 pointer-events-none">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  className="text-xl text-[#8E8E8E]"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    d="M7.99997 10.3904L2.47137 4.86182L1.52856 5.80463L7.99997 12.276L14.4714 5.80463L13.5286 4.86182L7.99997 10.3904Z"
-                    fill="#8E8E8E"
-                  />
-                </svg>
-              </div>
-            </div>
-            <div className="flex items-start lg:items-center space-x-2 lg:max-w-[565px] max-w-[290px] lg:mx-auto ">
-              <input type="checkbox" className="mt-1" />
+            <select
+              name="destination"
+              value={formData.destination}
+              onChange={handleChange}
+              className="bg-white px-3 py-2 w-full outline-none inter-regular text-[12px] text-[#4B4B4B] appearance-none cursor-pointer rounded mb-[10px]"
+            >
+              <option value="">Preferred Study Destination</option>
+              <option value="UK">UK</option>
+              <option value="USA">USA</option>
+              <option value="Australia">Australia</option>
+            </select>
+
+            <select
+              name="year"
+              value={formData.year}
+              onChange={handleChange}
+              className="bg-white px-3 py-2 w-full outline-none inter-regular text-[12px] text-[#4B4B4B] appearance-none cursor-pointer rounded mb-[10px]"
+            >
+              <option value="">Preferred Study Year</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+            </select>
+
+            <select
+              name="intake"
+              value={formData.intake}
+              onChange={handleChange}
+              className="bg-white px-3 py-2 w-full outline-none inter-regular text-[12px] text-[#4B4B4B] appearance-none cursor-pointer rounded mb-[10px]"
+            >
+              <option value="">Preferred Study Intake</option>
+              <option value="Physics">Physics</option>
+              <option value="Chemistry">Chemistry</option>
+              <option value="Mathematics">Mathematics</option>
+            </select>
+
+            <div className="flex items-start lg:items-center space-x-2 lg:max-w-[565px] max-w-[290px] lg:mx-auto mb-[10px]">
+              <input
+                type="checkbox"
+                name="agreeToTerms"
+                checked={formData.agreeToTerms}
+                onChange={handleChange}
+                className="mt-1"
+              />
               <p className="poppins-regular text-[12px] leading-[22px]">
                 By clicking you agree to our{" "}
-                <a href="/Privacy" className="text-[#008AFF] cursor-pointer">
+                <Link href="/Privacy" className="text-[#008AFF] cursor-pointer">
                   Privacy Policy
-                </a>{" "}
+                </Link>{" "}
                 and{" "}
                 <span className="text-[#008AFF] cursor-pointer">
                   Terms & Conditions
@@ -157,32 +162,22 @@ const Home_Contact = () => {
                 *
               </p>
             </div>
-            <div className="pt-[55px]">
-              <Link href={"/comingSoon"}>
-                <button className="lg:poppins-bold mulish-regular lg:text-[18px] text-[14px] lg:px-[81px] lg:py-[10px] px-[17px] py-2 bg-[#2563EB] hover:bg-[#3D7DED] text-white rounded-[32px]">
-                  Book Free Counselling
-                </button>
-              </Link>
-            </div>
+
+            <button type="submit" className="lg:poppins-bold mulish-regular lg:text-[18px] text-[14px] lg:px-[81px] lg:py-[10px] px-[17px] py-2 bg-[#2563EB] hover:bg-[#3D7DED] text-white rounded-[32px]">
+              Book Free Counselling
+            </button>
           </form>
         </div>
       </div>
+
       <div className="lg:block hidden">
         <div className="App">
           <section>
-            {Letter.map((item, index) => {
-              return (
-                <span
-                  key={index}
-                  className="letters"
-                  style={{
-                    transform: `rotate(${index * 15.5}deg)`,
-                  }}
-                >
-                  {item}
-                </span>
-              );
-            })}
+            {Letter.map((item, index) => (
+              <span key={index} className="letters" style={{ transform: `rotate(${index * 15.5}deg)` }}>
+                {item}
+              </span>
+            ))}
           </section>
         </div>
       </div>

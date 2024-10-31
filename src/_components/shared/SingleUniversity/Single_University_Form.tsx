@@ -17,7 +17,6 @@ export default function Single_University_Form({Name}:{Name:string}) {
     nearestSGEOffice: "",
     universityName:Name
   });
-  console.log(formData)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
