@@ -473,49 +473,7 @@ const Contact_Us_Accordion = () => {
                 <p className="text-base font-normal">Ctg</p>
               </div>
             </div>
-            <div
-              className={`accordion ${activeIndex === 10 ? "active" : ""}`}
-              id="basic-heading-three-with-arrow-always-open"
-            >
-              <button
-                className="accordion-toggle group inline-flex items-center gap-1 text-xl font-normal leading-8  w-full transition duration-500 accordion-active:font-medium "
-                aria-controls="basic-collapse-three-with-arrow-always-open"
-                onClick={() => toggleAccordion(10)}
-              >
-                <h5 className="text-xl font-semibold">Qatar</h5>
-                <svg
-                  className={` transition duration-500  ${
-                    activeIndex === 10 ? "rotate-180" : ""
-                  }`}
-                  width="22"
-                  height="22"
-                  viewBox="0 0 22 22"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  ></path>
-                </svg>
-              </button>
-              <div
-                id="basic-collapse-three-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 10 ? "active" : ""
-                }`}
-                style={{ maxHeight: activeIndex === 10 ? "100px" : "0px" }}
-                aria-labelledby="basic-heading-three-with-arrow-always-open"
-              >
-                <p className="text-base font-normal">
-                  3rd Floor, Symphony Heights, Baruth Khana, East Zindabazar,
-                  Sylhet.
-                </p>
-              </div>
-            </div>
+             
           </div>
         </div>
       </div>

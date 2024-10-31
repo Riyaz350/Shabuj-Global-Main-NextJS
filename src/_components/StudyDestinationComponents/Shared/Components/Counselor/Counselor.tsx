@@ -11,7 +11,7 @@ const Counselor = ( {country, bgColor}:{country:string, bgColor:string}) => {
             <h1 className="lg:poppins-semibold poppins-bold lg:text-[56px] text-[28px] lg:leading-[72.8px] leading-[32px] -tracking-[0.01em] text-white pt-[51px] lg:pb-[69px] pb-[30px]">
               Talk to Our Expert<br></br> {country} Counselor
             </h1>
-            <Link
+            <Link target="blank"
              href="https://wa.me/+447903108549"
               className="poppins-bold lg:text-[18px] text-[10px] bg-white lg:px-[124px] px-[66px] lg:py-[22px] py-[16px] rounded-[36px]"
             >

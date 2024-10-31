@@ -63,7 +63,7 @@
   }
   
   .card-shine-effect-metal:hover:after {
-    animation: shine 1s ease-in infinite; 
+    animation: shine 1s ease-in  ; 
   }
    
   

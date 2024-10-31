@@ -24,7 +24,7 @@ const Home_Connection = () => {
             Connect With Our Finest Counsellors And Biggest Study Abroad
             Community
           </p>
-          <Link href={"https://wa.me/+447903108549"}>
+          <Link target="blank" href={"https://wa.me/+447903108549"}>
             <button  className=" lg:text-xl md:text-xl text-lg bg-white rounded-full border-transparent border-[1px] text-black lg:px-20 md:px-20 px-5 lg:py-3 md:py-3  py-2 hover:text-blue-500 hover:border-blue-500 hover:border-[1px] ">
               Talk to a Counsellor
             </button>

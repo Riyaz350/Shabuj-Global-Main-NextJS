@@ -15,6 +15,7 @@ export default function Single_University_Form({Name}:{Name:string}) {
     lastAcademicQualification: "",
     englishTestStatus: "",
     nearestSGEOffice: "",
+    universityName:Name
   });
   console.log(formData)
 
@@ -59,6 +60,8 @@ export default function Single_University_Form({Name}:{Name:string}) {
         lastAcademicQualification: "",
         englishTestStatus: "",
         nearestSGEOffice: "",
+        universityName:Name
+
       });
     } catch (error) {
       console.error("There was a problem with the fetch operation:", error);
