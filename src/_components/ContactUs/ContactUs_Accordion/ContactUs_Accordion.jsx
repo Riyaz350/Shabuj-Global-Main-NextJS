@@ -211,21 +211,7 @@ const ContactUs_Accordion = () => {
               <p>546 Sheikh Zayed Road,Dubai 8679,United Arab Emirates</p>
             </div>
           </div>
-          <div className="collapse collapse-arrow">
-            <input
-              type="checkbox"
-              name="my-accordion-2"
-              onClick={(e) => {
-                handleClick(e);
-              }}
-            />
-            <div className="collapse-title text-base lg:text-lg poppins-normal lg:poppins-medium">
-              Qatar
-            </div>
-            <div className="collapse-content text-xs lg:text-sm">
-              <p>745 Al Corniche Street, Doha 796, Qatar</p>
-            </div>
-          </div>
+           
         </div>
       </div>
     </div>

@@ -245,7 +245,7 @@ export default function page() {
               <Image
                 width={100}
                 height={100}
-                className="w-auto h-2/3 rounded-2xl"
+                className="w-1/3 h-2/3 rounded-2xl invisible"
                 src="https://i.ibb.co.com/6g2cqsq/hand-drawn-study-abroad-illustration-23-2150314526-removebg-preview.png"
                 alt="Study Concept"
               />
