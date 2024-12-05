@@ -20,18 +20,19 @@ import Banner3 from '@/_components/StudyDestinationComponents/Shared/Banners/Ban
 const page = () => {
     return (
         <div>
-            <Banner3 country='Canada'/>
-            <Car country='Canada'  description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Canada universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers. ` }  bgColor='bg-[#06400a]'/>
-            <QuickFacts country='Canada'/>
-            <Tabs country='Canada'/>
-            <AnimatedText country="Canada"/>
+            <title>Study in the Canada</title>
+            <Banner3 country='Canada' />
+            <Car country='Canada' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Canada universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers. `} bgColor='bg-[#06400a]' />
+            <QuickFacts country='Canada' />
+            <Tabs country='Canada' />
+            <AnimatedText country="Canada" />
             {/* <UniversityCards country='Canada'  /> */}
             <RequirementCard country={"Canada"} />
-            <Exams country='Canada'/>
-            <GuidanceBanner/>
-            <University_Required_Docs country='Canada' doc1={Doc1} doc2={Doc2} doc3={Doc3}/>
-            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQCanada} country='Canada'/>
-            <Counselor country='Canada' bgColor='linear-gradient(77deg, rgba(60,100,68,1) 0%, rgba(4,45,7,1) 100%)'/>
+            <Exams country='Canada' />
+            <GuidanceBanner />
+            <University_Required_Docs country='Canada' doc1={Doc1} doc2={Doc2} doc3={Doc3} />
+            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQCanada} country='Canada' />
+            <Counselor country='Canada' bgColor='linear-gradient(77deg, rgba(60,100,68,1) 0%, rgba(4,45,7,1) 100%)' />
 
         </div>
     );

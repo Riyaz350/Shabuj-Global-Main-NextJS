@@ -20,18 +20,19 @@ import Doc1 from '@/_components/StudyDestinationComponents/Finland/SVG/Doc1';
 const page = () => {
     return (
         <div>
-            <Banner3 country='Finland'/>
-            <Car country='Finland'  bgColor='bg-[#e1b43d]' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Finland universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers. ` } />
-            <QuickFacts country='Finland'/>
-            <Tabs country='Finland'/>
-            <AnimatedText country="Finland"/>
+            <title>Study in the Finland</title>
+            <Banner3 country='Finland' />
+            <Car country='Finland' bgColor='bg-[#e1b43d]' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Finland universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers. `} />
+            <QuickFacts country='Finland' />
+            <Tabs country='Finland' />
+            <AnimatedText country="Finland" />
             {/* <UniversityCards country='Finland'  /> */}
             <RequirementCard country={"Finland"} />
-            <Exams country='Finland'/>
-            <GuidanceBanner/>
-            <University_Required_Docs country='Finland' doc1={Doc1} doc2={Doc2} doc3={Doc3}/>
-            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQFinland} country='Finland'/>
-            <Counselor country='Finland' bgColor='linear-gradient(264deg, rgba(225,180,61,1) 0%, rgba(225,180,61,1) 100%)'/>
+            <Exams country='Finland' />
+            <GuidanceBanner />
+            <University_Required_Docs country='Finland' doc1={Doc1} doc2={Doc2} doc3={Doc3} />
+            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQFinland} country='Finland' />
+            <Counselor country='Finland' bgColor='linear-gradient(264deg, rgba(225,180,61,1) 0%, rgba(225,180,61,1) 100%)' />
 
         </div>
     );

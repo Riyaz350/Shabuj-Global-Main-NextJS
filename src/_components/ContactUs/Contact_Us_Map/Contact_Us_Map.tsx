@@ -7,13 +7,26 @@ import "./Contact_US.css";
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 
+type Office = {
+  city?: string;
+  address?: string;
+  phone?: string;
+  email?: string;
+};
+
+type OfficeAddress = {
+  [country: string]: {
+    title: string;
+    offices: Office[];
+  };
+};
 const Contact_Us_Map = () => {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
   const [showModal, setShowModal] = useState<boolean>(false);
   const [showDiv, setShowDiv] = useState<string | null>("block");
-  const modalRef = useRef<HTMLDivElement | null>(null); 
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
-  const handleMouseEnter = (event:React.MouseEvent<SVGPathElement>) => {
+  const handleMouseEnter = (event: React.MouseEvent<SVGPathElement>) => {
     setSelectedCountry(event.currentTarget.id);
     setShowDiv("block");
   };
@@ -26,7 +39,7 @@ const Contact_Us_Map = () => {
     setShowModal(false);
   };
 
-  const handleClickOutside = (event:MouseEvent) => {
+  const handleClickOutside = (event: MouseEvent) => {
     if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
       closeModal();
     }
@@ -34,7 +47,7 @@ const Contact_Us_Map = () => {
 
   useEffect(() => {
     if (showModal) {
-      document.addEventListener("click", handleClickOutside); 
+      document.addEventListener("click", handleClickOutside);
     } else {
       document.removeEventListener("click", handleClickOutside);
     }
@@ -51,10 +64,10 @@ const Contact_Us_Map = () => {
   }, []);
 
   const handleSvgClick = (event: React.MouseEvent<SVGPathElement>) => {
-    event.stopPropagation(); 
+    event.stopPropagation();
     setShowModal(true);
   };
-  const officeAddress = {
+  const officeAddress : OfficeAddress = {
     "United Kingdom": {
       title: "United Kingdom",
       offices: [
@@ -138,10 +151,8 @@ const Contact_Us_Map = () => {
       title: "Dubai",
       offices: [
         {
-          city: "Kathmandu",
-          address: "3rd Floor, Putalisadak, रामशाह पथ, Kathmandu 44600",
-          phone: "00447903108549",
-          email: "applications.nepal@shabujglobal.com",
+          city: "Dubai",
+          address: "Shabuj Global Education, Dubai Silicon Oasis, Dubai Digital Park - Dubai (Near to Dubai Academic City)- United Arab Emirates"
         },
       ],
     },
@@ -149,19 +160,9 @@ const Contact_Us_Map = () => {
       title: "Saudi Arabia",
       offices: [
         {
-          city: "Dhaka",
-          address:
-            "Nagar Lutfun Homes, House No 11, Road No 17,Block D, Banani, Dhaka.",
-          phone: "09065327323, 07048293093",
-          email: "bd@shabujglobal.com, applications.bd@shabujglobal.com",
-        },
-        {
-          city: "Chattogram",
-          address:
-            "R.I. Tower(level 3),23/A MM Ali Road, Golpahar moor, Chattogram.",
-          phone: "+2349033173017",
-          email: "bd@shabujglobal.com",
-        },
+
+          email: "info@shabujglobal.com",
+        }
       ],
     },
   };
@@ -2382,9 +2383,8 @@ const Contact_Us_Map = () => {
 
           <div
             id="name"
-            className={`absolute bottom-2 text-white left-1/2 transform -translate-x-1/2 ${
-              showDiv ? "block" : "hidden"
-            }`}
+            className={`absolute bottom-2 text-white left-1/2 transform -translate-x-1/2 ${showDiv ? "block" : "hidden"
+              }`}
           >
             <p
               id="namep"
@@ -2401,40 +2401,48 @@ const Contact_Us_Map = () => {
                   <IoIosCloseCircleOutline />
                 </button>
                 <h2 className="text-[30px] text-center font-bold mb-6">
-                {selectedCountry && officeAddress[selectedCountry as keyof typeof officeAddress]?.title}
+                  {selectedCountry && officeAddress[selectedCountry as keyof typeof officeAddress]?.title}
                 </h2>
                 {selectedCountry && officeAddress[selectedCountry as keyof typeof officeAddress]?.offices.map(
                   (office, index) => (
                     <div
                       key={index}
-                      className={`py-5 mx-auto space-y-2 w-[75%] ${
-                        index !==
+                      className={`py-5 mx-auto space-y-2 w-full ${index !==
                         officeAddress[selectedCountry as keyof typeof officeAddress]?.offices.length - 1
-                          ? "border-b border-dashed border-black"
-                          : ""
-                      }`}
+                        ? "border-b border-dashed border-black"
+                        : ""
+                        }`}
                     >
                       <h3 className="font-bold uppercase">{office.city}</h3>
-                      <div className="font-medium flex gap-2 items-start">
-                        <div className="flex-none ">
-                          <SlLocationPin size={22} className="mt-[6px]" />
+                      {office.address &&
+                        <div className="font-medium flex gap-2 items-start">
+                          <div className="flex-none ">
+                            <SlLocationPin size={22} className="mt-[6px]" />
+                          </div>
+                          <p className="align-top ">{office.address}</p>
                         </div>
-                        <p className="align-top ">{office.address}</p>
+                      }
+                      <div>
+                        {office.phone &&
+                          <p className="font-medium">
+                            <FiSmartphone
+                              size={22}
+                              className=" inline-block justify-center items-center mr-2"
+                            />
+                            {office.phone}
+                          </p>
+                        }
                       </div>
-                      <p className="font-medium">
-                        <FiSmartphone
-                          size={22}
-                          className=" inline-block justify-center items-center mr-2"
-                        />
-                        {office.phone}
-                      </p>
 
-                      <div className="font-medium flex gap-2 items-start">
-                        <div className="flex-none ">
-                          <IoMailOutline size={22} />
+                      <div> {office.email &&
+                        <div className="font-medium flex gap-2 items-start">
+                          <div className="flex-none ">
+                            <IoMailOutline size={22} />
+                          </div>
+                          <p className="align-top ">{office.email}</p>
                         </div>
-                        <p className="align-top ">{office.email}</p>
-                      </div>
+                      }</div>
+
                     </div>
                   )
                 )}

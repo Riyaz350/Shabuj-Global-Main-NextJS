@@ -20,18 +20,19 @@ import Banner1 from '@/_components/StudyDestinationComponents/Shared/Banners/Ban
 const page = () => {
     return (
         <div>
-            <Banner1 country='New Zealand'/>
-            <Tower country='New Zealand' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of New Zealand universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`}/>
-            <QuickFacts country='New Zealand'/>
-            <Tabs country='New Zealand'/>
-            <AnimatedText country="New Zealand"/>
+            <title>Study in the New Zealand</title>
+            <Banner1 country='New Zealand' />
+            <Tower country='New Zealand' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of New Zealand universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`} />
+            <QuickFacts country='New Zealand' />
+            <Tabs country='New Zealand' />
+            <AnimatedText country="New Zealand" />
             {/* <UniversityCards country='New Zealand'  /> */}
             <RequirementCard country={"New Zealand"} />
-            <Exams country='New Zealand'/>
-            <GuidanceBanner/>
-            <University_Required_Docs country='New Zealand' doc1={Doc1} doc2={Doc2} doc3={Doc3}/>
-            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQNewZealand} country='New Zealand'/>
-            <Counselor country='New Zealand' bgColor=' linear-gradient(264deg, rgba(163,167,255,1) 0%, rgba(114,117,179,1) 100%)'/>
+            <Exams country='New Zealand' />
+            <GuidanceBanner />
+            <University_Required_Docs country='New Zealand' doc1={Doc1} doc2={Doc2} doc3={Doc3} />
+            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQNewZealand} country='New Zealand' />
+            <Counselor country='New Zealand' bgColor=' linear-gradient(264deg, rgba(163,167,255,1) 0%, rgba(114,117,179,1) 100%)' />
 
         </div>
     );

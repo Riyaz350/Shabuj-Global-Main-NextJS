@@ -19,18 +19,19 @@ import Car from '../../../../_components/StudyDestinationComponents/Shared/Secon
 const page = () => {
     return (
         <div>
-            <Banner2 country='Australia'/>
-            <Car country='Australia'bgColor='bg-[#191F2C]' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Australia universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`} />
-            <QuickFacts country='Australia'/>
-            <Tabs country='Australia'/>
-            <AnimatedText country="Australia"/>
+            <title>Study in the Australia</title>
+            <Banner2 country='Australia' />
+            <Car country='Australia' bgColor='bg-[#191F2C]' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Australia universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`} />
+            <QuickFacts country='Australia' />
+            <Tabs country='Australia' />
+            <AnimatedText country="Australia" />
             {/* <UniversityCards country='Australia'  /> */}
             <RequirementCard country={"Australia"} />
-            <Exams country='Australia'/>
-            <GuidanceBanner/>
-            <University_Required_Docs country='Australia' doc1={Doc1} doc2={Doc2} doc3={Doc3}/>
-            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQAustralia}  country='Australia'/>
-            <Counselor country='Australia' bgColor='linear-gradient(351deg, rgba(8,4,100,1) 0%, rgba(36,31,170,1) 100%)'/>
+            <Exams country='Australia' />
+            <GuidanceBanner />
+            <University_Required_Docs country='Australia' doc1={Doc1} doc2={Doc2} doc3={Doc3} />
+            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQAustralia} country='Australia' />
+            <Counselor country='Australia' bgColor='linear-gradient(351deg, rgba(8,4,100,1) 0%, rgba(36,31,170,1) 100%)' />
 
         </div>
     );

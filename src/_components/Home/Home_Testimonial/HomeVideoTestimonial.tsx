@@ -82,16 +82,16 @@ const HomeVideoTestimonial = () => {
                                 className={`${currentSlider === inx
                                     ? "bg-gradient-to-b from-[#88D6F3] via-[#88F3D0] to-[#ACFFE4] h-[280px] md:h-[530px] lg:h-[530px] transition-all duration-300"
                                     : "h-[280px] md:h-[530px] lg:h-[530px] transition-all duration-300"
-                                    } min-w-[50%] duration-200 bg-white rounded-3xl lg:hidden md:hidden block relative`}
+                                    } min-w-[50%] duration-200 bg-white rounded-3xl lg:hidden md:hidden  relative mx-1 flex flex-col justify-center`}
                                 onClick={() => openModal(slide)} // Open modal on click
                             >
 
 
-                                <div className="mx-1">
+                                <div className="">
                                     <p className="text-sm my-2 font-semibold text-center">
                                         {slide.name}
                                     </p>
-                                    <p className="text-[9px] mx-5">{slide.name}</p>
+                                    <p className="text-[9px] text-center text-lg  mx-5">{slide.country}</p>
                                 </div>
                             </div>
                         ))}

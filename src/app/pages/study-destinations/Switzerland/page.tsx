@@ -20,18 +20,19 @@ import Banner3 from '@/_components/StudyDestinationComponents/Shared/Banners/Ban
 const page = () => {
     return (
         <div>
-            <Banner3 country='Switzerland'/>
-            <Car country='Switzerland'  bgColor='bg-[#f76c6c]' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Switzerland universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers. ` } />
-            <QuickFacts country='Switzerland'/>
-            <Tabs country='Switzerland'/>
-            <AnimatedText country="Switzerland"/>
+            <title>Study in the Switzerland</title>
+            <Banner3 country='Switzerland' />
+            <Car country='Switzerland' bgColor='bg-[#f76c6c]' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Switzerland universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers. `} />
+            <QuickFacts country='Switzerland' />
+            <Tabs country='Switzerland' />
+            <AnimatedText country="Switzerland" />
             {/* <UniversityCards country='Switzerland'  /> */}
             <RequirementCard country={"Switzerland"} />
-            <Exams country='Switzerland'/>
-            <GuidanceBanner/>
-            <University_Required_Docs country='Switzerland' doc1={Doc1} doc2={Doc2} doc3={Doc3}/>
-            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQSwitzerland} country='Switzerland'/>
-            <Counselor country='Switzerland' bgColor='linear-gradient(264deg, rgba(247,108,108,1) 0%, rgba(173,76,76,1) 100%)'/>
+            <Exams country='Switzerland' />
+            <GuidanceBanner />
+            <University_Required_Docs country='Switzerland' doc1={Doc1} doc2={Doc2} doc3={Doc3} />
+            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQSwitzerland} country='Switzerland' />
+            <Counselor country='Switzerland' bgColor='linear-gradient(264deg, rgba(247,108,108,1) 0%, rgba(173,76,76,1) 100%)' />
 
         </div>
     );

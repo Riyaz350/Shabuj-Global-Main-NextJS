@@ -6,7 +6,7 @@ const Canada_Banner = ({ country}:{country:string}) => {
      
          <div className='relative '>
          <div className='absolute top-4 sm:top-14 left-0 right-0 mx-auto'>
-                <h2 className='poppins-bold sm:text-[64px] text-2xl lg:leading-[83.2px] text-[#081831] lg:-tracking-[0.02em] text-center'>Study in {country}</h2>
+                <h2 className='poppins-bold sm:text-[64px] text-2xl lg:leading-[83.2px] text-[#081831] lg:-tracking-[0.02em] text-center'>Study in the {country}</h2>
                 <p className='poppins-medium sm:text-[18px] text-[14px] text-[#D80621] text-center pt-4'>Here’s a comprehensive guide for all<br></br> students who want to study in {country}</p>
             </div>
             <svg

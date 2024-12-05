@@ -20,18 +20,19 @@ import Banner1 from '@/_components/StudyDestinationComponents/Shared/Banners/Ban
 const page = () => {
     return (
         <div>
-            <Banner1 country='Cyprus'/>
-            <Tower country='Cyprus'  description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Cyprus universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`}/>
-            <QuickFacts country='Cyprus'/>
-            <Tabs country='Cyprus'/>
-            <AnimatedText country="Cyprus"/>
+            <title>Study in the Cyprus</title>
+            <Banner1 country='Cyprus' />
+            <Tower country='Cyprus' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Cyprus universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`} />
+            <QuickFacts country='Cyprus' />
+            <Tabs country='Cyprus' />
+            <AnimatedText country="Cyprus" />
             {/* <UniversityCards country='Cyprus'  /> */}
             <RequirementCard country={"Cyprus"} />
-            <Exams country='Cyprus'/>
-            <GuidanceBanner/>
-            <University_Required_Docs country='Cyprus' doc1={Doc1} doc2={Doc2} doc3={Doc3}/>
-            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQCyprus} country='Cyprus'/>
-            <Counselor country='Cyprus' bgColor='linear-gradient(264deg, rgba(105,42,0,1) 0%, rgba(73,29,0,1) 100%)'/>
+            <Exams country='Cyprus' />
+            <GuidanceBanner />
+            <University_Required_Docs country='Cyprus' doc1={Doc1} doc2={Doc2} doc3={Doc3} />
+            <FAQ bgColor={"bg-[#1A1A1A]"} FAQimg={FAQCyprus} country='Cyprus' />
+            <Counselor country='Cyprus' bgColor='linear-gradient(264deg, rgba(105,42,0,1) 0%, rgba(73,29,0,1) 100%)' />
 
         </div>
     );

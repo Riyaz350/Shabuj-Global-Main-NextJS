@@ -2,79 +2,79 @@
   {
     "name": "UK",
     "img": "https://i.ibb.co/DGMDftr/UK.jpg",
-    "to": "/UK",
+    "to": "/study-destinations/study-in-the-uk",
     "label": "Study in UK"
   },
   {
     "name": "USA",
     "img": "https://i.ibb.co/HqNXF0R/USA.jpg",
-    "to": "/USA",
+    "to": "/study-destinations/study-in-the-usa",
     "label": "Study in USA"
   },
   {
     "name": "Australia",
     "img": "https://i.ibb.co/1qd19nV/AUSTRALIA.jpg",
-    "to": "/Australia",
+    "to": "/study-destinations/study-in-the-australia",
     "label": "Study in Australia"
   },
   {
     "name": "Canada",
     "img": "https://i.ibb.co/7gMqP6z/CANADA.jpg",
-    "to": "/Canada",
+    "to": "/study-destinations/study-in-the-canada",
     "label": "Study in Canada"
   },
   {
     "name": "Germany",
     "img": "https://i.ibb.co/NxYffJN/GERMANY.jpg",
-    "to": "/Germany",
+    "to": "/study-destinations/study-in-the-germany",
     "label": "Study in Germany"
   },
   {
     "name": "New Zealand",
     "img": "https://i.ibb.co/3F276Wh/NZ.jpg",
-    "to": "/New-Zealand",
+    "to": "/study-destinations/study-in-the-new-zealand",
     "label": "Study in New Zealand"
   },
   {
     "name": "UAE",
     "img": "https://i.ibb.co/vhS3vSX/UAE.jpg",
-    "to": "/UAE",
+    "to": "/study-destinations/study-in-the-uae",
     "label": "Study in UAE"
   },
   {
     "name": "Georgia",
     "img": "https://i.ibb.co/BZXkW1X/Georgia.png",
-    "to": "/Georgia",
+    "to": "/study-destinations/study-in-the-georgia",
     "label": "Study in Georgia"
   },
   {
     "name": "Finland",
     "img": "https://i.ibb.co/kJFRR6p/Finland.png",
-    "to": "/Finland",
+    "to": "/study-destinations/study-in-the-finland",
     "label": "Study in Finland"
   },
   {
     "name": "Cyprus",
     "img": "https://i.ibb.co.com/zZbntX5/Cyprus.png",
-    "to": "/Cyprus",
+    "to": "/study-destinations/study-in-the-cyprus",
     "label": "Study in Cyprus"
   },
   {
     "name": "Switzerland",
     "img": "https://i.ibb.co/zf9yQKF/Switzerland.png",
-    "to": "/Switzerland",
+    "to": "/study-destinations/study-in-the-switzerland",
     "label": "Study in Switzerland"
   },
   {
     "name": "France",
     "img": "https://i.ibb.co/wr2DVNH/France.png",
-    "to": "/France",
+    "to": "/study-destinations/study-in-the-france",
     "label": "Study in France"
   },
   {
     "name": "West Indies",
     "img": "https://i.ibb.co/930GwsL/West-Indies.jpg",
-    "to": "/West-Indies",
+    "to": "/study-destinations/study-in-the-west-indies",
     "label": "Study in West Indies"
   }
 ]

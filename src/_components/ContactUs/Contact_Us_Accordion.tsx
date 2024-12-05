@@ -4,7 +4,7 @@ import { useState } from "react";
 const Contact_Us_Accordion = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(100);
 
-  const toggleAccordion = (index:number |null) => {
+  const toggleAccordion = (index: number | null) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
@@ -27,9 +27,8 @@ const Contact_Us_Accordion = () => {
               >
                 <h5 className="text-xl font-semibold text-start">London (Head Office)</h5>
                 <svg
-                  className={`transition duration-500  ${
-                    activeIndex === 0 ? "rotate-180" : ""
-                  }`}
+                  className={`transition duration-500  ${activeIndex === 0 ? "rotate-180" : ""
+                    }`}
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"
@@ -47,9 +46,8 @@ const Contact_Us_Accordion = () => {
               </button>
               <div
                 id="basic-collapse-one-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 0 ? "active" : ""
-                }`}
+                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${activeIndex === 0 ? "active" : ""
+                  }`}
                 style={{ maxHeight: activeIndex === 0 ? "100px" : "0px" }}
                 aria-labelledby="basic-heading-one-with-arrow-always-open"
               >
@@ -81,9 +79,8 @@ const Contact_Us_Accordion = () => {
                   Dhaka (South Asian Regional Head Office)
                 </h5>
                 <svg
-                  className={`transition duration-500 ${
-                    activeIndex === 1 ? "rotate-180" : ""
-                  }`}
+                  className={`transition duration-500 ${activeIndex === 1 ? "rotate-180" : ""
+                    }`}
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"
@@ -101,13 +98,17 @@ const Contact_Us_Accordion = () => {
               </button>
               <div
                 id="basic-collapse-two-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 1 ? "active" : ""
-                }`}
+                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${activeIndex === 1 ? "active" : ""
+                  }`}
                 style={{ maxHeight: activeIndex === 1 ? "100px" : "0px" }}
                 aria-labelledby="basic-heading-two-with-arrow-always-open"
               >
-                <p className="text-base font-normal">Dhaka</p>
+                <p className="text-base font-normal">759, Delvista Fuljhuri(Lift-5)
+Satmosjid Road, Dhanmondi, Dhaka-1207
+
+01701808655, 01321182535
+
+Email: om.bd@shabujglobal.com</p>
               </div>
             </div>
             <div
@@ -121,9 +122,8 @@ const Contact_Us_Accordion = () => {
               >
                 <h5 className="text-xl font-semibold">Chattogram</h5>
                 <svg
-                  className={`transition duration-500 ${
-                    activeIndex === 2 ? "rotate-180" : ""
-                  }`}
+                  className={`transition duration-500 ${activeIndex === 2 ? "rotate-180" : ""
+                    }`}
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"
@@ -141,13 +141,16 @@ const Contact_Us_Accordion = () => {
               </button>
               <div
                 id="basic-collapse-two-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 2 ? "active" : ""
-                }`}
+                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${activeIndex === 2 ? "active" : ""
+                  }`}
                 style={{ maxHeight: activeIndex === 2 ? "100px" : "0px" }}
                 aria-labelledby="basic-heading-two-with-arrow-always-open"
               >
-                <p className="text-base font-normal">Ctg</p>
+                <p className="text-base font-normal">R.I. Tower (level 3)
+                  23/A MM Ali Road
+                  Golpahar moor, Chattogram, Bangladesh.
+                  Tel: +8801321182544
+                  Email: applications.ctg@shabujglobal.com</p>
               </div>
             </div>
             <div
@@ -161,9 +164,8 @@ const Contact_Us_Accordion = () => {
               >
                 <h5 className="text-xl font-semibold">Sylhet</h5>
                 <svg
-                  className={` transition duration-500  ${
-                    activeIndex === 3 ? "rotate-180" : ""
-                  }`}
+                  className={` transition duration-500  ${activeIndex === 3 ? "rotate-180" : ""
+                    }`}
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"
@@ -181,9 +183,8 @@ const Contact_Us_Accordion = () => {
               </button>
               <div
                 id="basic-collapse-three-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 3 ? "active" : ""
-                }`}
+                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${activeIndex === 3 ? "active" : ""
+                  }`}
                 style={{ maxHeight: activeIndex === 3 ? "100px" : "0px" }}
                 aria-labelledby="basic-heading-three-with-arrow-always-open"
               >
@@ -213,9 +214,8 @@ const Contact_Us_Accordion = () => {
               >
                 <h5 className="text-xl font-semibold">Kochin</h5>
                 <svg
-                  className={`transition duration-500  ${
-                    activeIndex === 4 ? "rotate-180" : ""
-                  }`}
+                  className={`transition duration-500  ${activeIndex === 4 ? "rotate-180" : ""
+                    }`}
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"
@@ -233,9 +233,8 @@ const Contact_Us_Accordion = () => {
               </button>
               <div
                 id="basic-collapse-one-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 4 ? "active" : ""
-                }`}
+                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${activeIndex === 4 ? "active" : ""
+                  }`}
                 style={{ maxHeight: activeIndex === 4 ? "100px" : "0px" }}
                 aria-labelledby="basic-heading-one-with-arrow-always-open"
               >
@@ -256,9 +255,8 @@ const Contact_Us_Accordion = () => {
               >
                 <h5 className="text-xl font-semibold">Kannur</h5>
                 <svg
-                  className={`transition duration-500 ${
-                    activeIndex === 5 ? "rotate-180" : ""
-                  }`}
+                  className={`transition duration-500 ${activeIndex === 5 ? "rotate-180" : ""
+                    }`}
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"
@@ -276,9 +274,8 @@ const Contact_Us_Accordion = () => {
               </button>
               <div
                 id="basic-collapse-two-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 5 ? "active" : ""
-                }`}
+                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${activeIndex === 5 ? "active" : ""
+                  }`}
                 style={{ maxHeight: activeIndex === 5 ? "100px" : "0px" }}
                 aria-labelledby="basic-heading-two-with-arrow-always-open"
               >
@@ -308,9 +305,8 @@ const Contact_Us_Accordion = () => {
               >
                 <h5 className="text-xl font-semibold">Abuja</h5>
                 <svg
-                  className={`transition duration-500  ${
-                    activeIndex === 6 ? "rotate-180" : ""
-                  }`}
+                  className={`transition duration-500  ${activeIndex === 6 ? "rotate-180" : ""
+                    }`}
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"
@@ -328,9 +324,8 @@ const Contact_Us_Accordion = () => {
               </button>
               <div
                 id="basic-collapse-one-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 6 ? "active" : ""
-                }`}
+                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${activeIndex === 6 ? "active" : ""
+                  }`}
                 style={{ maxHeight: activeIndex === 6 ? "100px" : "0px" }}
                 aria-labelledby="basic-heading-one-with-arrow-always-open"
               >
@@ -350,9 +345,8 @@ const Contact_Us_Accordion = () => {
               >
                 <h5 className="text-xl font-semibold">Lagos</h5>
                 <svg
-                  className={`transition duration-500 ${
-                    activeIndex === 7 ? "rotate-180" : ""
-                  }`}
+                  className={`transition duration-500 ${activeIndex === 7 ? "rotate-180" : ""
+                    }`}
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"
@@ -370,9 +364,8 @@ const Contact_Us_Accordion = () => {
               </button>
               <div
                 id="basic-collapse-two-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 7 ? "active" : ""
-                }`}
+                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${activeIndex === 7 ? "active" : ""
+                  }`}
                 style={{ maxHeight: activeIndex === 7 ? "100px" : "0px" }}
                 aria-labelledby="basic-heading-two-with-arrow-always-open"
               >
@@ -401,9 +394,8 @@ const Contact_Us_Accordion = () => {
               >
                 <h5 className="text-xl font-semibold">Saudi Arabia</h5>
                 <svg
-                  className={`transition duration-500  ${
-                    activeIndex === 8 ? "rotate-180" : ""
-                  }`}
+                  className={`transition duration-500  ${activeIndex === 8 ? "rotate-180" : ""
+                    }`}
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"
@@ -421,15 +413,13 @@ const Contact_Us_Accordion = () => {
               </button>
               <div
                 id="basic-collapse-one-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 8 ? "active" : ""
-                }`}
+                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${activeIndex === 8 ? "active" : ""
+                  }`}
                 style={{ maxHeight: activeIndex === 8 ? "100px" : "0px" }}
                 aria-labelledby="basic-heading-one-with-arrow-always-open"
               >
                 <p className="text-base font-normal ">
-                  1st Floor, 94A Whitechapel High Street, London E1 7RA, United
-                  Kingdom.
+                  Email: info@shabujglobal.com
                 </p>
               </div>
             </div>
@@ -444,9 +434,8 @@ const Contact_Us_Accordion = () => {
               >
                 <h5 className="text-xl font-semibold">UAE</h5>
                 <svg
-                  className={`transition duration-500 ${
-                    activeIndex === 9 ? "rotate-180" : ""
-                  }`}
+                  className={`transition duration-500 ${activeIndex === 9 ? "rotate-180" : ""
+                    }`}
                   width="22"
                   height="22"
                   viewBox="0 0 22 22"
@@ -464,16 +453,15 @@ const Contact_Us_Accordion = () => {
               </button>
               <div
                 id="basic-collapse-two-with-arrow-always-open"
-                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${
-                  activeIndex === 9 ? "active" : ""
-                }`}
+                className={`accordion-content w-full px-0 overflow-hidden pr-4 ${activeIndex === 9 ? "active" : ""
+                  }`}
                 style={{ maxHeight: activeIndex === 9 ? "100px" : "0px" }}
                 aria-labelledby="basic-heading-two-with-arrow-always-open"
               >
-                <p className="text-base font-normal">Ctg</p>
+                <p className="text-base font-normal">Shabuj Global Education, Dubai Silicon Oasis, Dubai Digital Park - Dubai (Near to Dubai Academic City)- United Arab Emirates  </p>
               </div>
             </div>
-             
+
           </div>
         </div>
       </div>
