@@ -33,6 +33,7 @@ const nextConfig = {
       { source: "/collaboration", destination: "/pages/ServicesPages/collaboration" },
       { source: "/logIn", destination: "/pages/logIn" },
       { source: "/registration", destination: "/pages/registration" },
+      { source: "/study-destinations", destination: "/pages/study-destinations" },
       { source: "/study-destinations/study-in-the-uk", destination: "/pages/study-destinations/UK" },
       { source: "/study-destinations/study-in-the-usa", destination: "/pages/study-destinations/USA" },
       { source: "/study-destinations/study-in-the-australia", destination: "/pages/study-destinations/Australia", },

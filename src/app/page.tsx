@@ -16,18 +16,26 @@ import HomeVideoTestimonial from "@/_components/Home/Home_Testimonial/HomeVideoT
 export default function Home() {
   return (
     <div className=" font-poppins">
-      <WelcomeModal/>
-      <Banner/>
-      <Home_Events/>
-      <Home_Tab/>
-      <Home_Counter/>
+      <WelcomeModal />
+      <Banner />
+      <Home_Events />
+      <Home_Tab />
+      <Home_Counter />
       {/* <Home_Testimonial/> */}
-      <HomeVideoTestimonial/>
-      <Home_Connection/>
-      <Home_Destination/>
-      <Home_UniversityList/>
-      <ImageGallery/>
-      <Home_Contact/>
+      <HomeVideoTestimonial />
+      <Home_Connection />
+      <div
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(13,53,234,1) 30%, rgba(44,124,249,1) 50%, rgba(13,53,234,1) 70%)",
+        }}
+      >
+
+        <Home_Destination />
+      </div>
+      <Home_UniversityList />
+      <ImageGallery />
+      <Home_Contact />
     </div>
   );
 }
