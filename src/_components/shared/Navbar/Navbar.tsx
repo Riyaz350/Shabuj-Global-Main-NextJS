@@ -46,9 +46,8 @@ const Navbar2 = () => {
             </p>
           </button>
           <span
-            className={` ${
-              navButton == ind && "rotate-180 transition ease-in-out delay-450"
-            }`}
+            className={` ${navButton == ind && "rotate-180 transition ease-in-out delay-450"
+              }`}
           >
             <FaChevronUp />
           </span>
@@ -675,7 +674,9 @@ const Navbar2 = () => {
             </Link>
           </div>
           <div className="flex items-center gap-1">
-            <NavButton text="Study Destination" ind={1} />
+            <Link href={"/study-destinations"}>
+              <NavButton text="Study Destination" ind={1} />
+            </Link>
           </div>
 
           <div className="flex items-center gap-1">
@@ -695,9 +696,8 @@ const Navbar2 = () => {
           </div>
           {!user || loading ? (
             <div
-              className={`${
-                width >= 1244 ? "text-base" : "text-sm"
-              } flex items-center justify-end gap-1`}
+              className={`${width >= 1244 ? "text-base" : "text-sm"
+                } flex items-center justify-end gap-1`}
             >
               <Link
                 className={`  bg-[#BFDBFE] col-span-2  font-bold px-5 py-2 rounded-2xl`}
@@ -742,7 +742,7 @@ const Navbar2 = () => {
                       {user?.displayName}{" "}
                       {/* Fallback to "User" if displayName is not set */}
                     </p>
-                  ):(
+                  ) : (
                     <></>
                   )}
                   <button
@@ -785,9 +785,8 @@ const Navbar2 = () => {
         {navIndex == 2 && (
           <>
             <div
-              className={`${
-                width <= 1450 ? "grid-cols-4" : "grid-cols-5"
-              }   mx-10 gap-5 hidden  lg:grid md:mx-auto   md:max-w-[1800px]`}
+              className={`${width <= 1450 ? "grid-cols-4" : "grid-cols-5"
+                }   mx-10 gap-5 hidden  lg:grid md:mx-auto   md:max-w-[1800px]`}
             >
               <div className="col-span-1 md:my-10 my-5">
                 <h2 className="my-5 text-lg font-medium border-b-2 w-fit border-[#f85424]">
