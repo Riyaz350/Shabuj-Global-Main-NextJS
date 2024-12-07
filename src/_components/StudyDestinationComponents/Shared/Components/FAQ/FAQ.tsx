@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useRef, useState } from 'react'
 
 export default function FAQ({bgColor, FAQimg:FAQComponent, country}:{bgColor:string, FAQimg:React.FC, country:string}) {
