@@ -16,11 +16,16 @@ import FAQGeorgia from '@/_components/StudyDestinationComponents/Georgia/SVG/FAQ
 import React from 'react';
 import Banner3 from '@/_components/StudyDestinationComponents/Shared/Banners/Banner3/Banner3';
 import Doc1 from '@/_components/StudyDestinationComponents/Georgia/SVG/Doc1';
+import Head from 'next/head';
 
 const page = () => {
     return (
         <div>
-            <title>Study in the Georgia</title>
+            <Head>
+                <title>Study in the Georgia</title>
+                <meta name="description" content="Learn from the world's best academics and study at prestigious Georgian universities." />
+                <meta name="keywords" content="Study in Georgia, Georgian Universities, Study Abroad" />
+            </Head>
             <Banner3 country='Georgia' />
             <Car country='Georgia' bgColor='bg-[#0873ba]' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Georgia universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers. `} />
             <QuickFacts country='Georgia' />

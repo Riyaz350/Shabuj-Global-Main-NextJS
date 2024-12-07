@@ -16,11 +16,16 @@ import Doc3 from '@/_components/StudyDestinationComponents/UAE/SVG/Doc3';
 import FAQUAE from '@/_components/StudyDestinationComponents/UAE/SVG/FAQ';
 import React from 'react';
 import Banner1 from '@/_components/StudyDestinationComponents/Shared/Banners/Banner1/Banner1';
+import Head from 'next/head';
 
 const page = () => {
     return (
         <div>
-            <title>Study in the UAE</title>
+            <Head>
+                <title>Study in the UAE</title>
+                <meta name="description" content="Learn from the world's best academics and study at prestigious UAE universities." />
+                <meta name="keywords" content="Study in UAE, UAE Universities, Study Abroad" />
+            </Head>
             <Banner1 country='UAE'/>
             <Tower country='UAE' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of UAE universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`}/>
             <QuickFacts country='UAE'/>

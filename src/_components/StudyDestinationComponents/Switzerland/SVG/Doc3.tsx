@@ -217,63 +217,63 @@ const Doc3 = () => {
       <path
         d="M92.8821 272.796C92.8821 272.796 120.441 324.434 124.715 348.405C129.634 375.943 130.429 406.702 127.035 430.803"
         stroke="#f76c6c"
-        stroke-width="1.25197"
+        strokeWidth="1.25197"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M120.366 332.456L133.866 291.107"
         stroke="#f76c6c"
-        stroke-width="1.25197"
+        strokeWidth="1.25197"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M124.715 348.406L150.126 316.454"
         stroke="#f76c6c"
-        stroke-width="1.25197"
+        strokeWidth="1.25197"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M123.094 342.595L86.2985 327.141"
         stroke="#f76c6c"
-        stroke-width="1.25197"
+        strokeWidth="1.25197"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.905 370.046L155.572 348.846"
         stroke="#f76c6c"
-        stroke-width="1.25197"
+        strokeWidth="1.25197"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M126.434 360.95L97.5325 354.936"
         stroke="#f76c6c"
-        stroke-width="1.25197"
+        strokeWidth="1.25197"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M127.819 383.085L105.437 379.541"
         stroke="#f76c6c"
-        stroke-width="1.25197"
+        strokeWidth="1.25197"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M129.71 397.412L144.767 383.923"
         stroke="#f76c6c"
-        stroke-width="1.25197"
+        strokeWidth="1.25197"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M129.409 403.48L103.687 397.015"
         stroke="#f76c6c"
-        stroke-width="1.25197"
+        strokeWidth="1.25197"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -447,21 +447,21 @@ const Doc3 = () => {
       <path
         d="M144.925 109.881C144.487 109.587 143.963 109.444 143.436 109.475C142.908 109.506 142.405 109.709 142.004 110.053C140.457 111.256 143.379 117.281 143.379 117.281C143.379 117.281 143.432 119.182 140.994 118.302"
         stroke="#263238"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M144.925 120.257C144.758 120.652 144.501 121.004 144.175 121.283C143.849 121.562 143.462 121.762 143.045 121.866C142.629 121.97 142.194 121.976 141.774 121.883C141.355 121.79 140.963 121.601 140.629 121.331"
         stroke="#263238"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M138.385 111.482C138.385 111.482 135.635 108.894 134.432 113.888"
         stroke="#263238"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -472,21 +472,21 @@ const Doc3 = () => {
       <path
         d="M140.5 102.17C140.5 102.17 137.107 99.4423 134.056 102.503C131.006 105.564 131.339 111.353 130.319 115.101C129.299 118.849 126.571 119.526 126.571 119.526"
         stroke="white"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M138.127 101.15C138.127 101.15 134.465 97.52 129.857 102.117C126.345 105.639 127.913 107.949 127.226 113.737"
         stroke="white"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M142.208 100.462C142.208 100.462 148.652 97.4015 151.402 105.231"
         stroke="white"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -738,14 +738,14 @@ const Doc3 = () => {
       <path
         d="M155.515 192.301L151.777 187.393"
         stroke="#263238"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M153.324 192.472L150.392 188.584"
         stroke="#263238"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -789,7 +789,7 @@ const Doc3 = () => {
       <path
         d="M437.152 252.852L433.822 254.226"
         stroke="#263238"
-        stroke-width="0.75"
+        strokeWidth="0.75"
         stroke-miterlimit="10"
       />
       <g opacity="0.5">
@@ -805,7 +805,7 @@ const Doc3 = () => {
         <path
           d="M437.152 252.852L433.822 254.226"
           stroke="#263238"
-          stroke-width="0.75"
+          strokeWidth="0.75"
           stroke-miterlimit="10"
         />
       </g>
@@ -868,7 +868,7 @@ const Doc3 = () => {
       <path
         d="M483.484 262.055C482.463 263.35 481.73 264.847 481.336 266.448C481.024 268.51 481.519 276.447 481.519 276.447L470.456 277.693C470.456 277.693 471.294 269.627 471.337 268.285C471.691 266.62 472.397 265.05 473.406 263.679C474.415 262.308 475.705 261.169 477.19 260.337C480.992 258.468 484.225 259.381 483.484 262.055Z"
         stroke="#263238"
-        stroke-width="1.00396"
+        strokeWidth="1.00396"
         stroke-miterlimit="10"
       />
       <path
@@ -909,14 +909,14 @@ const Doc3 = () => {
       <path
         d="M467.653 253.196C467.653 253.196 468.727 252.304 468.942 254.356"
         stroke="#263238"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M463.153 261.819C463.153 261.819 463.153 262.893 465.086 262.893"
         stroke="#263238"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -934,7 +934,7 @@ const Doc3 = () => {
       <path
         d="M469.49 370.305C469.49 370.305 466.773 386.297 464.721 394.137C462.67 401.977 462.681 409.796 462.681 418.302C462.681 426.808 459.62 442.488 459.62 442.488"
         stroke="#263238"
-        stroke-width="0.75"
+        strokeWidth="0.75"
         stroke-miterlimit="10"
       />
       <path
@@ -955,26 +955,26 @@ const Doc3 = () => {
       <path
         d="M480.412 364.086C480.573 374.665 481.647 379.756 482.485 382.548C483.505 385.953 483.162 392.418 483.162 395.436C483.162 398.454 481.798 394.759 484.869 408.721C487.941 422.683 489.971 442.08 489.971 442.08"
         stroke="#263238"
-        stroke-width="0.75"
+        strokeWidth="0.75"
         stroke-miterlimit="10"
       />
       <path
         d="M480.412 341.027C480.412 341.027 480.745 340.339 480.412 356.342C480.412 357.201 480.412 358.028 480.412 358.834"
         stroke="#263238"
-        stroke-width="0.75"
+        strokeWidth="0.75"
         stroke-miterlimit="10"
       />
       <path
         d="M464.7 337.987L464.474 342.777L463.368 346.107L465.022 348.04"
         stroke="#263238"
-        stroke-width="0.75"
+        strokeWidth="0.75"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M462.53 340.845C462.53 340.845 465.301 343.616 472.497 342.778"
         stroke="#263238"
-        stroke-width="0.75"
+        strokeWidth="0.75"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -986,7 +986,7 @@ const Doc3 = () => {
         d="M461.746 335.389L461.628 337.279L464.7 337.988L464.936 335.507L461.746 335.389Z"
         fill="white"
         stroke="#263238"
-        stroke-width="0.75"
+        strokeWidth="0.75"
         stroke-miterlimit="10"
       />
       <path
@@ -1067,7 +1067,7 @@ const Doc3 = () => {
       <path
         d="M478.683 305.273C473.238 303.576 468.469 298.829 468.469 298.829C469.678 304.47 472.958 309.452 477.663 312.791"
         stroke="#263238"
-        stroke-width="0.75"
+        strokeWidth="0.75"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
@@ -1118,7 +1118,7 @@ const Doc3 = () => {
       <path
         d="M436.131 258.297L431.363 260.681"
         stroke="#263238"
-        stroke-width="0.75"
+        strokeWidth="0.75"
         stroke-miterlimit="10"
       />
       <path
@@ -1130,14 +1130,14 @@ const Doc3 = () => {
       <path
         d="M472.723 250.886C472.723 250.886 478.007 257.33 485.836 257.953"
         stroke="white"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="M470.854 252.852C470.854 252.852 473.313 260.004 483.484 262.045"
         stroke="white"
-        stroke-width="0.5"
+        strokeWidth="0.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
