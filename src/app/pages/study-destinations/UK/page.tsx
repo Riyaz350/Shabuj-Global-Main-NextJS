@@ -21,16 +21,16 @@ import Head from 'next/head';
 const page = () => {
     return (
         <div>
+            <Head>
                 <title>Study in the UK and build your future</title>
                 <meta name="description" content="Learn from the world's best academics and study at prestigious UK universities." />
-            <Head>
+                <meta property="og:description" content="Learn from the world's best academics and study at prestigious UK universities." />
 
                 {/* Standard Meta Tags */}
                 <meta name="keywords" content="Study in UK, UK Universities, Study Abroad" />
 
                 {/* Open Graph Meta Tags for Social Media */}
                 <meta property="og:title" content="Study in the UK and build your future" />
-                <meta property="og:description" content="Learn from the world's best academics and study at prestigious UK universities." />
                 {/* Twitter Card Meta Tags */}
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Study in the UK and build your future" />
