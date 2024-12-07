@@ -29,11 +29,11 @@ const Meta: React.FC<MetaProps> = ({
             <title>{title}</title>
             <meta name="description" content={description} />
             {ogTitle && <meta property="og:title" content={ogTitle} />}
+            {ogDescription && <meta property="og:description" content={ogDescription} />}
             <Head>
                 {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
 
                 {/* Open Graph Meta Tags */}
-                {ogDescription && <meta property="og:description" content={ogDescription} />}
                 {ogUrl && <meta property="og:url" content={ogUrl} />}
                 {ogImage && <meta property="og:image" content={ogImage} />}
 
