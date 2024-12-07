@@ -30,8 +30,8 @@ const page = () => {
                 ogImage="https://yourwebsite.com/path-to-image.jpg" // Replace with the actual image URL
                 twitterImage="https://yourwebsite.com/path-to-image.jpg" // Replace with the actual image URL
             />
-            {/* <title>Study in the USA and build your future</title>
             <meta name="description" content="Learn from the world's best academics and study at prestigious USA universities." />
+            {/* <title>Study in the USA and build your future</title>
             <meta name="og:title" content="Study in the USA and build your future" />
             <meta property="og:description" content="Learn from the world's best academics and study at prestigious USA universities." />
             <meta name="keywords" content="Study in USA, USA Universities, Study Abroad" /> */}
