@@ -1,3 +1,5 @@
+'use client'
+
 import { motion, Transition } from "framer-motion";
 import "./Banner2.css";
 const Banner2SVG = () => {

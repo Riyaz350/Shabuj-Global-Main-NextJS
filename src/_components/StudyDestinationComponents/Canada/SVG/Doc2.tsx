@@ -1,3 +1,5 @@
+'use client'
+
 import './Canada_SVG.css'
 const Canada_Doc2 = () => {
     return (

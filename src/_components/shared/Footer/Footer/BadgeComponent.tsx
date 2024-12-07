@@ -17,8 +17,9 @@ const BadgeComponent = () => {
     }
 
     return () => {
-        badgeElement?.removeChild(scriptElement); 
-      
+      if (badgeElement && badgeElement.contains(scriptElement)) {
+        badgeElement.removeChild(scriptElement);
+      }
     };
   }, []); 
 

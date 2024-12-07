@@ -1,3 +1,5 @@
+'use client'
+
 import Banner2SVG from "./Banner2SVG";
 
 const Banner2 = ({country}:{country:string}) => {

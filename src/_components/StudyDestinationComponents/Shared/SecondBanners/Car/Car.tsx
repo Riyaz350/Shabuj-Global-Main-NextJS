@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 
 const SecondBanner = ({ country,description, bgColor }:{country:string, description:string, bgColor:string}) => {

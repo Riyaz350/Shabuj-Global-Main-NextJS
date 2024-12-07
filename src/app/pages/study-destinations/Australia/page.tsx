@@ -1,4 +1,3 @@
-'use client'
 import AnimatedText from '@/_components/StudyDestinationComponents/Shared/Components/AnimatedText/AnimatedText';
 import Counselor from '@/_components/StudyDestinationComponents/Shared/Components/Counselor/Counselor';
 import Exams from '@/_components/StudyDestinationComponents/Shared/Components/Exams/Exams';
@@ -16,15 +15,16 @@ import FAQAustralia from '@/_components/StudyDestinationComponents/Australia/SVG
 import React from 'react';
 import Banner2 from '@/_components/StudyDestinationComponents/Shared/Banners/Banner2/Banner2';
 import Car from '../../../../_components/StudyDestinationComponents/Shared/SecondBanners/Car/Car'
-import Head from 'next/head';
+ 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Study in the Australia and build your future',
+    description: 'Learn from the worlds best academics and study at prestigious Australia universities.',
+  }
 const page = () => {
     return (
         <div>
-            <Head>
-                <title>Study in Australia</title>
-                <meta name="description" content="Learn from the world's best academics and study at prestigious Australian universities." />
-                <meta name="keywords" content="Study in Australia, Australian Universities, Study Abroad" />
-            </Head>
             <Banner2 country='Australia' />
             <Car country='Australia' bgColor='bg-[#191F2C]' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Australia universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`} />
             <QuickFacts country='Australia' />

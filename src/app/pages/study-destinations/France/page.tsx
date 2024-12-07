@@ -1,4 +1,3 @@
-'use client'
 import AnimatedText from '@/_components/StudyDestinationComponents/Shared/Components/AnimatedText/AnimatedText';
 import Counselor from '@/_components/StudyDestinationComponents/Shared/Components/Counselor/Counselor';
 import Exams from '@/_components/StudyDestinationComponents/Shared/Components/Exams/Exams';
@@ -16,16 +15,15 @@ import Doc3 from '@/_components/StudyDestinationComponents/France/SVG/Doc3';
 import FAQFrance from '@/_components/StudyDestinationComponents/France/SVG/FAQ';
 import React from 'react';
 import Banner1 from '@/_components/StudyDestinationComponents/Shared/Banners/Banner1/Banner1';
-import Head from 'next/head';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+    title: 'Study in the France and build your future',
+    description: 'Learn from the worlds best academics and study at prestigious France universities.',
+  }
 const page = () => {
     return (
         <div>
-            <Head>
-                <title>Study in the France</title>
-                <meta name="description" content="Learn from the world's best academics and study at prestigious French universities." />
-                <meta name="keywords" content="Study in France, French Universities, Study Abroad" />
-            </Head>
             <Banner1 country='France' />
             <Tower country='France' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of France universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`} />
             <QuickFacts country='France' />

@@ -1,4 +1,3 @@
-'use client'
 import AnimatedText from '@/_components/StudyDestinationComponents/Shared/Components/AnimatedText/AnimatedText';
 import Counselor from '@/_components/StudyDestinationComponents/Shared/Components/Counselor/Counselor';
 import Exams from '@/_components/StudyDestinationComponents/Shared/Components/Exams/Exams';
@@ -16,16 +15,15 @@ import React from 'react';
 import Banner3 from '@/_components/StudyDestinationComponents/Shared/Banners/Banner3/Banner3';
 import Doc1 from '@/_components/StudyDestinationComponents/Germany/SVG/Doc1';
 import Doc2 from '@/_components/StudyDestinationComponents/Germany/SVG/Doc2';
-import Head from 'next/head';
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+    title: 'Study in the Germany and build your future',
+    description: 'Learn from the worlds best academics and study at prestigious Germany universities.',
+  }
 const page = () => {
     return (
         <div>
-            <Head>
-                <title>Study in the Germany</title>
-                <meta name="description" content="Learn from the world's best academics and study at prestigious German universities." />
-                <meta name="keywords" content="Study in Germany, German Universities, Study Abroad" />
-            </Head>
             <Banner3 country='Germany' />
             <Germany country='Germany' bgColor='bg-[#1A1A1A]' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Germany universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`} />
             <QuickFacts country='Germany' />

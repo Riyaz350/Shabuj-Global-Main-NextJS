@@ -1,4 +1,3 @@
-'use client'
 import AnimatedText from '@/_components/StudyDestinationComponents/Shared/Components/AnimatedText/AnimatedText';
 import Counselor from '@/_components/StudyDestinationComponents/Shared/Components/Counselor/Counselor';
 import Exams from '@/_components/StudyDestinationComponents/Shared/Components/Exams/Exams';
@@ -16,16 +15,16 @@ import FAQFinland from '@/_components/StudyDestinationComponents/Finland/SVG/FAQ
 import React from 'react';
 import Banner3 from '@/_components/StudyDestinationComponents/Shared/Banners/Banner3/Banner3';
 import Doc1 from '@/_components/StudyDestinationComponents/Finland/SVG/Doc1';
-import Head from 'next/head';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Study in the Finland and build your future',
+    description: 'Learn from the worlds best academics and study at prestigious Finland universities.',
+  }
 const page = () => {
     return (
         <div>
-            <Head>
-                <title>Study in the Finland</title>
-                <meta name="description" content="Learn from the world's best academics and study at prestigious Finland universities." />
-                <meta name="keywords" content="Study in Finland, Finland Universities, Study Abroad" />
-            </Head>
             <title>Study in the Finland</title>
             <Banner3 country='Finland' />
             <Car country='Finland' bgColor='bg-[#e1b43d]' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of Finland universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers. `} />

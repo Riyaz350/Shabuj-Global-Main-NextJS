@@ -1,3 +1,5 @@
+'use client'
+
 import { motion, Transition } from "framer-motion";
 const Finland_FaqSVG = () => {
   const bigQuestion = {

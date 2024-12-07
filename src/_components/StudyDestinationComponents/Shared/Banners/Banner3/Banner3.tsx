@@ -1,3 +1,5 @@
+'use client'
+
 import './Banner3.css'
 
 const Canada_Banner = ({ country}:{country:string}) => {

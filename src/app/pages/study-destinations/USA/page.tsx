@@ -1,4 +1,3 @@
-'use client'
 import AnimatedText from '@/_components/StudyDestinationComponents/Shared/Components/AnimatedText/AnimatedText';
 import Counselor from '@/_components/StudyDestinationComponents/Shared/Components/Counselor/Counselor';
 import Exams from '@/_components/StudyDestinationComponents/Shared/Components/Exams/Exams';
@@ -16,25 +15,15 @@ import Doc3 from '@/_components/StudyDestinationComponents/USA/SVG/Doc3';
 import FAQUSA from '@/_components/StudyDestinationComponents/USA/SVG/FAQ';
 import React from 'react';
 import Banner1 from '@/_components/StudyDestinationComponents/Shared/Banners/Banner1/Banner1';
-import Head from '@/_components/StudyDestinationComponents/Shared/Head/Head'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Study in the USA and build your future',
+    description: 'Learn from the worlds best academics and study at prestigious USA universities.',
+  }
 const page = () => {
     return (
         <div>
-            <Head
-                title="Study in the USA and build your future"
-                description="Learn from the world's best academics and study at prestigious USA universities."
-                keywords={['Study in USA', 'USA Universities', 'Study Abroad']}
-                ogTitle="Study in the USA and build your future"
-                ogDescription="Learn from the world's best academics and study at prestigious USA universities."
-                ogUrl="https://yourwebsite.com/usa"  // Replace with the actual URL
-                ogImage="https://yourwebsite.com/path-to-image.jpg" // Replace with the actual image URL
-                twitterImage="https://yourwebsite.com/path-to-image.jpg" // Replace with the actual image URL
-            />
-            {/* <title>Study in the USA and build your future</title>
-            <meta name="og:title" content="Study in the USA and build your future" />
-            <meta name="description" content="Learn from the world's best academics and study at prestigious USA universities." />
-            <meta property="og:description" content="Learn from the world's best academics and study at prestigious USA universities." />
-            <meta name="keywords" content="Study in USA, USA Universities, Study Abroad" /> */}
             <Banner1 country='USA' />
             <Tower country='USA' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of USA universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`} />
             <QuickFacts country='USA' />

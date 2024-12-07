@@ -1,3 +1,5 @@
+'use client'
+
 import './Georgia_SVG.css'
 const Doc2 = () => {
     return (
