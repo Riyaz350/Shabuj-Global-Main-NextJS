@@ -23,6 +23,7 @@ const page = () => {
         <div>
             <Head>
                 <title>Study in the UK and build your future</title>
+                <meta name="og:title" content="Study in the UK and build your future" />
                 <meta name="description" content="Learn from the world's best academics and study at prestigious UK universities." />
                 <meta property="og:description" content="Learn from the world's best academics and study at prestigious UK universities." />
 
