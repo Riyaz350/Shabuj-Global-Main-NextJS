@@ -18,7 +18,7 @@ import Banner3 from '@/_components/StudyDestinationComponents/Shared/Banners/Ban
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Study in the West-Indies and build your future',
+    title: 'Study in the West-Indies  ',
     description: 'Learn from the worlds best academics and study at prestigious West-Indies universities.',
   }
 const page = () => {

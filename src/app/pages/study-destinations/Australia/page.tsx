@@ -19,7 +19,7 @@ import Car from '../../../../_components/StudyDestinationComponents/Shared/Secon
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Study in the Australia and build your future',
+    title: 'Study in the Australia  ',
     description: 'Learn from the worlds best academics and study at prestigious Australia universities.',
   }
 const page = () => {

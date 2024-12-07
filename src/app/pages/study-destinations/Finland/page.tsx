@@ -19,7 +19,7 @@ import Doc1 from '@/_components/StudyDestinationComponents/Finland/SVG/Doc1';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Study in the Finland and build your future',
+    title: 'Study in the Finland  ',
     description: 'Learn from the worlds best academics and study at prestigious Finland universities.',
   }
 const page = () => {

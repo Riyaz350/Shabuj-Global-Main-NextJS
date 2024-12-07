@@ -18,7 +18,7 @@ import Doc2 from '@/_components/StudyDestinationComponents/Germany/SVG/Doc2';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Study in the Germany and build your future',
+    title: 'Study in the Germany  ',
     description: 'Learn from the worlds best academics and study at prestigious Germany universities.',
   }
 const page = () => {

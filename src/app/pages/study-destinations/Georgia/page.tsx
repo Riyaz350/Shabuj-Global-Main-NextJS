@@ -18,7 +18,7 @@ import Doc1 from '@/_components/StudyDestinationComponents/Georgia/SVG/Doc1';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Study in the Georgia and build your future',
+    title: 'Study in the Georgia  ',
     description: 'Learn from the worlds best academics and study at prestigious Georgia universities.',
   }
 const page = () => {

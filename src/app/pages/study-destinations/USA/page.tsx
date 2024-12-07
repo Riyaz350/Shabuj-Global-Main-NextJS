@@ -18,7 +18,7 @@ import Banner1 from '@/_components/StudyDestinationComponents/Shared/Banners/Ban
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Study in the USA and build your future',
+    title: 'Study in the USA  ',
     description: 'Learn from the worlds best academics and study at prestigious USA universities.',
   }
 const page = () => {
