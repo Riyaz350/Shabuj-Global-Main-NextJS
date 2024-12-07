@@ -31,15 +31,9 @@ const page = () => {
                 {/* Open Graph Meta Tags for Social Media */}
                 <meta property="og:title" content="Study in the UK and build your future" />
                 <meta property="og:description" content="Learn from the world's best academics and study at prestigious UK universities." />
-                <meta property="og:image" content="URL_TO_IMAGE" /> {/* Replace with an actual image URL */}
-                <meta property="og:url" content="https://yourwebsite.com/UK" />
-                <meta property="og:type" content="website" />
-
                 {/* Twitter Card Meta Tags */}
-                <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content="Study in the UK and build your future" />
                 <meta name="twitter:description" content="Learn from the world's best academics and study at prestigious UK universities." />
-                <meta name="twitter:image" content="URL_TO_IMAGE" /> {/* Replace with an actual image URL */}
             </Head>
             <Banner1 country='UK' />
             <Tower country='UK' description={`Learn from some of the ${`world's`} best academics and experts in some of ${`world’s`} most prestigious universities and benefit from their exceptional academic support. Study alongside some of the finest and brilliant minds and hone your skills using state-of-the-art technology. Avail placements, internships and volunteering positions that are your right fit through strong industry links of UK universities and apply your knowledge and skills in a real-world professional environment. Graduate with skills and expertise that are in high demand around the world and get hired by your dream employers.`} />
